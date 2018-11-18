@@ -1,0 +1,9 @@
+$arpi-light-primary: mat-palette($mat-grey, 200, 500, 300);
+$arpi-light-accent: mat-palette($mat-brown, 200);
+$arpi-light-warn: mat-palette($mat-deep-orange, 200);
+
+$arpi-light-theme: mat-light-theme(
+  $arpi-light-primary,
+  $arpi-light-accent,
+  $arpi-light-warn
+);
