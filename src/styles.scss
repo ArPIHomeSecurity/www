@@ -18,11 +18,13 @@
 @import 'app/app.component.scss-theme';
 @import 'app/shared/big-input/big-input.component.scss-theme';
 @import 'app/static/about/about.component.scss-theme';
+@import 'app/static/features/features.component.scss-theme';
 
 @mixin custom-components-theme($theme) {
   @include arpi-styles-reset-theme($theme);
   @include arpi-app-component-theme($theme);
   @include arpi-about-component-theme($theme);
+  @include arpi-features-component-theme($theme);
   @include arpi-big-input-component-theme($theme);
 }
 

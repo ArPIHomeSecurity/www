@@ -4,3 +4,15 @@ ngb-carousel {
 img.ng-star-inserted {
   width: 100%;
 }
+
+.carousel-caption {
+  bottom: 250px;
+}
+
+h3 {
+  font-size: 6em;
+}
+
+p {
+  font-size: 2em;
+}
