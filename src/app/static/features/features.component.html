@@ -2,11 +2,24 @@
   <div class="container">
     <div class="row">
       <div class="col-md-7 description">
-        <h2>Web UI</h2>
-        <p>Use and configure with a easy to use web application.</p>
+        <h2>User interface</h2>
+        <p>Use and configure with an easy to use web application from mobile or desktop.</p>
       </div>
       <div class="col-md-5">
-        <img src="https://via.placeholder.com/500x300?text=WEBUI" alt="WEBUI">
+        <ngb-carousel [showNavigationIndicators]="false">
+          <ng-template ngbSlide>
+            <img src="assets/screenshot-home-01.png" alt="Home normal">
+          </ng-template>
+          <ng-template ngbSlide>
+            <img src="assets/screenshot-home-02.png" alt="Home alert">
+          </ng-template>
+          <ng-template ngbSlide>
+            <img src="assets/screenshot-sensor-01.png" alt="Sensors">
+          </ng-template>
+          <ng-template ngbSlide>
+            <img src="assets/screenshot-menu-01.png" alt="Menu">
+          </ng-template>
+        </ngb-carousel>
       </div>
     </div>
   </div>
