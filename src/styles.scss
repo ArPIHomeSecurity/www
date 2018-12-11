@@ -17,8 +17,8 @@
 @import 'styles-reset.scss-theme';
 @import 'app/app.component.scss-theme';
 @import 'app/shared/big-input/big-input.component.scss-theme';
-@import 'app/static/about/about.component.scss-theme';
-@import 'app/static/features/features.component.scss-theme';
+@import 'app/about/about.component.scss-theme';
+@import 'app/features/features.component.scss-theme';
 
 @mixin custom-components-theme($theme) {
   @include arpi-styles-reset-theme($theme);

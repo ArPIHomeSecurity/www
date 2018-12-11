@@ -39,10 +39,9 @@
             }}</span>
 
           <span class="d-none d-md-inline">
-            <button mat-button class="nav-button" *ngFor="let item of navigation" [routerLink]="[item.link]"
-              routerLinkActive="active">
+            <a mat-button *ngFor="let item of navigation" routerLink="/main" [fragment]="item.link" routerLinkActive="active">
               {{item.label | translate}}
-            </button>
+            </a>
           </span>
 
           <a [matTooltip]="'arpi.header.github' | translate"

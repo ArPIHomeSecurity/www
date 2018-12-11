@@ -6,13 +6,21 @@ import { SharedModule } from '@app/shared';
 import { CoreModule } from '@app/core';
 
 import { SettingsModule } from './settings';
-import { StaticModule } from './static';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { MainComponent } from './main/main.component';
+import { HeaderComponent } from './header/header.component';
+import { FeaturesComponent } from './features/features.component';
+import { AboutComponent } from './about/about.component';
+
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   imports: [
+    // Bootstrap
+    NgbModule,
+
     // angular
     BrowserAnimationsModule,
     BrowserModule,
@@ -22,13 +30,18 @@ import { AppComponent } from './app.component';
     SharedModule,
 
     // features
-    StaticModule,
     SettingsModule,
 
     // app
     AppRoutingModule
   ],
-  declarations: [AppComponent],
+  declarations: [
+    AppComponent,
+    MainComponent,
+    HeaderComponent,
+    FeaturesComponent,
+    AboutComponent
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

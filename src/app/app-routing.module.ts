@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
+import { MainComponent } from './main/main.component';
 import { SettingsContainerComponent } from './settings';
 
 const routes: Routes = [
   {
-    path: '',
-    redirectTo: 'main',
-    pathMatch: 'full'
+    path: 'main',
+    component: MainComponent
   },
   {
     path: 'settings',
@@ -16,16 +16,15 @@ const routes: Routes = [
   },
   {
     path: '**',
-    redirectTo: 'about'
+    redirectTo: 'main'
   }
 ];
 
 @NgModule({
-  // useHash supports github.io demo page, remove in your app
   imports: [
     RouterModule.forRoot(routes, {
-      useHash: true,
-      scrollPositionRestoration: 'enabled'
+      useHash: false,
+      anchorScrolling: 'enabled'
     })
   ],
   exports: [RouterModule]
