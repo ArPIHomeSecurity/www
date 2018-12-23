@@ -40,7 +40,6 @@ export class AppComponent implements OnInit {
   ];
   navigationSideMenu = [
     ...this.navigation,
-    { link: 'settings', label: 'arpi.menu.settings' }
   ];
 
   isAuthenticated$: Observable<boolean>;

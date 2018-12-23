@@ -6,7 +6,7 @@ import { SettingsContainerComponent } from './settings';
 
 const routes: Routes = [
   {
-    path: 'main',
+    path: '',
     component: MainComponent
   },
   {
@@ -16,7 +16,7 @@ const routes: Routes = [
   },
   {
     path: '**',
-    redirectTo: 'main'
+    redirectTo: '/'
   }
 ];
 

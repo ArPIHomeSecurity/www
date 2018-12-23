@@ -1,4 +1,5 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { ActivatedRoute } from '@angular/router'; 
 
 @Component({
   selector: 'arpi-main',
@@ -8,9 +9,30 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 })
 export class MainComponent implements OnInit {
 
-  constructor() { }
+  
+  subscription: any;
+  fragment: string;
 
-  ngOnInit() {
+  constructor(
+    private route: ActivatedRoute
+  ) {
+    
   }
 
+  ngOnInit() {
+    this.subscription = this.route.fragment.subscribe(fragment => { this.fragment = fragment; });
+  }
+
+  ngAfterViewChecked(): void {
+    try {
+      if(this.fragment) {
+        document.querySelector('#' + this.fragment).scrollIntoView({behavior: "smooth"});
+        this.fragment = '';
+      }
+    } catch (e) { }
+  }
+  
+  public ngOnDestroy(): void {
+    this.subscription.unsubscribe();
+  }
 }
