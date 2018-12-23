@@ -10,6 +10,7 @@
     .background {
       color: mat-color($foreground, text);
       background-color: mat-color($background, background);
+      padding-bottom: 20px;
 
       .gradient {
         &::before {
@@ -25,8 +26,10 @@
     .follow-releases,
     .contribution,
     .contributors {
+      background-color: mat-color($background, background, 0.4);
+      padding: 20px;
+
       p {
-        background-color: mat-color($background, background, 0.4);
         padding: 5px;
         text-align: justify;
 

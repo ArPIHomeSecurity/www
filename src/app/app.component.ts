@@ -33,10 +33,10 @@ export class AppComponent implements OnInit {
   version = env.versions.app;
   year = new Date().getFullYear();
   logo = require('../assets/arpi-logo-64.png');
-  languages = ['en', 'de', 'sk', 'fr', 'es', 'pt-br'];
+  languages = ['en', 'hu'];
   navigation = [
-    { link: 'about', label: 'arpi.menu.about' },
-    { link: 'features', label: 'arpi.menu.features' }
+    { link: 'features', label: 'arpi.menu.features' },
+    { link: 'about', label: 'arpi.menu.about' }
   ];
   navigationSideMenu = [
     ...this.navigation,
