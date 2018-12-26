@@ -1,6 +1,8 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 
+import * as $ from 'jquery';
+
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
@@ -14,7 +16,11 @@ export class MainComponent implements OnInit, AfterViewInit {
   ) { }
 
   ngOnInit() {
-
+    $('a.nav-link, .dropdown-item').on('click', function(){
+      if ($('.navbar-toggler').is(":visible")) {
+        $('.navbar-toggler').click();
+      }
+    });
   }
 
   ngAfterViewInit() {
