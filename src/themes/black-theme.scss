@@ -1,9 +1,0 @@
-$arpi-black-primary: mat-palette($mat-grey, 700, 300, 900);
-$arpi-black-accent: mat-palette($mat-blue-grey, 400);
-$arpi-black-warn: mat-palette($mat-red, 500);
-
-$arpi-black-theme: mat-dark-theme(
-  $arpi-black-primary,
-  $arpi-black-accent,
-  $arpi-black-warn
-);

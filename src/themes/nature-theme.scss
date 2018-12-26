@@ -1,9 +1,0 @@
-$arpi-nature-primary: mat-palette($mat-brown, 700, 300, 900);
-$arpi-nature-accent: mat-palette($mat-deep-purple, 300);
-$arpi-nature-warn: mat-palette($mat-red, 600);
-
-$arpi-nature-theme: mat-light-theme(
-  $arpi-nature-primary,
-  $arpi-nature-accent,
-  $arpi-nature-warn
-);
