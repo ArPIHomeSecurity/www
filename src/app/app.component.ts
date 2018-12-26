@@ -7,7 +7,7 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'www2';
+  title = 'www';
 
   constructor(translate: TranslateService) {
     // this language will be used as a fallback when a translation isn't found in the current language
