@@ -1,14 +1,6 @@
 {
   "extends": "../tsconfig.json",
   "compilerOptions": {
-<<<<<<< HEAD
-    "baseUrl": "",
-    "outDir": "../out-tsc/app",
-    "module": "es2015",
-    "types": ["node"]
-  },
-  "exclude": ["test.ts", "**/*.spec.ts"]
-=======
     "outDir": "../out-tsc/app",
     "types": []
   },
@@ -16,5 +8,4 @@
     "test.ts",
     "**/*.spec.ts"
   ]
->>>>>>> refs/heads/master
 }

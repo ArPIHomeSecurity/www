@@ -8,9 +8,5 @@ if (environment.production) {
   enableProdMode();
 }
 
-<<<<<<< HEAD
-platformBrowserDynamic().bootstrapModule(AppModule);
-=======
 platformBrowserDynamic().bootstrapModule(AppModule)
   .catch(err => console.error(err));
->>>>>>> refs/heads/master

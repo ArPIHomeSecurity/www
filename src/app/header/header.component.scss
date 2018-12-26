@@ -1,40 +1,3 @@
-<<<<<<< HEAD
-@import '../../styles-variables';
-
-ngb-carousel {
-}
-
-img.ng-star-inserted {
-  width: 100%;
-}
-
-.carousel-caption {
-  bottom: 30%;
-  background-color: #55555559;
-}
-
-h3 {
-  font-size: 6em;
-}
-
-p {
-  font-size: 2em;
-}
-
-@media (max-width: map-get($grid-breakpoints, md)) {
-  .carousel-caption {
-    bottom: 0px;
-  }
-
-  h3 {
-    font-size: 2em;
-  }
-
-  p {
-    font-size: 1em;
-  }
-}
-=======
 .carousel-caption {
   bottom: 30%;
   background-color: #55555559;
@@ -47,4 +10,3 @@ p {
     font-size: 2em;
   }
 }
->>>>>>> refs/heads/master

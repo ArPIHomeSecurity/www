@@ -1,66 +1,3 @@
-<<<<<<< HEAD
-@import '../../styles-variables';
-
-.container {
-  margin-top: 20px;
-}
-
-.main-heading {
-  text-transform: uppercase;
-  margin: 0 0 20px 0;
-}
-
-mat-card {
-  margin: 0 0 20px 0;
-
-  mat-card-title {
-    position: relative;
-
-    code {
-      position: absolute;
-      top: 11px;
-      right: 0;
-      float: right;
-      font-size: 10px;
-    }
-  }
-  mat-card-subtitle {
-    min-height: 60px;
-  }
-
-  @media (max-width: map-get($grid-breakpoints, sm)) {
-    mat-card-subtitle {
-      min-height: auto;
-    }
-  }
-
-  a {
-    fa-icon {
-      position: relative;
-      bottom: 2px;
-      font-size: 16px;
-      margin: 6px;
-    }
-  }
-
-  a[mat-icon-button] {
-    position: relative;
-    left: 5px;
-  }
-}
-
-.feature {
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
-
-.feature img {
-  width: 100%;
-}
-
-.description {
-  padding: 15px;
-=======
 .features {
   padding: 45px 0px 0px 0px;
   background-color: #FF6C00;
@@ -76,5 +13,4 @@ mat-card {
 
 .feature.odd {
   background-color: #0949D3;
->>>>>>> refs/heads/master
 }
