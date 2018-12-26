@@ -1,0 +1,16 @@
+.features {
+  padding: 45px 0px 0px 0px;
+  background-color: #FF6C00;
+}
+
+.feature {
+  padding: 35px;
+
+  img {
+    width: 100%;
+  }
+}
+
+.feature.odd {
+  background-color: #0949D3;
+}
