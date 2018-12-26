@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const packageJson = require('../../package.json');
 
 export const environment = {
@@ -20,4 +21,8 @@ export const environment = {
     typescript: packageJson.devDependencies['typescript'],
     cypress: packageJson.devDependencies['cypress']
   }
+=======
+export const environment = {
+  production: true
+>>>>>>> refs/heads/master
 };

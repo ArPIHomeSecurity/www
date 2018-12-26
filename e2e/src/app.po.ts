@@ -5,6 +5,7 @@ export class AppPage {
     return browser.get('/');
   }
 
+<<<<<<< HEAD
   getCurrentYear() {
     return element(by.css('.signature .year')).getText();
   }
@@ -13,5 +14,9 @@ export class AppPage {
     return element
       .all(by.css('mat-toolbar button.nav-button'))
       .map(elm => elm.getText());
+=======
+  getTitleText() {
+    return element(by.css('app-root h1')).getText();
+>>>>>>> refs/heads/master
   }
 }

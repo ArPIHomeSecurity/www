@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import 'styles-variables';
 
 @import '../node_modules/bootstrap/scss/bootstrap';
@@ -46,4 +47,9 @@
 .nature-theme {
   @include angular-material-theme($arpi-nature-theme);
   @include custom-components-theme($arpi-nature-theme);
+=======
+/* You can add global styles to this file, and also import other style files */
+body {
+  padding-top: 56px;
+>>>>>>> refs/heads/master
 }

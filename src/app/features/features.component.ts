@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 
 import { ROUTE_ANIMATIONS_ELEMENTS } from '@app/core';
@@ -19,4 +20,20 @@ export class FeaturesComponent implements OnInit {
   openLink(link: string) {
     window.open(link, '_blank');
   }
+=======
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-features',
+  templateUrl: './features.component.html',
+  styleUrls: ['./features.component.scss']
+})
+export class FeaturesComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+>>>>>>> refs/heads/master
 }

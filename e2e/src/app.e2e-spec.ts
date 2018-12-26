@@ -1,5 +1,6 @@
 import { AppPage } from './app.po';
 
+<<<<<<< HEAD
 import { getCurrentRouteUrl } from './utils';
 
 describe('App', () => {
@@ -22,5 +23,17 @@ describe('App', () => {
     page
       .getAllMenus()
       .then(menus => expect(menus).toEqual(['About', 'Features', 'Examples']));
+=======
+describe('workspace-project App', () => {
+  let page: AppPage;
+
+  beforeEach(() => {
+    page = new AppPage();
+  });
+
+  it('should display welcome message', () => {
+    page.navigateTo();
+    expect(page.getTitleText()).toEqual('Welcome to www!');
+>>>>>>> refs/heads/master
   });
 });
