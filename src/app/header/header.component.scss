@@ -1,12 +1,15 @@
+
+.carousel {
+  img {
+    width: 100%;
+  }
+}
+
 .carousel-caption {
-  bottom: 30%;
   background-color: #55555559;
-
-  h3 {
-    font-size: 6em;
-  }
-
-  p {
-    font-size: 2em;
-  }
+  
+  /* vertical center */
+  top: 50%;
+  transform: translateY(-50%);
+  bottom: initial;
 }
