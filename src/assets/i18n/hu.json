@@ -43,9 +43,8 @@
   "arpi.home.opensource.description": "Használd a közösség erejét",
   "arpi.footer.changelog": "Show changelog",
   "arpi.header.github": "Project Github Repository",
-  "arpi.menu.about": "Névjegy",
-  "arpi.menu.examples": "Examples",
   "arpi.menu.features": "Funkciók",
+  "arpi.menu.about": "Névjegy",
   "arpi.title.long": "ArPI - Home Security System",
   "arpi.title.short": "ArPI"
 }

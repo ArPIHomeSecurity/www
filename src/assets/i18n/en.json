@@ -43,9 +43,8 @@
   "arpi.home.opensource.description": "Power of the community",
   "arpi.footer.changelog": "Show changelog",
   "arpi.header.github": "Project Github Repository",
-  "arpi.menu.about": "About",
-  "arpi.menu.examples": "Examples",
   "arpi.menu.features": "Features",
+  "arpi.menu.about": "About",
   "arpi.title.long": "ArPI - Home Security System",
   "arpi.title.short": "ArPI"
 }
