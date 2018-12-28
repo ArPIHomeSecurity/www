@@ -16,6 +16,7 @@ export class MainComponent implements OnInit, AfterViewInit {
   ) { }
 
   ngOnInit() {
+    // close menu after click in mobile view
     $('a.nav-link, .dropdown-item').on('click', function(){
       if ($('.navbar-toggler').is(":visible")) {
         $('.navbar-toggler').click();

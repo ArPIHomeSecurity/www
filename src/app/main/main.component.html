@@ -1,4 +1,4 @@
-<nav id="main-menu" class="navbar fixed-top navbar-expand-md navbar-dark bg-primary" role="navigation" snScrollSpy>
+<nav class="navbar fixed-top navbar-expand-md navbar-dark bg-primary">
   <a class="navbar-brand d-none d-sm-block" href=".">
     <img src="assets/arpi-logo-64.png"/>
     {{ 'arpi.title.long' | translate }}
@@ -11,43 +11,39 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <div id="navbarSupportedContent" class="collapse navbar-collapse">
-    <ul class="navbar-nav ml-auto">
+    <ul id="main-menu" class="navbar-nav ml-auto flex-column-reverse flex-md-row-reverse" role="navigation" snScrollSpy>
       <li class="nav-item">
-        <a class="nav-link" href="#features" snScrollSpyItem for="main-menu">{{ 'arpi.menu.features' | translate }}</a>
+        <a class="nav-link" snScrollSpyItem for="main-menu" href="#contact">{{ 'arpi.menu.contact' | translate }}</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#about" snScrollSpyItem for="main-menu">{{ 'arpi.menu.about' | translate }}</a>
+        <a class="nav-link" snScrollSpyItem for="main-menu" href="#about">{{ 'arpi.menu.about' | translate }}</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#contact" snScrollSpyItem for="main-menu">{{ 'arpi.menu.contact' | translate }}</a>
+        <a class="nav-link" snScrollSpyItem for="main-menu" href="#features">{{ 'arpi.menu.features' | translate }}</a>
       </li>
-      <div class="dropdown">
-          <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            {{language}}
-          </button>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" (click)="useLanguage('en')">EN</a>
-            <a class="dropdown-item" (click)="useLanguage('hu')">HU</a>
-          </div>
-        </div>
     </ul>
+    <div class="dropdown">
+      <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        {{language}}
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" (click)="useLanguage('en')">EN</a>
+        <a class="dropdown-item" (click)="useLanguage('hu')">HU</a>
+      </div>
+    </div>
   </div>
 </nav>
 
-<div id="scroll-area" scrollSpy>
-  <sn-scroll-spy-section class="scrollspy-triggerr">
-    <sn-scroll-spy-section id="header" for="main-menu">
-      <app-header ></app-header>
-    </sn-scroll-spy-section>
-    <sn-scroll-spy-section id="features" for="main-menu">
-      <app-features></app-features>
-    </sn-scroll-spy-section>
-    <sn-scroll-spy-section id="about" for="main-menu">
-      <app-about></app-about>
-    </sn-scroll-spy-section>
-    <sn-scroll-spy-section id="contact" for="main-menu">
-      <app-contact></app-contact>
-    </sn-scroll-spy-section>
-  </sn-scroll-spy-section>
-  <app-footer></app-footer>
-</div>
+<sn-scroll-spy-section id="header" for="main-menu">
+  <app-header ></app-header>
+</sn-scroll-spy-section>
+<sn-scroll-spy-section id="features" for="main-menu">
+  <app-features></app-features>
+</sn-scroll-spy-section>
+<sn-scroll-spy-section id="about" for="main-menu">
+  <app-about></app-about>
+</sn-scroll-spy-section>
+<sn-scroll-spy-section id="contact" for="main-menu">
+  <app-contact></app-contact>
+</sn-scroll-spy-section>
+<app-footer></app-footer>
