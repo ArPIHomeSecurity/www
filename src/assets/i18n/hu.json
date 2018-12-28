@@ -26,7 +26,7 @@
   "arpi.features.rtc.description": "Valós idejű óra csatlakoztatási lehetőség, hogy internet kapcsolat nélküli működés esetén is pontos legyen a rendszer ideje.",
   "arpi.features.gsm.title": "GSM",
   "arpi.features.gsm.description": "Valós idejű értesítések SMS-ben.",
-  "arpi.home.build.title": "Építs",
+  "arpi.home.build.title": "DIY",
   "arpi.home.build.description": "Építsd meg saját otthoni riasztórendszered",
   "arpi.home.upgrade.title": "Frissíts",
   "arpi.home.upgrade.description": "Tedd okosabbá elavult riasztórendszered",

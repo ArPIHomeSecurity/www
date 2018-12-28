@@ -26,7 +26,7 @@
   "arpi.features.rtc.description": "You can attach a real-time clock to have a precise time without internet connection.",
   "arpi.features.gsm.title": "GSM",
   "arpi.features.gsm.description": "You can get real-time notifications in SMS.",
-  "arpi.home.build.title": "Build",
+  "arpi.home.build.title": "DIY",
   "arpi.home.build.description": "Build your own home security system",
   "arpi.home.upgrade.title": "Upgrade",
   "arpi.home.upgrade.description": "Make your old security system smart",
