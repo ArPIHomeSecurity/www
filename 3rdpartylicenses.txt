@@ -344,6 +344,9 @@ MIT
 @angular/router
 MIT
 
+@ngx-translate/core
+MIT
+
 @thisissoon/angular-scrollspy
 MIT
 The MIT License
@@ -369,9 +372,6 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
 
-@ngx-translate/core
-MIT
-
 @thisissoon/angular-inviewport
 MIT
 The MIT License
@@ -396,6 +396,12 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
+
+@angular/forms
+MIT
+
+ngx-captcha
+MIT
 
 @fortawesome/fontawesome-svg-core
 MIT
