@@ -6,13 +6,13 @@
     
         <form id="contact-arpi-board" [formGroup]="contactForm" (ngSubmit)="submit($event)" action="https://api.formbucket.com/f/buk_6KJ9CZeRTxixJcQUu5wBJDIf" method="post" target="_blank">
           <div class="form-group">
-            <input class="form-control" formControlName="email" type="text" name="email" placeholder="email" required/>
+            <input class="form-control" formControlName="email" type="text" name="email" placeholder="Email" required/>
           </div>
           <div class="form-group">
             <input class="form-control" formControlName="subject" type="text" name="subject" [attr.placeholder]="'arpi.contact.subject' | translate" required/>
           </div>
           <div class="form-group">
-            <textarea class="form-control" formControlName="message" type="text" name="message" [attr.placeholder]="'arpi.contact.message' | translate" required></textarea>
+            <textarea class="form-control" formControlName="message" type="text" name="message" [attr.placeholder]="'arpi.contact.message' | translate" rows="10" required></textarea>
           </div>
           <div class="form-group">
             <ngx-recaptcha2 #captchaElem
