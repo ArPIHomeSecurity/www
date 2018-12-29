@@ -1,6 +1,6 @@
 .features {
   padding: 45px 0px 0px 0px;
-  background-color: #FF6C00;
+  background-color: #ff6c00;
 }
 
 .feature {
@@ -17,5 +17,27 @@
 }
 
 .feature.odd {
-  background-color: #0949D3;
+  background-color: #0949d3;
+}
+
+.feature.technologies {
+  .title {
+    margin-bottom: 20px;
+  }
+
+  h3 {
+    margin-bottom: 20px;
+  }
+
+  .layer {
+    padding: 20px;
+    height: 100%;
+  }
+
+  img {
+    width: auto;
+    height: auto;
+    max-width: 200px;
+    max-height: 200px;
+  }
 }

@@ -69,4 +69,25 @@
       </div>
     </div>
   </div>
+
+  <div class="feature technologies">
+    <div class="container">
+      <div class="row title">
+        <div class="col-md-12">
+          <h2>{{ 'arpi.feature.stack' | translate }}</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div *ngFor="let layer of technologies" class="col-md-3 text-center">
+          <div class="layer border">
+            <h3>{{ layer.name | translate }}</h3>
+            <div *ngFor="let logo of layer.images;let i = index; let last=last">
+              <img [attr.src]="logo"/>
+              <hr *ngIf="!last" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

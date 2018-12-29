@@ -11,7 +11,7 @@ import { ReCaptcha2Component } from 'ngx-captcha';
 })
 export class ContactComponent implements OnInit {
 
-  protected contactForm: FormGroup;
+  public contactForm: FormGroup;
   @ViewChild('captchaElem') captchaElem: ReCaptcha2Component;
 
   // recaptcha site key
