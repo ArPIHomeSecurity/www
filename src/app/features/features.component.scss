@@ -1,6 +1,12 @@
 .features {
-  padding: 45px 0px 0px 0px;
-  background-color: #ff6c00;
+  /*background-image: linear-gradient(#ff6c00, #ffb178);*/
+  background: #ff6c00;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #f5af19, #ff6c00);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #f5af19, #ff6c00); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.features .feature:first-of-type {
+  padding: 70px 0px 35px 0px;
 }
 
 .feature {
@@ -12,12 +18,14 @@
 
   img {
     width: 100%;
-    margin-bottom: 25px;
   }
 }
 
 .feature.odd {
-  background-color: #0949d3;
+  /*background-image: linear-gradient(#0949d3, #598eff);*/
+  background: #00c6ff;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #0072ff, #00c6ff);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #0072ff, #00c6ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .feature.technologies {
@@ -37,7 +45,7 @@
   img {
     width: auto;
     height: auto;
-    max-width: 200px;
-    max-height: 200px;
+    max-width: 100px;
+    max-height: 100px;
   }
 }

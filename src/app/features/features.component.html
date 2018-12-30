@@ -1,5 +1,6 @@
+
 <div class="features">
-  <div class="feature">
+  <div class="feature odd text-light">
     <div class="container">
       <div class="row">
         <div class="col-md-7 description">
@@ -28,43 +29,28 @@
     </div>
   </div>
 
-  <div class="feature odd text-light">
+  <div *ngFor="let feature of features; let index=index; let odd=odd; let even=even;" [ngClass]="{ 'odd text-light': odd, feature: feature }">
     <div class="container">
-      <div class="row">
-        <div class="col-md-5">
-          <img src="assets/channels.jpg" alt="Channels">
+      <div *ngIf="odd" class="row">
+        <div class="col-md-8">
+          <img [attr.src]="'assets/arpi_board_' + feature + '.svg'" alt="Channels">
         </div>
-        <div class="col-md-7 description">
-          <h2>{{ 'arpi.features.channels.title' | translate }}</h2>
-          <p>{{ 'arpi.features.channels.description' | translate }}</p>
+        <div class="col-md-4 description d-flex">
+          <div class="align-self-center">
+            <h2>{{ 'arpi.features.' + feature + '.title' | translate }}</h2>
+            <p class="text-justify">{{ 'arpi.features.' + feature + '.description' | translate }}</p>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-
-  <div class="feature">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-7 description">
-          <h2>{{ 'arpi.features.rtc.title' | translate }}</h2>
-          <p>{{ 'arpi.features.rtc.description' | translate }}</p>
+      <div *ngIf="even" class="row">
+        <div class="col-md-4 description d-flex">
+          <div class="align-self-center">
+            <h2>{{ 'arpi.features.' + feature + '.title' | translate }}</h2>
+            <p class="text-justify">{{ 'arpi.features.' + feature + '.description' | translate }}</p>
+          </div>
         </div>
-        <div class="col-md-5">
-          <img src="assets/rtc.jpg" alt="RTC">
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="feature odd text-light">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-5">
-          <img src="assets/sim900.jpg" alt="GSM">
-        </div>
-        <div class="col-md-7 description">
-          <h2>{{ 'arpi.features.gsm.title' | translate }}</h2>
-          <p>{{ 'arpi.features.gsm.description' | translate }}</p>
+        <div class="col-md-8">
+          <img [attr.src]="'assets/arpi_board_' + feature + '.svg'" alt="Channels">
         </div>
       </div>
     </div>

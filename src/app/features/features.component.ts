@@ -19,6 +19,15 @@ export class FeaturesComponent implements OnInit {
     { name: 'Frontend', images: ['assets/angular_logo.svg'] }
   ];
 
+  features = [
+    'channels',
+    'outputs',
+    'keyboard',
+    'ups',
+    'rtc',
+    'gsm'
+  ];
+
   constructor() {}
 
   ngOnInit() {}
