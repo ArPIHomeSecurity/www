@@ -16,7 +16,7 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 Builds on Travis
 
-[![Build Status](https://api.travis-ci.org/ArPIHomeSecurity/www.svg?branch=master)](https://travis-ci.org/Enngage/ngx-captcha)
+[![Build Status](https://api.travis-ci.org/ArPIHomeSecurity/www.svg?branch=master)](https://travis-ci.org/ArPIHomeSecurity/www)
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
