@@ -19,7 +19,6 @@ import { FeaturesComponent } from './features/features.component';
 import { AboutComponent } from './about/about.component';
 import { MainComponent } from './main/main.component';
 import { FooterComponent } from './footer/footer.component';
-import { OrderComponent } from './order/order.component';
 import { ContactComponent } from './contact/contact.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
@@ -34,7 +33,6 @@ export function HttpLoaderFactory(http: HttpClient) {
     AboutComponent,
     MainComponent,
     FooterComponent,
-    OrderComponent,
     ContactComponent
   ],
   imports: [
