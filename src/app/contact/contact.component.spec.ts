@@ -7,6 +7,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 import { ContactComponent } from './contact.component';
 import { NgxCaptchaModule } from 'ngx-captcha';
+import { LazyLoadImageModule } from 'ng-lazyload-image';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, 'assets/i18n/', '.json');
@@ -29,7 +30,8 @@ describe('ContactComponent', () => {
               useFactory: HttpLoaderFactory,
               deps: [HttpClient]
           }
-        })
+        }),
+        LazyLoadImageModule
       ],
       providers: [
         TranslateService

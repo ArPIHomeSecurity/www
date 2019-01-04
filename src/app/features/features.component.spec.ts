@@ -3,6 +3,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 import { TranslateModule, TranslateLoader, TranslateService } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { LazyLoadImageModule } from 'ng-lazyload-image';
 
 import { FeaturesComponent } from './features.component';
 
@@ -25,7 +26,8 @@ describe('FeaturesComponent', () => {
               useFactory: HttpLoaderFactory,
               deps: [HttpClient]
           }
-        })
+        }),
+        LazyLoadImageModule
       ],
       providers: [
         TranslateService

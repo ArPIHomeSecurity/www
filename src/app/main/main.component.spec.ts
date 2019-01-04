@@ -7,6 +7,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { ScrollSpyModule } from '@thisissoon/angular-scrollspy';
 import { NgxCaptchaModule } from 'ngx-captcha';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { LazyLoadImageModule } from 'ng-lazyload-image';
 
 import { MainComponent } from './main.component';
 import { HeaderComponent } from '../header/header.component';
@@ -39,7 +40,8 @@ describe('MainComponent', () => {
               useFactory: HttpLoaderFactory,
               deps: [HttpClient]
           }
-        })
+        }),
+        LazyLoadImageModule
       ],
       providers: [
         TranslateService
