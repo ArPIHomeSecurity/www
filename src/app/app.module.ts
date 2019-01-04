@@ -7,10 +7,9 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 import { InViewportModule } from '@thisissoon/angular-inviewport';
 import { ScrollSpyModule } from '@thisissoon/angular-scrollspy';
-
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-
 import { NgxCaptchaModule } from 'ngx-captcha';
+import { LazyLoadImageModule } from 'ng-lazyload-image';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -38,8 +37,10 @@ export function HttpLoaderFactory(http: HttpClient) {
   imports: [
     BrowserModule,
     AppRoutingModule,
-
     HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+
     TranslateModule.forRoot({
       loader: {
           provide: TranslateLoader,
@@ -54,8 +55,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     FontAwesomeModule,
 
     NgxCaptchaModule,
-    FormsModule,
-    ReactiveFormsModule
+    LazyLoadImageModule
   ],
   providers: [],
   bootstrap: [AppComponent]

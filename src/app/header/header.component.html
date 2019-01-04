@@ -1,24 +1,13 @@
 <div id="arpi-header-slider"class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="assets/diy3.jpg" alt="Screenshot">
+    <div *ngFor="let slide of slides; let isFirst = first" class="carousel-item" [class.active]="isFirst">
+
+      <div *ngIf="displayPlaceholder" style="height: 500px"></div>
+      <img [attr.src]="'assets/header_' + slide + '.jpg'" (load)="imageLoaded($event)">
+
       <div class="carousel-caption">
-        <h1>{{ 'arpi.home.build.title' | translate }}</h1>
-        <h3>{{ 'arpi.home.build.description' | translate }}</h3>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img src="assets/upgrade3.jpg" alt="GSM">
-      <div class="carousel-caption">
-        <h1>{{ 'arpi.home.upgrade.title' | translate }}</h1>
-        <h3>{{ 'arpi.home.upgrade.description' | translate }}</h3>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img src="assets/open-source3.jpg" alt="Terminals">
-      <div class="carousel-caption">
-        <h1>{{ 'arpi.home.opensource.title' | translate }}</h1>
-        <h3>{{ 'arpi.home.opensource.description' | translate }}</h3>
+        <h1>{{ 'arpi.home.' + slide + '.title' | translate }}</h1>
+        <h3>{{ 'arpi.home.' + slide + '.description' | translate }}</h3>
       </div>
     </div>
   </div>
