@@ -1,0 +1,79 @@
+
+<div class="features">
+  <div class="feature odd text-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7 description">
+          <h2>{{ 'arpi.features.ui.title' | translate }}</h2>
+          <p>{{ 'arpi.features.ui.description' | translate }}</p>
+        </div>
+        <div class="col-md-4">
+          <div id="arpi-features-slider"class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img [lazyLoad]="'assets/screenshot-home-01.png'" alt="Home normal">
+              </div>
+              <div class="carousel-item">
+                <img [lazyLoad]="'assets/screenshot-home-02.png'" alt="Home alert">
+              </div>
+              <div class="carousel-item">
+                <img [lazyLoad]="'assets/screenshot-sensor-01.png'" alt="Sensors">
+              </div>
+              <div class="carousel-item">
+                <img [lazyLoad]="'assets/screenshot-menu-01.png'" alt="Menu">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div *ngFor="let feature of features; let index=index; let odd=odd; let even=even;" [ngClass]="{ 'odd text-light': odd, feature: feature }">
+    <div class="container">
+      <div *ngIf="odd" class="row">
+        <div class="col-md-8">
+          <img [lazyLoad]="'assets/arpi_board_' + feature + '.svg'" [defaultImage]="'https://via.placeholder.com/10x10'">
+        </div>
+        <div class="col-md-4 description d-flex">
+          <div class="align-self-center">
+            <h2>{{ 'arpi.features.' + feature + '.title' | translate }}</h2>
+            <p class="text-justify">{{ 'arpi.features.' + feature + '.description' | translate }}</p>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="even" class="row">
+        <div class="col-md-4 description d-flex">
+          <div class="align-self-center">
+            <h2>{{ 'arpi.features.' + feature + '.title' | translate }}</h2>
+            <p class="text-justify">{{ 'arpi.features.' + feature + '.description' | translate }}</p>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <img [lazyLoad]="'assets/arpi_board_' + feature + '.svg'" [defaultImage]="'https://via.placeholder.com/10x10'">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="feature technologies">
+    <div class="container">
+      <div class="row title">
+        <div class="col-md-12">
+          <h2>{{ 'arpi.feature.stack' | translate }}</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div *ngFor="let layer of technologies" class="col-md-3 text-center">
+          <div class="layer border">
+            <h3>{{ layer.name | translate }}</h3>
+            <div *ngFor="let logo of layer.images;let i = index; let last=last">
+              <img [lazyLoad]="logo"/>
+              <hr *ngIf="!last" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

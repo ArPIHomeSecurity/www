@@ -1,0 +1,51 @@
+.features {
+  /*background-image: linear-gradient(#ff6c00, #ffb178);*/
+  background: #ff6c00;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #f5af19, #ff6c00);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #f5af19, #ff6c00); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.features .feature:first-of-type {
+  padding: 70px 0px 35px 0px;
+}
+
+.feature {
+  padding: 35px;
+
+  .description {
+    margin-bottom: 25px;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+.feature.odd {
+  /*background-image: linear-gradient(#0949d3, #598eff);*/
+  background: #00c6ff;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #0072ff, #00c6ff);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #0072ff, #00c6ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.feature.technologies {
+  .title {
+    margin-bottom: 20px;
+  }
+
+  h3 {
+    margin-bottom: 20px;
+  }
+
+  .layer {
+    padding: 20px;
+    height: 100%;
+  }
+
+  img {
+    width: auto;
+    height: auto;
+    max-width: 100px;
+    max-height: 100px;
+  }
+}

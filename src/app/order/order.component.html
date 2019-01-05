@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+      <div class="order">
+        <h2>{{ 'arpi.order.title' | translate }}</h2>
+
+        <p>{{ 'arpi.order.description' | translate }}</p>
+
+        <form id="order-arpi-board" action="https://api.formbucket.com/f/buk_OekB1LeGwMV0KewySjelddFH" method="post" target="_blank">
+          <div class="form-group">
+            <input class="form-control" type="text" name="email" placeholder="email" />
+          </div>
+          <div class="form-group">
+              <select class="form-control" name="count" [attr.placeholder]="'arpi.order.count' | translate">
+                  <option>1</option>
+                  <option>2</option>
+                  <option>{{ 'arpi.order.other' | translate }}</option>
+                </select>
+          </div>
+          <div class="form-group">
+            <input class="form-control" type="text" name="address" [attr.placeholder]="'arpi.order.address' | translate" />
+          </div>
+          <div class="form-group">
+            <textarea class="form-control" type="text" name="message" [attr.placeholder]="'arpi.order.message' | translate"></textarea>
+          </div>
+          <button class="btn btn-primary" type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

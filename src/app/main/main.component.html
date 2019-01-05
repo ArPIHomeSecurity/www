@@ -1,0 +1,52 @@
+<nav class="navbar fixed-top navbar-expand-md navbar-dark bg-primary">
+  <a class="navbar-brand d-none d-sm-block" href=".">
+    <img src="assets/arpi-logo-64.png"/>
+    {{ 'arpi.title.long' | translate }}
+  </a>
+  <a class="navbar-brand d-sm-none" href=".">
+    <img src="assets/arpi-logo-64.png"/>
+    {{ 'arpi.title.short' | translate }}
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div id="navbarSupportedContent" class="collapse navbar-collapse">
+    <ul id="main-menu" class="navbar-nav ml-auto flex-column-reverse flex-md-row-reverse" role="navigation" snScrollSpy>
+        <li class="nav-item">
+            <a class="nav-link" snScrollSpyItem for="main-menu" href="#contact">{{ 'arpi.menu.contact' | translate }}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" snScrollSpyItem for="main-menu" href="#about">{{ 'arpi.menu.about' | translate }}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" snScrollSpyItem for="main-menu" href="#features">{{ 'arpi.menu.features' | translate }}</a>
+          </li>
+      <li class="nav-item">
+        <a href="https://github.com/ArPIHomeSecurity" target="_blank" class="nav-link text-light"><fa-icon [icon]="github"></fa-icon></a>
+      </li>
+    </ul>
+    <div class="dropdown">
+      <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        {{language}}
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" (click)="useLanguage('en')">EN</a>
+        <a class="dropdown-item" (click)="useLanguage('hu')">HU</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<sn-scroll-spy-section id="header" for="main-menu">
+    <app-header ></app-header>
+  </sn-scroll-spy-section>
+  <sn-scroll-spy-section id="features" for="main-menu">
+    <app-features></app-features>
+  </sn-scroll-spy-section>
+  <sn-scroll-spy-section id="about" for="main-menu">
+    <app-about></app-about>
+  </sn-scroll-spy-section>
+  <sn-scroll-spy-section id="contact" for="main-menu">
+    <app-contact></app-contact>
+  </sn-scroll-spy-section>
+  <app-footer></app-footer>

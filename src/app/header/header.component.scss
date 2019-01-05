@@ -1,0 +1,15 @@
+
+.carousel {
+  img {
+    width: 100%;
+  }
+}
+
+.carousel-caption {
+  background-color: #55555559;
+  
+  /* vertical center */
+  top: 50%;
+  transform: translateY(-50%);
+  bottom: initial;
+}
