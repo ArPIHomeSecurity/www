@@ -12,14 +12,17 @@
   </button>
   <div id="navbarSupportedContent" class="collapse navbar-collapse">
     <ul id="main-menu" class="navbar-nav ml-auto flex-column-reverse flex-md-row-reverse" role="navigation" snScrollSpy>
+        <li class="nav-item">
+            <a class="nav-link" snScrollSpyItem for="main-menu" href="#contact">{{ 'arpi.menu.contact' | translate }}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" snScrollSpyItem for="main-menu" href="#about">{{ 'arpi.menu.about' | translate }}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" snScrollSpyItem for="main-menu" href="#features">{{ 'arpi.menu.features' | translate }}</a>
+          </li>
       <li class="nav-item">
-        <a class="nav-link" snScrollSpyItem for="main-menu" href="#contact">{{ 'arpi.menu.contact' | translate }}</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" snScrollSpyItem for="main-menu" href="#about">{{ 'arpi.menu.about' | translate }}</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" snScrollSpyItem for="main-menu" href="#features">{{ 'arpi.menu.features' | translate }}</a>
+        <a href="https://github.com/ArPIHomeSecurity" target="_blank" class="nav-link text-light"><fa-icon [icon]="github"></fa-icon></a>
       </li>
     </ul>
     <div class="dropdown">
@@ -35,15 +38,15 @@
 </nav>
 
 <sn-scroll-spy-section id="header" for="main-menu">
-  <app-header ></app-header>
-</sn-scroll-spy-section>
-<sn-scroll-spy-section id="features" for="main-menu">
-  <app-features></app-features>
-</sn-scroll-spy-section>
-<sn-scroll-spy-section id="about" for="main-menu">
-  <app-about></app-about>
-</sn-scroll-spy-section>
-<sn-scroll-spy-section id="contact" for="main-menu">
-  <app-contact></app-contact>
-</sn-scroll-spy-section>
-<app-footer></app-footer>
+    <app-header ></app-header>
+  </sn-scroll-spy-section>
+  <sn-scroll-spy-section id="features" for="main-menu">
+    <app-features></app-features>
+  </sn-scroll-spy-section>
+  <sn-scroll-spy-section id="about" for="main-menu">
+    <app-about></app-about>
+  </sn-scroll-spy-section>
+  <sn-scroll-spy-section id="contact" for="main-menu">
+    <app-contact></app-contact>
+  </sn-scroll-spy-section>
+  <app-footer></app-footer>
