@@ -14,7 +14,7 @@ before_script:
   - npm install -g @angular/cli
 
 script:
-  - ng build --prod --aot
+  - ng build --prod --output-path dist/prod --base-href  "https://arpi-security.info"
   - LANGUAGE=en ng test --watch false
 
 deploy:
