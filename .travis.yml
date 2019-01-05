@@ -19,11 +19,12 @@ script:
 
 deploy:
   provider: pages
+  local-dir: dist/prod
   skip-cleanup: true
   github-token: $GITHUB_TOKEN
   keep-history: true
   on:
-    branch: gh-pages
+    branch: master
   repo: ArPIHomeSecurity/www
   target_branch: gh-pages
   fqdn: arpi-security.info
