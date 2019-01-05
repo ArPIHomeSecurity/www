@@ -16,7 +16,6 @@ export class HeaderComponent implements OnInit {
   }
 
   imageLoaded(event) {
-    console.log('LOADED: ', event);
     this.displayPlaceholder = false;
   }
 }

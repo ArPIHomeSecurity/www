@@ -15,4 +15,4 @@ before_script:
 
 script:
   - ng build --prod --aot
-  - ng test --watch false
+  - LANGUAGE=en ng test --watch false
