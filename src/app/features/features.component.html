@@ -17,16 +17,16 @@
           <div id="arpi-features-slider"class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img [lazyLoad]="'assets/screenshot-home-01.png'" alt="Home normal">
+                <img src="assets/screenshot-home-01.png" alt="Home normal">
               </div>
               <div class="carousel-item">
-                <img [lazyLoad]="'assets/screenshot-home-02.png'" alt="Home alert">
+                <img src="assets/screenshot-home-02.png" alt="Home alert">
               </div>
               <div class="carousel-item">
-                <img [lazyLoad]="'assets/screenshot-sensor-01.png'" alt="Sensors">
+                <img src="assets/screenshot-sensor-01.png" alt="Sensors">
               </div>
               <div class="carousel-item">
-                <img [lazyLoad]="'assets/screenshot-menu-01.png'" alt="Menu">
+                <img src="assets/screenshot-menu-01.png" alt="Menu">
               </div>
             </div>
           </div>
@@ -39,7 +39,7 @@
     <div class="container">
       <div *ngIf="odd" class="row">
         <div class="col-md-8">
-          <img [lazyLoad]="'assets/arpi_board_' + feature + '.svg'" [defaultImage]="'https://via.placeholder.com/10x10'">
+          <img [attr.src]="'assets/arpi_board_' + feature + '.svg'" defaultImage="'https://via.placeholder.com/10x10'">
         </div>
         <div class="col-md-4 description d-flex">
           <div class="align-self-center">
@@ -56,7 +56,7 @@
           </div>
         </div>
         <div class="col-md-8">
-          <img [lazyLoad]="'assets/arpi_board_' + feature + '.svg'" [defaultImage]="'https://via.placeholder.com/10x10'">
+          <img [attr.src]="'assets/arpi_board_' + feature + '.svg'" defaultImage="'https://via.placeholder.com/10x10'">
         </div>
       </div>
     </div>
@@ -74,7 +74,7 @@
           <div class="layer border">
             <h3>{{ layer.name | translate }}</h3>
             <div *ngFor="let logo of layer.images;let i = index; let last=last">
-              <img [lazyLoad]="logo"/>
+              <img [attr.src]="logo"/>
               <hr *ngIf="!last" />
             </div>
           </div>
