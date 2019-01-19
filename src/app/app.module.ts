@@ -19,6 +19,12 @@ import { AboutComponent } from './about/about.component';
 import { MainComponent } from './main/main.component';
 import { FooterComponent } from './footer/footer.component';
 import { ContactComponent } from './contact/contact.component';
+import { PreviewComponent } from './preview/preview.component';
+
+import 'hammerjs';
+import 'mousetrap';
+import { ModalGalleryModule } from 'angular-modal-gallery';
+
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, 'assets/i18n/', '.json');
@@ -32,7 +38,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     AboutComponent,
     MainComponent,
     FooterComponent,
-    ContactComponent
+    ContactComponent,
+    PreviewComponent
   ],
   imports: [
     BrowserModule,
@@ -55,7 +62,9 @@ export function HttpLoaderFactory(http: HttpClient) {
     FontAwesomeModule,
 
     NgxCaptchaModule,
-    LazyLoadImageModule
+    LazyLoadImageModule,
+
+    ModalGalleryModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
