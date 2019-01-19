@@ -8,6 +8,7 @@ import { ScrollSpyModule } from '@thisissoon/angular-scrollspy';
 import { NgxCaptchaModule } from 'ngx-captcha';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { LazyLoadImageModule } from 'ng-lazyload-image';
+import { ModalGalleryModule } from 'angular-modal-gallery';
 
 import { MainComponent } from './main.component';
 import { HeaderComponent } from '../header/header.component';
@@ -15,6 +16,7 @@ import { FeaturesComponent } from '../features/features.component';
 import { AboutComponent } from '../about/about.component';
 import { FooterComponent } from '../footer/footer.component';
 import { ContactComponent } from '../contact/contact.component';
+import { PreviewComponent } from '../preview/preview.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, 'assets/i18n/', '.json');
@@ -41,7 +43,8 @@ describe('MainComponent', () => {
               deps: [HttpClient]
           }
         }),
-        LazyLoadImageModule
+        LazyLoadImageModule,
+        ModalGalleryModule.forRoot()
       ],
       providers: [
         TranslateService
@@ -52,7 +55,8 @@ describe('MainComponent', () => {
         AboutComponent,
         ContactComponent,
         FooterComponent,
-        MainComponent ]
+        MainComponent,
+        PreviewComponent ]
     })
     .compileComponents();
   }));
