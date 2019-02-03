@@ -5,7 +5,6 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { TranslateModule, TranslateLoader, TranslateService } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { ScrollSpyModule } from '@thisissoon/angular-scrollspy';
-import { NgxCaptchaModule } from 'ngx-captcha';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { LazyLoadImageModule } from 'ng-lazyload-image';
 import { ModalGalleryModule } from 'angular-modal-gallery';
@@ -34,7 +33,6 @@ describe('MainComponent', () => {
         FontAwesomeModule,
         HttpClientModule,
         ReactiveFormsModule,
-        NgxCaptchaModule,
         ScrollSpyModule.forRoot(),
         TranslateModule.forRoot({
           loader: {

@@ -6,7 +6,6 @@ import { TranslateModule, TranslateLoader, TranslateService } from '@ngx-transla
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 import { ContactComponent } from './contact.component';
-import { NgxCaptchaModule } from 'ngx-captcha';
 import { LazyLoadImageModule } from 'ng-lazyload-image';
 
 export function HttpLoaderFactory(http: HttpClient) {
@@ -22,7 +21,6 @@ describe('ContactComponent', () => {
     TestBed.configureTestingModule({
       imports: [
         HttpClientModule,
-        NgxCaptchaModule,
         ReactiveFormsModule,
         TranslateModule.forRoot({
           loader: {

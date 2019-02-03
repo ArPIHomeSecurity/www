@@ -35,7 +35,7 @@ module.exports = function (config) {
       '../node_modules/jquery/dist/jquery.min.js',
       '../node_modules/bootstrap/dist/js/bootstrap.min.js',
       {pattern: 'https://www.google.com/recaptcha/api.js?onload=ngx_captcha_onload_callback&render=explicit', type: 'js'},
-      'https://www.gstatic.com/recaptcha/api2/v1547447582668/recaptcha__en.js'
+      'https://www.gstatic.com/recaptcha/api2/v1548052318968/recaptcha__en.js'
     ]
   });
 };
