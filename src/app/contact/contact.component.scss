@@ -10,3 +10,7 @@
     margin-bottom: 30px;
   }
 }
+
+form:invalid>#submit-message {
+  pointer-events: none;
+}
