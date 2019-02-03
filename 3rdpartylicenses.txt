@@ -689,9 +689,6 @@ SOFTWARE.
 @angular/forms
 MIT
 
-ngx-captcha
-MIT
-
 @fortawesome/free-brands-svg-icons
 (CC-BY-4.0 AND MIT)
 Font Awesome Free License
