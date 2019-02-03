@@ -33,9 +33,7 @@ module.exports = function (config) {
     crossOriginAttribute: false,
     files: [
       '../node_modules/jquery/dist/jquery.min.js',
-      '../node_modules/bootstrap/dist/js/bootstrap.min.js',
-      {pattern: 'https://www.google.com/recaptcha/api.js?onload=ngx_captcha_onload_callback&render=explicit', type: 'js'},
-      'https://www.gstatic.com/recaptcha/api2/v1548052318968/recaptcha__en.js'
+      '../node_modules/bootstrap/dist/js/bootstrap.min.js'
     ]
   });
 };

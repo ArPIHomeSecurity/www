@@ -8,7 +8,6 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { InViewportModule } from '@thisissoon/angular-inviewport';
 import { ScrollSpyModule } from '@thisissoon/angular-scrollspy';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { NgxCaptchaModule } from 'ngx-captcha';
 import { LazyLoadImageModule } from 'ng-lazyload-image';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -61,7 +60,6 @@ export function HttpLoaderFactory(http: HttpClient) {
 
     FontAwesomeModule,
 
-    NgxCaptchaModule,
     LazyLoadImageModule,
 
     ModalGalleryModule.forRoot()
