@@ -7,16 +7,34 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FeaturesComponent implements OnInit {
   technologies = [
-    { name: 'arpi.features.stack.hardware', images: ['assets/raspberry_logo.svg'] },
+    { 
+      name: 'arpi.features.stack.hardware',
+      items: [
+        {image: 'assets/raspberry_pi_logo.png', url: 'https://www.raspberry.org'}
+      ]
+    },
     {
       name: 'Backend',
-      images: ['assets/python_logo.svg', 'assets/postgresql_logo.svg', 'assets/nginx_logo.svg']
+      items: [
+        {image: 'assets/python_logo.svg', url: 'https://www.python.org'},
+        {image: 'assets/postgresql_logo.svg', url: 'https://www.postgresql.org/'},
+        {image: 'assets/nginx_logo.svg', url: 'http://nginx.org/'}
+      ]
     },
     {
       name: 'arpi.features.stack.connection',
-      images: ['assets/letsencrypt_logo.svg', 'assets/socketio_logo.svg']
+      items: [
+        {image: 'assets/letsencrypt_logo.svg', url: 'https://letsencrypt.org/'},
+        {image: 'assets/socketio_logo.svg', url: 'https://socket.io/'}
+      ]
     },
-    { name: 'Frontend', images: ['assets/angular_logo.svg'] }
+    {
+      name: 'Frontend',
+      items: [
+        {image: 'assets/angular_logo.svg', url: 'https://angular.io/'},
+        {image: 'assets/angular_material_logo.svg', url: 'https://material.angular.io/'}
+      ]
+    }
   ];
 
   features = [

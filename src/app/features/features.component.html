@@ -73,8 +73,8 @@
         <div *ngFor="let layer of technologies" class="col-md-3 text-center">
           <div class="layer border">
             <h3>{{ layer.name | translate }}</h3>
-            <div *ngFor="let logo of layer.images;let i = index; let last=last">
-              <img [attr.src]="logo"/>
+            <div *ngFor="let item of layer.items;let i = index; let last=last">
+              <a [attr.href]="item.url"><img [attr.src]="item.image"/></a>
               <hr *ngIf="!last" />
             </div>
           </div>
