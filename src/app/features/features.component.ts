@@ -18,7 +18,7 @@ export class FeaturesComponent implements OnInit {
       items: [
         {image: 'assets/python_logo.svg', url: 'https://www.python.org'},
         {image: 'assets/postgresql_logo.svg', url: 'https://www.postgresql.org/'},
-        {image: 'assets/nginx_logo.svg', url: 'http://nginx.org/'}
+        {image: 'assets/nginx_logo.svg', url: 'https://nginx.org/'}
       ]
     },
     {
