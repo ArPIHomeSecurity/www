@@ -4,53 +4,6 @@
 /dist
 /tmp
 /out-tsc
-<<<<<<< HEAD
-/coverage
-
-# dependencies
-/node_modules
-yarn.lock
-
-# IDEs and editors
-/.idea
-.project
-.classpath
-.c9/
-*.launch
-.settings/
-*.sublime-workspace
-
-# IDE - VSCode
-.vscode/*
-# !.vscode/settings.json
-# !.vscode/tasks.json
-# !.vscode/launch.json
-# !.vscode/extensions.json
-
-# compodoc
-/documentation
-
-# misc
-/.sass-cache
-/connect.lock
-/coverage
-/libpeerconnection.log
-npm-debug.log
-testem.log
-/typings
-
-# e2e
-/e2e/src/*.js
-/e2e/src/*.map
-/cypress/screenshots
-
-# System Files
-.DS_Store
-Thumbs.db
-
-# debug
-debug.log
-=======
 
 # dependencies
 /node_modules
@@ -89,4 +42,3 @@ testem.log
 .DS_Store
 Thumbs.db
 .directory
->>>>>>> refs/heads/master
