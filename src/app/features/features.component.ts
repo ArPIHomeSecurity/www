@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FeaturesComponent implements OnInit {
   technologies = [
-    { 
+    {
       name: 'arpi.features.stack.hardware',
       items: [
         {image: 'assets/raspberry_pi_logo.png', url: 'https://www.raspberry.org'}
