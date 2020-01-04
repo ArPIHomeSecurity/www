@@ -1,4 +1,3 @@
-
 <div class="features">
   <div class="feature odd text-light">
     <div class="container">
@@ -14,7 +13,7 @@
           </div>
         </div>
         <div class="col-md-5">
-          <div id="arpi-features-slider"class="carousel slide" data-ride="carousel">
+          <div id="arpi-features-slider" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <img src="assets/screenshot-home-01.png" alt="Home normal">
@@ -32,10 +31,22 @@
           </div>
         </div>
       </div>
+
+      <div class="row">
+        <div class="col-md-5 offset-md-1 mt-5 embed-responsive embed-responsive-16by9">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/SXPr6w1OpdQ" frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="col-md-5 offset-md-1 mt-5 embed-responsive embed-responsive-16by9">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/uXUc3SM1nVA" frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
     </div>
   </div>
 
-  <div *ngFor="let feature of features; let index=index; let odd=odd; let even=even;" [ngClass]="{ 'odd text-light': odd, feature: feature }">
+  <div *ngFor="let feature of features; let index=index; let odd=odd; let even=even;"
+    [ngClass]="{ 'odd text-light': odd, feature: feature }">
     <div class="container">
       <div *ngIf="odd" class="row">
         <div class="col-md-8">
@@ -74,7 +85,7 @@
           <div class="layer border">
             <h3>{{ layer.name | translate }}</h3>
             <div *ngFor="let item of layer.items;let i = index; let last=last">
-              <a [attr.href]="item.url"><img [attr.src]="item.image"/></a>
+              <a [attr.href]="item.url"><img [attr.src]="item.image" /></a>
               <hr *ngIf="!last" />
             </div>
           </div>
