@@ -1,4 +1,4 @@
-import { TestBed, async } from '@angular/core/testing';
+import { TestBed, waitForAsync } from '@angular/core/testing';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 import { TranslateModule, TranslateLoader, TranslateService } from '@ngx-translate/core';
@@ -14,7 +14,7 @@ export function HttpLoaderFactory(http: HttpClient) {
 describe('AppComponent', () => {
   let translate: TranslateService;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       imports: [
         RouterTestingModule,

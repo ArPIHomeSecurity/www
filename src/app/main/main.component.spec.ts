@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 
@@ -7,7 +7,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { ScrollSpyModule } from '@thisissoon/angular-scrollspy';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { LazyLoadImageModule } from 'ng-lazyload-image';
-import { ModalGalleryModule } from 'angular-modal-gallery';
+import { GalleryModule } from '@ks89/angular-modal-gallery';
 
 import { MainComponent } from './main.component';
 import { HeaderComponent } from '../header/header.component';
@@ -27,7 +27,7 @@ describe('MainComponent', () => {
   let translate: TranslateService;
 
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       imports: [
         FontAwesomeModule,
@@ -42,7 +42,7 @@ describe('MainComponent', () => {
           }
         }),
         LazyLoadImageModule,
-        ModalGalleryModule.forRoot()
+        GalleryModule.forRoot()
       ],
       providers: [
         TranslateService

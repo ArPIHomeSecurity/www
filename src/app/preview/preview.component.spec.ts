@@ -1,9 +1,9 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateService, TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
-import { ModalGalleryModule } from 'angular-modal-gallery';
+import { GalleryModule } from '@ks89/angular-modal-gallery';
 
 import { PreviewComponent } from './preview.component';
 
@@ -16,7 +16,7 @@ describe('PreviewComponent', () => {
   let fixture: ComponentFixture<PreviewComponent>;
   let translate: TranslateService;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       imports: [
         HttpClientModule,
@@ -27,7 +27,7 @@ describe('PreviewComponent', () => {
               deps: [HttpClient]
           }
         }),
-        ModalGalleryModule.forRoot()
+        GalleryModule.forRoot()
       ],
       declarations: [ PreviewComponent ],
       providers: [

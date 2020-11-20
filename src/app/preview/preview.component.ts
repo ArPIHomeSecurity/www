@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Image, PlainGalleryStrategy, PlainGalleryConfig, LineLayout, ButtonsConfig, ButtonsStrategy } from 'angular-modal-gallery';
+import { Image, PlainGalleryStrategy, PlainGalleryConfig, LineLayout, ButtonsConfig, ButtonsStrategy } from '@ks89/angular-modal-gallery';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({

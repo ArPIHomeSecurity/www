@@ -22,7 +22,8 @@ import { PreviewComponent } from './preview/preview.component';
 
 import 'hammerjs';
 import 'mousetrap';
-import { ModalGalleryModule } from 'angular-modal-gallery';
+import { GalleryModule } from '@ks89/angular-modal-gallery';
+
 
 
 export function HttpLoaderFactory(http: HttpClient) {
@@ -62,7 +63,7 @@ export function HttpLoaderFactory(http: HttpClient) {
 
     LazyLoadImageModule,
 
-    ModalGalleryModule.forRoot()
+    GalleryModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
