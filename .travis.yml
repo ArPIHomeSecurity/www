@@ -4,7 +4,7 @@ addons:
 
 language: node_js
 node_js:
-  - "10"
+  - "14"
 
 branches:
   only:
@@ -14,7 +14,7 @@ before_script:
   - npm install -g @angular/cli
 
 script:
-  - ng build --prod --output-path dist/prod --base-href  "https://www.arpi-security.info"
+  - ng build --configuration production --output-path dist/prod --base-href  "https://www.arpi-security.info"
   - LANGUAGE=en ng test --watch false
 
 deploy:
