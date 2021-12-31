@@ -1,6 +1,7 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 
 import { TranslateService } from '@ngx-translate/core';
+import { Meta } from '@angular/platform-browser';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 import * as $ from 'jquery';
@@ -16,12 +17,17 @@ export class MainComponent implements OnInit, AfterViewInit {
   github = faGithub;
 
   constructor(
-    private translate: TranslateService
+    private translate: TranslateService,
+    private meta: Meta
   ) { }
 
   ngOnInit() {
     // close menu after click in mobile view
-    $('a.nav-link, .dropdown-item').on('click', function(){
+    this.meta.addTag({
+      name: "description",
+      content: "An easy to use Raspberry PI Zero based home security system to replace your old mainboard"
+    });
+    $('a.nav-link, .dropdown-item').on('click', function () {
       if ($('.navbar-toggler').is(":visible")) {
         $('.navbar-toggler').click();
       }
