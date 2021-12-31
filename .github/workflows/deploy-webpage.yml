@@ -1,0 +1,44 @@
+name: Deploy the web page
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy-webpage:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2.3.1
+
+      - name: Cache node modules 💽
+        uses: actions/cache@v2
+        env:
+          cache-name: cache-node-modules
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
+
+      - name: Install dependencies 🔧
+        run: |
+          npm ci
+          npm install -g @angular/cli
+
+      - name: Build application 💪
+        run: |
+          ng build --configuration production --output-path dist/prod --base-href  "https://www.arpi-security.info"
+
+      - name: Test application 🤞
+        run: |
+          LANGUAGE=en ng test --watch false
+
+      - name: Deploy application 🚀
+        uses: JamesIves/github-pages-deploy-action@4.1.7
+        with:
+          branch: gh-pages
+          folder: dist/prod
