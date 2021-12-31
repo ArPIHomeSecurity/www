@@ -1,4 +1,4 @@
-# ARPI-Security web site
+# ArPI-Security web site
 
 Source code of https://arpi-security.info.
 
@@ -14,9 +14,9 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 ## Build
 
-Builds on Travis
+Builds
 
-[![Build Status](https://api.travis-ci.org/ArPIHomeSecurity/www.svg?branch=master)](https://travis-ci.org/ArPIHomeSecurity/www)
+![Build Status](https://github.com/ArPIHomeSecurity/www/actions/workflows/deploy-webpage.yml/badge.svg)
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
