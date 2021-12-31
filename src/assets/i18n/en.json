@@ -42,7 +42,7 @@
   "arpi.preview.version.v0_5": "v0.5 - Improved security",
   "arpi.preview.version.v0_4": "v0.4 - DSC keypad handling",
   "arpi.home.build.title": "DIY",
-  "arpi.home.build.description": "Build your own home security system",
+  "arpi.home.build.description": "Build your own home security system with a Raspberry PI",
   "arpi.home.upgrade.title": "Upgrade",
   "arpi.home.upgrade.description": "Make your old security system smart",
   "arpi.home.opensource.title": "Open source",
