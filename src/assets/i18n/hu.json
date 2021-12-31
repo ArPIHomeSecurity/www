@@ -39,6 +39,8 @@
   "arpi.features.stack.connection": "Kapcsolat",
   "arpi.preview.title": "ArPI panel V1.0",
   "arpi.preview.version.title": "ArPI szoftver",
+  "arpi.preview.version.v0_7": "v0.7 - Wiegand billentyűzet kezelés",
+  "arpi.preview.version.v0_6": "v0.6 - Általános javítások (biztonság, hiba kezelés)",
   "arpi.preview.version.v0_5": "v0.5 - Megnövelt biztonság",
   "arpi.preview.version.v0_4": "v0.4 - DSC billentyűzet kezelés",
   "arpi.home.build.title": "DIY",
