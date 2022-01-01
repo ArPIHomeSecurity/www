@@ -59,5 +59,6 @@
   "arpi.order.count": "Pieces",
   "arpi.order.other": "Write in message",
   "arpi.order.address": "Address",
-  "arpi.order.message": "Message"
+  "arpi.order.message": "Message",
+  "arpi.share.title": "Share"
 }

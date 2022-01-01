@@ -59,5 +59,6 @@
   "arpi.order.count": "Darab",
   "arpi.order.other": "Üzenetben leírom",
   "arpi.order.address": "Cím",
-  "arpi.order.message": "Üzenet"
+  "arpi.order.message": "Üzenet",
+  "arpi.share.title": "Megosztás"
 }
