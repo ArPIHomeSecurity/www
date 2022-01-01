@@ -4,39 +4,28 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { TranslateModule, TranslateLoader, TranslateService } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import { ScrollSpyModule } from '@thisissoon/angular-scrollspy';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { LazyLoadImageModule } from 'ng-lazyload-image';
-import { GalleryModule } from '@ks89/angular-modal-gallery';
-import { ShareIconsModule } from 'ngx-sharebuttons/icons';
-import { ShareButtonsModule } from 'ngx-sharebuttons/buttons';
 
-import { MainComponent } from './main.component';
-import { HeaderComponent } from '../header/header.component';
-import { FeaturesComponent } from '../features/features.component';
-import { AboutComponent } from '../about/about.component';
-import { FooterComponent } from '../footer/footer.component';
-import { ContactComponent } from '../contact/contact.component';
-import { PreviewComponent } from '../preview/preview.component';
-import { ShareComponent } from '../share/share.component';
+import { LazyLoadImageModule } from 'ng-lazyload-image';
+import { ShareButtonsModule } from 'ngx-sharebuttons/buttons';
+import { ShareIconsModule } from 'ngx-sharebuttons/icons';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
+import { ShareComponent } from './share.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, 'assets/i18n/', '.json');
 }
 
-describe('MainComponent', () => {
-  let component: MainComponent;
-  let fixture: ComponentFixture<MainComponent>;
+describe('ShareComponent', () => {
+  let component: ShareComponent;
+  let fixture: ComponentFixture<ShareComponent>;
   let translate: TranslateService;
-
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       imports: [
-        FontAwesomeModule,
         HttpClientModule,
         ReactiveFormsModule,
-        ScrollSpyModule.forRoot(),
         TranslateModule.forRoot({
           loader: {
               provide: TranslateLoader,
@@ -45,29 +34,20 @@ describe('MainComponent', () => {
           }
         }),
         LazyLoadImageModule,
-        GalleryModule.forRoot(),
+        FontAwesomeModule,
         ShareButtonsModule,
         ShareIconsModule
       ],
       providers: [
         TranslateService
       ],
-      declarations: [
-        HeaderComponent,
-        FeaturesComponent,
-        AboutComponent,
-        ContactComponent,
-        FooterComponent,
-        MainComponent,
-        PreviewComponent,
-        ShareComponent
-      ]
+      declarations: [ ShareComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(MainComponent);
+    fixture = TestBed.createComponent(ShareComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

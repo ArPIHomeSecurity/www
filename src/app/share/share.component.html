@@ -1,0 +1,26 @@
+<div id="shareDialog" class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                {{ 'arpi.share.title' | translate }}
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid py-3">
+                    <share-buttons
+                        theme="modern-light"
+                        [exclude]="['print','messenger','copy']"
+                        [showIcon]="true"
+                        [showText]="true"
+                        image="https://www.arpi-security.info/assets/screenshot-home-01.png"
+                        url="https://www.arpi-security.info/"
+                        title="ArPI Home Security System"
+                        description="An easy to use Raspberry PI based home security system">
+                    </share-buttons>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

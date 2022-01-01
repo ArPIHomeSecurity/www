@@ -9,6 +9,8 @@ import { InViewportModule } from '@thisissoon/angular-inviewport';
 import { ScrollSpyModule } from '@thisissoon/angular-scrollspy';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { LazyLoadImageModule } from 'ng-lazyload-image';
+import { ShareButtonsModule } from 'ngx-sharebuttons/buttons';
+import { ShareIconsModule } from 'ngx-sharebuttons/icons';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,6 +21,7 @@ import { MainComponent } from './main/main.component';
 import { FooterComponent } from './footer/footer.component';
 import { ContactComponent } from './contact/contact.component';
 import { PreviewComponent } from './preview/preview.component';
+import { ShareComponent } from './share/share.component';
 
 import 'hammerjs';
 import 'mousetrap';
@@ -39,7 +42,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     MainComponent,
     FooterComponent,
     ContactComponent,
-    PreviewComponent
+    PreviewComponent,
+    ShareComponent
   ],
   imports: [
     BrowserModule,
@@ -60,6 +64,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     ScrollSpyModule.forRoot(),
 
     FontAwesomeModule,
+    ShareButtonsModule,
+    ShareIconsModule,
 
     LazyLoadImageModule,
 
