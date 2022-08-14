@@ -9,15 +9,23 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class PreviewComponent implements OnInit {
 
-  images: Image[] = [
+  images_0_8: Image[] = [
     new Image(0, {
-      img: 'assets/ArPIV1.0/IMG_1215.JPG'
+      img: 'assets/ArPIV0.8/IMG_1215.JPG'
     }),
     new Image(1, {
-      img: 'assets/ArPIV1.0/IMG_1213.JPG'
+      img: 'assets/ArPIV0.8/IMG_1213.JPG'
     }),
     new Image(2, {
-      img: 'assets/ArPIV1.0/IMG_1214.JPG'
+      img: 'assets/ArPIV0.8/IMG_1214.JPG'
+    })
+  ];
+  images_0_9: Image[] = [
+    new Image(0, {
+      img: 'assets/ArPIV0.9/IMG_20220814_115448_376.jpg'
+    }),
+    new Image(1, {
+      img: 'assets/ArPIV0.9/IMG_20220814_115529_488.jpg'
     })
   ];
 
