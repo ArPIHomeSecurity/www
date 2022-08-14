@@ -21,16 +21,16 @@
       </li>
       
       <li class="nav-item">
-        <a class="nav-link" snScrollSpyItem for="main-menu" href="#contact">{{ 'arpi.menu.contact' | translate }}</a>
+        <a class="nav-link" spyOn="contact" activeClass="active" href="#contact">{{ 'arpi.menu.contact' | translate }}</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" snScrollSpyItem for="main-menu" href="#about">{{ 'arpi.menu.about' | translate }}</a>
+        <a class="nav-link" spyOn="about" activeClass="active" href="#about">{{ 'arpi.menu.about' | translate }}</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" snScrollSpyItem for="main-menu" href="#preview">{{ 'arpi.menu.preview' | translate }}</a>
+        <a class="nav-link" spyOn="preview" activeClass="active" href="#preview">{{ 'arpi.menu.preview' | translate }}</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" snScrollSpyItem for="main-menu" href="#features">{{ 'arpi.menu.features' | translate }}</a>
+        <a class="nav-link" spyOn="features" activeClass="active" href="#features">{{ 'arpi.menu.features' | translate }}</a>
       </li>
     </ul>
     <div class="dropdown">
@@ -49,21 +49,21 @@
   </div>
 </nav>
 
-<sn-scroll-spy-section id="header" for="main-menu">
+<div id="header" spyTarget="header">
   <app-header ></app-header>
-</sn-scroll-spy-section>
-<sn-scroll-spy-section id="features" for="main-menu">
+</div>
+<div id="features" spyTarget="features">
   <app-features></app-features>
-</sn-scroll-spy-section>
-<sn-scroll-spy-section id="preview" for="main-menu">
+</div>
+<div id="preview" spyTarget="preview">
   <app-preview></app-preview>
-</sn-scroll-spy-section>
-<sn-scroll-spy-section id="about" for="main-menu">
+</div>
+<div id="about" spyTarget="about">
   <app-about></app-about>
-</sn-scroll-spy-section>
-<sn-scroll-spy-section id="contact" for="main-menu">
+</div>
+<div id="contact" spyTarget="contact">
   <app-contact></app-contact>
-</sn-scroll-spy-section>
+</div>
 
 <app-share></app-share>
 

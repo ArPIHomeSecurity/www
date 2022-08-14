@@ -6,6 +6,7 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faShareAlt } from '@fortawesome/free-solid-svg-icons';
 
 import * as $ from 'jquery';
+import { ScrollSpyService } from 'ng-spy';
 
 @Component({
   selector: 'app-main',
@@ -19,6 +20,7 @@ export class MainComponent implements OnInit, AfterViewInit {
   faShareAlt = faShareAlt;
 
   constructor(
+    private spyService: ScrollSpyService,
     private translate: TranslateService,
     private meta: Meta
   ) { }
@@ -37,7 +39,7 @@ export class MainComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-
+    this.spyService.spy({ thresholdBottom: 50 });
   }
 
   useLanguage(language: string) {

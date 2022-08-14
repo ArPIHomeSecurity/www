@@ -5,10 +5,10 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
-import { InViewportModule } from '@thisissoon/angular-inviewport';
-import { ScrollSpyModule } from '@thisissoon/angular-scrollspy';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { GalleryModule } from '@ks89/angular-modal-gallery';
 import { LazyLoadImageModule } from 'ng-lazyload-image';
+import { ScrollSpyModule, ScrollSpyService } from 'ng-spy';
 import { ShareButtonsModule } from 'ngx-sharebuttons/buttons';
 import { ShareIconsModule } from 'ngx-sharebuttons/icons';
 
@@ -25,7 +25,6 @@ import { ShareComponent } from './share/share.component';
 
 import 'hammerjs';
 import 'mousetrap';
-import { GalleryModule } from '@ks89/angular-modal-gallery';
 
 
 
@@ -60,18 +59,15 @@ export function HttpLoaderFactory(http: HttpClient) {
       }
     }),
 
-    InViewportModule,
-    ScrollSpyModule.forRoot(),
-
     FontAwesomeModule,
     ShareButtonsModule,
     ShareIconsModule,
-
     LazyLoadImageModule,
+    ScrollSpyModule,
 
     GalleryModule.forRoot()
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [ AppComponent ]
 })
 export class AppModule { }
