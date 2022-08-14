@@ -40,6 +40,7 @@
   "arpi.preview.title": "ArPI panel V1.0",
   "arpi.preview.subtitle": "A Raspberry PI illesztő az otthoni biztonsági rendszerhez",
   "arpi.preview.version.title": "ArPI szoftver",
+  "arpi.preview.version.subtitle": "Az otthoni biztonsági rendszer nyílt forráskódú szoftvere",
   "arpi.preview.version.v0_7": "v0.7 - Wiegand billentyűzet kezelés",
   "arpi.preview.version.v0_6": "v0.6 - Általános javítások (biztonság, hiba kezelés)",
   "arpi.preview.version.v0_5": "v0.5 - Megnövelt biztonság",
