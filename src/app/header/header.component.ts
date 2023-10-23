@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  slides = ['build', 'upgrade', 'opensource'];
+  slides = ['build', 'upgrade', 'opensource', 'cloudless'];
   displayPlaceholder = true;
 
   constructor() { }

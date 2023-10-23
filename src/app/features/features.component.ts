@@ -40,7 +40,7 @@ export class FeaturesComponent implements OnInit {
   features = [
     'channels',
     'outputs',
-    'keyboard',
+    'keypad',
     'ups',
     'rtc',
     'gsm'
