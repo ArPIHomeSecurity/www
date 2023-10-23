@@ -52,6 +52,8 @@
   "arpi.home.upgrade.description": "Tedd okosabbá elavult riasztórendszered",
   "arpi.home.opensource.title": "Nyílt forrás",
   "arpi.home.opensource.description": "Használd a közösség erejét",
+  "arpi.home.cloudless.title": "Felhőmentes",
+  "arpi.home.cloudless.description": "Az adatod nálad marad",
   "arpi.contact.title": "Kapcsolat",
   "arpi.contact.subject": "Tárgy",
   "arpi.contact.message": "Üzenet",
