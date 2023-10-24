@@ -6,56 +6,84 @@
     </div>
 
     <div class="contributors">
-      <div class="row">
+      <div class="row ">
         <div class="col-md-6 offset-md-1">
+          
+          <h2>{{ 'arpi.about.contributors.title' | translate }}</h2>
+          <p>{{ 'arpi.about.contributors.description1' | translate }}</p>
+          <p>{{ 'arpi.about.contributors.join' | translate }}</p>
+          <p>
+            {{ 'arpi.about.contributors.description3' | translate }}
+            <a href="https://github.com/ArPIHomeSecurity/arpi_server/issues" target="_blank">
+              {{'arpi.about.contributors.issues' | translate}}
+            </a>/
+            <a href="https://github.com/ArPIHomeSecurity/arpi_webapplication/issues" target="_blank">
+              {{'arpi.about.contributors.issues' | translate}}
+            </a>!
+          </p>
+        </div>
+
+        <div class="col-md-4">
           <p>{{ 'arpi.about.contributors.team' | translate }}</p>
-          <a href="https://github.com/ArPIHomeSecurity">
-            <img src="https://badges.pufler.dev/repos/ArPIHomeSecurity" alt="GitHub repositories">
-          </a>
-
-          <ul>
-            <li>UI: <img src="https://badges.pufler.dev/contributors/ArPIHomeSecurity/arpi_webapplication?size=25&padding=5&bots=true" alt="GitHub contributors"></li>
-            <li>BACKEND: <img src="https://badges.pufler.dev/contributors/ArPIHomeSecurity/arpi_server?size=25&padding=5&bots=true" alt="GitHub contributors"></li>
-          </ul> 
-        </div>
-
-        <div class="col-md-3">
-          <p>{{ 'arpi.about.contributors' | translate }}</p>
-          <div class="LI-profile-badge"
-              data-version="v1"
-              data-size="medium"
-              data-locale="en_US"
-              data-type="VERTICAL"
-              data-theme="light"
-              data-vanity="gábor-kovács-85159b84">
-            <a class="LI-simple-link" href="https://hu.linkedin.com/in/g%C3%A1bor-kov%C3%A1cs-85159b84?trk=profile-badge">Gábor Kovács</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="contributors">
-      <h2>{{ 'arpi.about.contributors.title' | translate }}</h2>
-      <p>{{ 'arpi.about.contributors.description1' | translate }}</p>
-      <p>{{ 'arpi.about.contributors.join' | translate }}
-        <a
+          <a
             matTooltipPosition="before"
             mat-icon-button
             class="link d-none d-sm-inline"
             href="https://github.com/ArPIHomeSecurity"
             target="_blank">
-          ArPIHomeSecurity
-        </a>
-      </p>
-      <p>
-        {{ 'arpi.about.contributors.description3' | translate }}
-        <a href="https://github.com/ArPIHomeSecurity/arpi_server/issues" target="_blank">
-          {{'arpi.about.contributors.issues' | translate}}
-        </a>/
-        <a href="https://github.com/ArPIHomeSecurity/arpi_webapplication/issues" target="_blank">
-          {{'arpi.about.contributors.issues' | translate}}
-        </a>!
-      </p>
+            ArPIHomeSecurity
+          </a>
+
+          <a href="https://github.com/ArPIHomeSecurity">
+            <img src="https://badges.pufler.dev/repos/ArPIHomeSecurity" alt="GitHub repositories">
+          </a>
+  
+          <ul>
+            <li>UI: <img src="https://badges.pufler.dev/contributors/ArPIHomeSecurity/arpi_webapplication?size=25&padding=5&bots=true" alt="GitHub contributors"></li>
+            <li>BACKEND: <img src="https://badges.pufler.dev/contributors/ArPIHomeSecurity/arpi_server?size=25&padding=5&bots=true" alt="GitHub contributors"></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="row badges">
+        <div class="col-md-4">
+          <div
+            class="badge-base LI-profile-badge"
+            data-locale="en_US"
+            data-size="medium"
+            data-theme="light"
+            data-type="VERTICAL"
+            data-vanity="kovg"
+            data-version="v1">
+            <a class="badge-base__link LI-simple-link" href="https://hu.linkedin.com/in/kovg?trk=profile-badge">Gábor Kovács</a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div
+            class="badge-base LI-profile-badge"
+            data-locale="en_US"
+            data-size="medium"
+            data-theme="light"
+            data-type="VERTICAL"
+            data-vanity="norbert-toth-a6b49a65"
+            data-version="v1">
+            <a class="badge-base__link LI-simple-link" href="https://hu.linkedin.com/in/norbert-toth-a6b49a65?trk=profile-badge">Norbert Tóth</a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div
+            class="badge-base LI-profile-badge"
+            data-locale="en_US"
+            data-size="medium"
+            data-theme="light"
+            data-type="VERTICAL"
+            data-vanity="tibor-wappler-33063798"
+            data-version="v1">
+            <a class="badge-base__link LI-simple-link" href="https://hu.linkedin.com/in/tibor-wappler-33063798?trk=profile-badge">Tibor Wappler</a>
+          </div>
+        </div>
+      </div>
     </div>
+
   </div>
 </div>
