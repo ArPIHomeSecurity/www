@@ -2,7 +2,7 @@ import { Component, OnInit, AfterViewInit } from '@angular/core';
 
 import { TranslateService } from '@ngx-translate/core';
 import { Meta } from '@angular/platform-browser';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faSlack } from '@fortawesome/free-brands-svg-icons';
 import { faShareAlt } from '@fortawesome/free-solid-svg-icons';
 
 import * as $ from 'jquery';
@@ -17,6 +17,7 @@ export class MainComponent implements OnInit, AfterViewInit {
 
   language = 'EN';
   github = faGithub;
+  slack = faSlack;
   faShareAlt = faShareAlt;
 
   constructor(
