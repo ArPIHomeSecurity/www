@@ -37,7 +37,7 @@
   "arpi.features.stack.connection": "Connection",
   "arpi.features.stack.hardware": "Hardware",
   "arpi.preview.title": "ArPI board V1.0",
-  "arpi.preview.subtitle": "The Raspberry PI Zero W hat for interfacing with you home security system",
+  "arpi.preview.subtitle": "The Raspberry PI Zero W adapter for interfacing with you home security system",
   "arpi.preview.version.title": "ArPI software",
   "arpi.preview.version.subtitle": "The open source software of the home security system",
   "arpi.preview.version.v0_9": "v0.9 - Area management",
