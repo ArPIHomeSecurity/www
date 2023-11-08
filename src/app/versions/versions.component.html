@@ -7,41 +7,66 @@
       </div>
     </div>
     <div class="row">
-      <div class="border rounded mb-2 col-md-12 text-center">
-        <ks-modal-gallery
-          [id]="0"
-          [modalImages]="images_0_8"
-          [plainGalleryConfig]="plainGalleryRow"
-          [previewConfig]="{visible: false}"
-          [slideConfig]="{infinite: true, sidePreviews: {show: false}}"
-          [buttonsConfig]="{visible: true, strategy: 1}"
-          [dotsConfig]="{visible: false}">
-        </ks-modal-gallery>
-        <h4>{{ 'arpi.versions.hw.v0_8' | translate }}</h4>
-      </div>
-      <div class="border rounded mb-2 col-md-12 text-center">
-        <ks-modal-gallery
-          [id]="0"
-          [modalImages]="images_0_9"
-          [plainGalleryConfig]="plainGalleryRow"
-          [previewConfig]="{visible: false}"
-          [slideConfig]="{infinite: true, sidePreviews: {show: false}}"
-          [buttonsConfig]="{visible: true, strategy: 1}"
-          [dotsConfig]="{visible: false}">
-        </ks-modal-gallery>
-        <h4>{{ 'arpi.versions.hw.v0_9' | translate }}</h4>
-      </div>
-      <div class="border rounded mb-4 col-md-12 text-center">
-        <ks-modal-gallery
-          [id]="0"
-          [modalImages]="images_2_0"
-          [plainGalleryConfig]="plainGalleryRow"
-          [previewConfig]="{visible: false}"
-          [slideConfig]="{infinite: true, sidePreviews: {show: false}}"
-          [buttonsConfig]="{visible: true, strategy: 1}"
-          [dotsConfig]="{visible: false}">
-        </ks-modal-gallery>
-        <h4>{{ 'arpi.versions.hw.v2_0' | translate }}</h4>
+      <div id="hw-accordion" class="col-12 mb-4">
+        <div class="card bg-transparent">
+          <div role="button" class="card-header" data-toggle="collapse" data-target="#version-2-0" aria-expanded="true" aria-controls="version-2-0">
+            <h4 class="float-left">{{ 'arpi.versions.hw.v2_0' | translate }}</h4>
+            <fa-icon [icon]="faDown" class="float-right"></fa-icon>
+          </div>
+          <div id="version-2-0" class="collapse show" data-parent="#hw-accordion">
+            <div class="card-body">
+              <ks-modal-gallery
+                [id]="0"
+                [modalImages]="images_2_0"
+                [plainGalleryConfig]="plainGalleryRow"
+                [previewConfig]="{visible: false}"
+                [slideConfig]="{infinite: true, sidePreviews: {show: false}}"
+                [buttonsConfig]="{visible: true, strategy: 1}"
+                [dotsConfig]="{visible: false}">
+              </ks-modal-gallery>
+            </div>
+          </div>
+        </div>
+
+        <div class="card bg-transparent">
+          <div role="button" class="card-header" data-toggle="collapse" data-target="#version-0-9" aria-expanded="true" aria-controls="version-0-9">
+            <h4 class="float-left">{{ 'arpi.versions.hw.v0_9' | translate }}</h4>
+            <fa-icon [icon]="faDown" class="float-right"></fa-icon>
+          </div>
+          <div id="version-0-9" class="collapse" data-parent="#hw-accordion">
+            <div class="card-body">
+              <ks-modal-gallery
+                [id]="0"
+                [modalImages]="images_0_9"
+                [plainGalleryConfig]="plainGalleryRow"
+                [previewConfig]="{visible: false}"
+                [slideConfig]="{infinite: true, sidePreviews: {show: false}}"
+                [buttonsConfig]="{visible: true, strategy: 1}"
+                [dotsConfig]="{visible: false}">
+              </ks-modal-gallery>
+            </div>
+          </div>
+        </div>
+
+        <div class="card bg-transparent">
+          <div role="button" class="card-header" data-toggle="collapse" data-target="#version-0-8" aria-expanded="true" aria-controls="version-0-8">
+            <h4 class="float-left">{{ 'arpi.versions.hw.v0_8' | translate }}</h4>
+            <fa-icon [icon]="faDown" class="float-right"></fa-icon>
+          </div>
+          <div id="version-0-8" class="collapse" data-parent="#hw-accordion">
+            <div class="card-body">
+              <ks-modal-gallery
+                [id]="0"
+                [modalImages]="images_0_8"
+                [plainGalleryConfig]="plainGalleryRow"
+                [previewConfig]="{visible: false}"
+                [slideConfig]="{infinite: true, sidePreviews: {show: false}}"
+                [buttonsConfig]="{visible: true, strategy: 1}"
+                [dotsConfig]="{visible: false}">
+              </ks-modal-gallery>
+            </div>
+          </div>
+        </div>        
       </div>
     </div>
     <div class="row">

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { faChevronCircleDown, faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import { Image, PlainGalleryStrategy, PlainGalleryConfig, LineLayout, ButtonsConfig, ButtonsStrategy } from '@ks89/angular-modal-gallery';
 
 @Component({
@@ -49,6 +50,8 @@ export class VersionsComponent implements OnInit {
     visible: true,
     strategy: ButtonsStrategy.DEFAULT
   };
+
+  faDown = faChevronCircleDown
 
   constructor() { }
 
