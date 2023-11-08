@@ -5,15 +5,15 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 import { GalleryModule } from '@ks89/angular-modal-gallery';
 
-import { PreviewComponent } from './preview.component';
+import { VersionsComponent } from './versions.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, 'assets/i18n/', '.json');
 }
 
-describe('PreviewComponent', () => {
-  let component: PreviewComponent;
-  let fixture: ComponentFixture<PreviewComponent>;
+describe('VersionsComponent', () => {
+  let component: VersionsComponent;
+  let fixture: ComponentFixture<VersionsComponent>;
   let translate: TranslateService;
 
   beforeEach(waitForAsync(() => {
@@ -29,7 +29,7 @@ describe('PreviewComponent', () => {
         }),
         GalleryModule.forRoot()
       ],
-      declarations: [ PreviewComponent ],
+      declarations: [ VersionsComponent ],
       providers: [
         TranslateService
       ]
@@ -38,7 +38,7 @@ describe('PreviewComponent', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PreviewComponent);
+    fixture = TestBed.createComponent(VersionsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

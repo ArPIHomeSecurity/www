@@ -16,7 +16,7 @@ import { FeaturesComponent } from '../features/features.component';
 import { AboutComponent } from '../about/about.component';
 import { FooterComponent } from '../footer/footer.component';
 import { ContactComponent } from '../contact/contact.component';
-import { PreviewComponent } from '../preview/preview.component';
+import { VersionsComponent } from '../versions/versions.component';
 import { ShareComponent } from '../share/share.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
@@ -57,8 +57,8 @@ describe('MainComponent', () => {
         ContactComponent,
         FooterComponent,
         MainComponent,
-        PreviewComponent,
-        ShareComponent
+        ShareComponent,
+        VersionsComponent
       ]
     })
     .compileComponents();

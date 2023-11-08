@@ -1,7 +1,5 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { UntypedFormGroup, UntypedFormBuilder, Validators } from '@angular/forms';
-
-import { HttpClient } from '@angular/common/http';
+import { Component, OnInit } from '@angular/core';
+import { UntypedFormGroup } from '@angular/forms';
 
 
 @Component({
@@ -14,9 +12,7 @@ export class ContactComponent implements OnInit {
   public contactForm: UntypedFormGroup;
   email = "Z2tvdmFjczgxQGdtYWlsLmNvbQ==";
 
-  constructor(
-    private formBuilder: UntypedFormBuilder
-  ) {
+  constructor() {
     this.email  = atob(this.email);
   }
 

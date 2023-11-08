@@ -8,7 +8,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { GalleryModule } from '@ks89/angular-modal-gallery';
 import { LazyLoadImageModule } from 'ng-lazyload-image';
-import { ScrollSpyModule, ScrollSpyService } from 'ng-spy';
+import { ScrollSpyModule } from 'ng-spy';
 import { ShareButtonsModule } from 'ngx-sharebuttons/buttons';
 import { ShareIconsModule } from 'ngx-sharebuttons/icons';
 
@@ -20,8 +20,8 @@ import { AboutComponent } from './about/about.component';
 import { MainComponent } from './main/main.component';
 import { FooterComponent } from './footer/footer.component';
 import { ContactComponent } from './contact/contact.component';
-import { PreviewComponent } from './preview/preview.component';
 import { ShareComponent } from './share/share.component';
+import { VersionsComponent } from './versions/versions.component';
 
 import 'hammerjs';
 import 'mousetrap';
@@ -41,8 +41,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     MainComponent,
     FooterComponent,
     ContactComponent,
-    PreviewComponent,
-    ShareComponent
+    ShareComponent,
+    VersionsComponent
   ],
   imports: [
     BrowserModule,

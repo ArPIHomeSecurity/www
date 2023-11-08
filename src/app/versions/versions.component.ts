@@ -1,13 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { Image, PlainGalleryStrategy, PlainGalleryConfig, LineLayout, ButtonsConfig, ButtonsStrategy } from '@ks89/angular-modal-gallery';
-import { TranslateService } from '@ngx-translate/core';
 
 @Component({
-  selector: 'app-preview',
-  templateUrl: './preview.component.html',
-  styleUrls: ['./preview.component.scss']
+  selector: 'app-versions',
+  templateUrl: './versions.component.html',
+  styleUrls: ['./versions.component.scss']
 })
-export class PreviewComponent implements OnInit {
+export class VersionsComponent implements OnInit {
 
   images_0_8: Image[] = [
     new Image(0, {
@@ -51,9 +50,7 @@ export class PreviewComponent implements OnInit {
     strategy: ButtonsStrategy.DEFAULT
   };
 
-  constructor(
-    translate: TranslateService
-  ) { }
+  constructor() { }
 
   ngOnInit() {
 
