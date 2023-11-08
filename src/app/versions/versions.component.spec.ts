@@ -3,6 +3,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateService, TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { GalleryModule } from '@ks89/angular-modal-gallery';
 
 import { VersionsComponent } from './versions.component';
@@ -14,7 +15,6 @@ export function HttpLoaderFactory(http: HttpClient) {
 describe('VersionsComponent', () => {
   let component: VersionsComponent;
   let fixture: ComponentFixture<VersionsComponent>;
-  let translate: TranslateService;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
@@ -27,7 +27,8 @@ describe('VersionsComponent', () => {
               deps: [HttpClient]
           }
         }),
-        GalleryModule.forRoot()
+        GalleryModule.forRoot(),
+        FontAwesomeModule
       ],
       declarations: [ VersionsComponent ],
       providers: [

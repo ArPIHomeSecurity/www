@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { FooterComponent } from './footer.component';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 describe('FooterComponent', () => {
   let component: FooterComponent;
