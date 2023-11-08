@@ -15,15 +15,12 @@
           </div>
           <div id="version-2-0" class="collapse show" data-parent="#hw-accordion">
             <div class="card-body">
-              <ks-modal-gallery
+              <ks-plain-gallery
                 [id]="0"
-                [modalImages]="images_2_0"
-                [plainGalleryConfig]="plainGalleryRow"
-                [previewConfig]="{visible: false}"
-                [slideConfig]="{infinite: true, sidePreviews: {show: false}}"
-                [buttonsConfig]="{visible: true, strategy: 1}"
-                [dotsConfig]="{visible: false}">
-              </ks-modal-gallery>
+                [images]="images_2_0"
+                [config]="libConfigPlainGalleryRowSpaceAround"
+                (clickImage)="onShow(202, $event, images_2_0)">
+              </ks-plain-gallery>
             </div>
           </div>
         </div>
@@ -35,15 +32,12 @@
           </div>
           <div id="version-0-9" class="collapse" data-parent="#hw-accordion">
             <div class="card-body">
-              <ks-modal-gallery
+              <ks-plain-gallery
                 [id]="0"
-                [modalImages]="images_0_9"
-                [plainGalleryConfig]="plainGalleryRow"
-                [previewConfig]="{visible: false}"
-                [slideConfig]="{infinite: true, sidePreviews: {show: false}}"
-                [buttonsConfig]="{visible: true, strategy: 1}"
-                [dotsConfig]="{visible: false}">
-              </ks-modal-gallery>
+                [images]="images_0_9"
+                [config]="libConfigPlainGalleryRowSpaceAround"
+                (clickImage)="onShow(202, $event, images_0_9)">
+              </ks-plain-gallery>
             </div>
           </div>
         </div>
@@ -55,15 +49,12 @@
           </div>
           <div id="version-0-8" class="collapse" data-parent="#hw-accordion">
             <div class="card-body">
-              <ks-modal-gallery
+              <ks-plain-gallery
                 [id]="0"
-                [modalImages]="images_0_8"
-                [plainGalleryConfig]="plainGalleryRow"
-                [previewConfig]="{visible: false}"
-                [slideConfig]="{infinite: true, sidePreviews: {show: false}}"
-                [buttonsConfig]="{visible: true, strategy: 1}"
-                [dotsConfig]="{visible: false}">
-              </ks-modal-gallery>
+                [images]="images_0_8"
+                [config]="libConfigPlainGalleryRowSpaceAround"
+                (clickImage)="onShow(202, $event, images_0_8)">
+              </ks-plain-gallery>
             </div>
           </div>
         </div>        

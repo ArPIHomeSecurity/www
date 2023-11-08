@@ -65,7 +65,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     LazyLoadImageModule,
     ScrollSpyModule,
 
-    GalleryModule.forRoot()
+    GalleryModule
   ],
   providers: [],
   bootstrap: [ AppComponent ]

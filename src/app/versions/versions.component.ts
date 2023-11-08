@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { faChevronCircleDown, faChevronDown } from '@fortawesome/free-solid-svg-icons';
-import { Image, PlainGalleryStrategy, PlainGalleryConfig, LineLayout, ButtonsConfig, ButtonsStrategy } from '@ks89/angular-modal-gallery';
+import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import { Image, PlainGalleryStrategy, LineLayout, ButtonsConfig, ButtonsStrategy, PlainLibConfig, ModalGalleryService, ModalGalleryRef, ModalLibConfig, DescriptionStrategy } from '@ks89/angular-modal-gallery';
 
 @Component({
   selector: 'app-versions',
@@ -41,9 +41,15 @@ export class VersionsComponent implements OnInit {
     })
   ];
 
-  plainGalleryRow: PlainGalleryConfig = {
-    strategy: PlainGalleryStrategy.ROW,
-    layout: new LineLayout({ width: '25%', height: 'auto' }, {length: -1, wrap: true}, 'space-between')
+  libConfigPlainGalleryRowSpaceAround: PlainLibConfig = {
+    plainGalleryConfig: {
+      strategy: PlainGalleryStrategy.ROW,
+      layout: new LineLayout(
+        {width:'auto', height: '400px'},
+        {length: 2, wrap: true},
+        'space-around'
+      )
+    }
   };
 
   buttonsConfig: ButtonsConfig = {
@@ -51,12 +57,40 @@ export class VersionsComponent implements OnInit {
     strategy: ButtonsStrategy.DEFAULT
   };
 
-  faDown = faChevronCircleDown
+  faDown = faChevronDown
 
-  constructor() { }
+  constructor(
+    private modalGalleryService: ModalGalleryService
+  ) { }
 
   ngOnInit() {
 
   }
 
+  onShow(id: number, index: number, images: Image[] = this.images_2_0): void {
+    const dialogRef: ModalGalleryRef = this.modalGalleryService.open({
+      id,
+      images,
+      currentImage: images[index],
+      libConfig: {
+        slideConfig: {
+          infinite: false,
+          sidePreviews: {
+            show: false
+          }
+        },
+        dotsConfig: {
+          visible: false
+        },
+        currentImageConfig: {
+          loadingConfig: {
+            enable: true
+          },
+          description: {
+            strategy: DescriptionStrategy.ALWAYS_HIDDEN
+          }
+        }
+      } as ModalLibConfig
+    }) as ModalGalleryRef;
+  }
 }
