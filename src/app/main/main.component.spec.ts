@@ -43,7 +43,7 @@ describe('MainComponent', () => {
           }
         }),
         LazyLoadImageModule,
-        GalleryModule.forRoot(),
+        GalleryModule,
         ShareButtonsModule,
         ShareIconsModule
       ],

@@ -27,7 +27,7 @@ describe('VersionsComponent', () => {
               deps: [HttpClient]
           }
         }),
-        GalleryModule.forRoot(),
+        GalleryModule,
         FontAwesomeModule
       ],
       declarations: [ VersionsComponent ],
