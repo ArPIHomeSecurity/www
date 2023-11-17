@@ -45,8 +45,8 @@ export class VersionsComponent implements OnInit {
     plainGalleryConfig: {
       strategy: PlainGalleryStrategy.ROW,
       layout: new LineLayout(
-        {width:'auto', height: '400px'},
-        {length: 2, wrap: true},
+        {width:'30%', height: 'auto'},
+        {length: 3, wrap: true},
         'space-around'
       )
     }
