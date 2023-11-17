@@ -62,12 +62,7 @@
   "arpi.contact.message": "Message",
   "arpi.contact.social": "Contact Us on Slack",
   "arpi.order.title": "Order your ArPI interface board",
-  "arpi.order.description": "Please fill the form for order the ArPI board.",
-  "arpi.order.package": "Your package will contain",
-  "arpi.order.package1": "Board",
-  "arpi.order.count": "Pieces",
-  "arpi.order.other": "Write in message",
-  "arpi.order.address": "Address",
-  "arpi.order.message": "Message",
+  "arpi.order.description": "If you want to order an ArPI interface board, please contact us in a message here or on Slack!",
+  "arpi.order.external": "You can buy it on ",
   "arpi.share.title": "Share"
 }

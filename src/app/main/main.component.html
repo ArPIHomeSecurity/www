@@ -21,6 +21,9 @@
       </li>
       
       <li class="nav-item">
+        <a class="nav-link" spyOn="order" activeClass="active" href="#order">{{ 'arpi.menu.order' | translate }}</a>
+      </li>
+      <li class="nav-item">
         <a class="nav-link" spyOn="contact" activeClass="active" href="#contact">{{ 'arpi.menu.contact' | translate }}</a>
       </li>
       <li class="nav-item">
@@ -61,6 +64,9 @@
 </div>
 <div id="about" spyTarget="about">
   <app-about></app-about>
+</div>
+<div id="order" spyTarget="order">
+  <app-order></app-order>
 </div>
 <div id="contact" spyTarget="contact">
   <app-contact></app-contact>

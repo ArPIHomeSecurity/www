@@ -20,6 +20,7 @@ import { AboutComponent } from './about/about.component';
 import { MainComponent } from './main/main.component';
 import { FooterComponent } from './footer/footer.component';
 import { ContactComponent } from './contact/contact.component';
+import { OrderComponent } from './order/order.component';
 import { ShareComponent } from './share/share.component';
 import { VersionsComponent } from './versions/versions.component';
 
@@ -41,6 +42,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     MainComponent,
     FooterComponent,
     ContactComponent,
+    OrderComponent,
     ShareComponent,
     VersionsComponent
   ],
