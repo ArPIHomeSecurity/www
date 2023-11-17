@@ -61,13 +61,8 @@
   "arpi.contact.subject": "Tárgy",
   "arpi.contact.message": "Üzenet",
   "arpi.contact.social": "Lépjen kapcsolatba velünk a Slacken",
-  "arpi.order.title": "Order your ArPI interface board",
-  "arpi.order.description": "Please fill the form for order the ArPI board.",
-  "arpi.order.package": "Your package will contain",
-  "arpi.order.package1": "Board",
-  "arpi.order.count": "Darab",
-  "arpi.order.other": "Üzenetben leírom",
-  "arpi.order.address": "Cím",
-  "arpi.order.message": "Üzenet",
+  "arpi.order.title": "ArPI interfész kártya megrendelése",
+  "arpi.order.description": "Ha szeretnél rendelni egy kártyát kérlek küldj egy üzenetet itt vagy a Slacken!",
+  "arpi.order.external": "Megvásárolhatod itt is ",
   "arpi.share.title": "Megosztás"
 }
