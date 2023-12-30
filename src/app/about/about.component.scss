@@ -4,10 +4,14 @@
   background-size: cover;
 }
 
+.about {
+  margin-bottom: 15px;
+}
 
-.contributors {
+.contributors, .about {
 	background-color: rgba(256,256,256,0.8);
   padding: 50px;
+  border-radius: 10px;
   
   h2 {
     text-transform: uppercase;

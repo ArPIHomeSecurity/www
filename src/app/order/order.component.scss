@@ -6,4 +6,22 @@
 .order {
     background-color: rgba(255, 255, 255, 0.8);
     padding: 50px;
+    border-radius: 10px;
+}
+
+.buy {
+    margin: 40px auto 0px auto;
+    padding: 10px 20px;
+    width: 20%;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #0072ff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+    img {
+        width: 100%;
+    }
 }
