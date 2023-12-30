@@ -37,7 +37,7 @@
   "arpi.features.stack.connection": "Connection",
   "arpi.features.stack.hardware": "Hardware",
   "arpi.versions.title": "ArPI board",
-  "arpi.versions.subtitle": "The Raspberry PI Zero W adapter for interfacing with you home security system",
+  "arpi.versions.subtitle": "The Raspberry PI Zero W adapter for interfacing with your home security system",
   "arpi.versions.version.title": "ArPI software",
   "arpi.versions.version.subtitle": "The open source software of the home security system",
   "arpi.versions.hw.v0_8": "2018 / v0.8 - development",
