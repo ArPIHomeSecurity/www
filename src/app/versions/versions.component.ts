@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import { faChevronDown, faDownload } from '@fortawesome/free-solid-svg-icons';
 import { Image, PlainGalleryStrategy, LineLayout, ButtonsConfig, ButtonsStrategy, PlainLibConfig, ModalGalleryService, ModalGalleryRef, ModalLibConfig, DescriptionStrategy } from '@ks89/angular-modal-gallery';
 
 @Component({
@@ -58,6 +58,7 @@ export class VersionsComponent implements OnInit {
   };
 
   faDown = faChevronDown
+  faDownload = faDownload
 
   constructor(
     private modalGalleryService: ModalGalleryService
