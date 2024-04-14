@@ -21,6 +21,23 @@
                 [config]="libConfigPlainGalleryRowSpaceAround"
                 (clickImage)="onShow(202, $event, images_2_0)">
               </ks-plain-gallery>
+
+              <ks-plain-gallery
+                [id]="0"
+                [images]="images_case_2_0"
+                [config]="libConfigPlainGalleryRowSpaceAround"
+                (clickImage)="onShow(202, $event, images_case_2_0)">
+              </ks-plain-gallery>
+
+              <div class="row mt-5">
+                <div class="col-12 text-center">
+                  <a href="assets/arpi_case.stl" download="arpi_case.stl" class="btn btn-lg download">
+                    <fa-icon [icon]="faDownload"></fa-icon>
+                    {{ 'arpi.versions.case.download' | translate }}
+                  </a>
+                </div>
+              </div>
+
             </div>
           </div>
         </div>

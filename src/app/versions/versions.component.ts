@@ -11,33 +11,45 @@ export class VersionsComponent implements OnInit {
 
   images_0_8: Image[] = [
     new Image(0, {
-      img: 'assets/ArPI_V0.8/IMG_1215.JPG'
+      img: 'assets/ArPI_V0.8/arpi_01.webp'
     }),
     new Image(1, {
-      img: 'assets/ArPI_V0.8/IMG_1213.JPG'
+      img: 'assets/ArPI_V0.8/arpi_02.webp'
     }),
     new Image(2, {
-      img: 'assets/ArPI_V0.8/IMG_1214.JPG'
+      img: 'assets/ArPI_V0.8/arpi_03.webp'
     })
   ];
   images_0_9: Image[] = [
     new Image(0, {
-      img: 'assets/ArPI_V0.9/IMG_20220814_115448_376.jpg'
+      img: 'assets/ArPI_V0.9/arpi_01.webp'
     }),
     new Image(1, {
-      img: 'assets/ArPI_V0.9/IMG_20220814_115529_488.jpg'
+      img: 'assets/ArPI_V0.9/arpi_02.webp'
     })
   ];
 
   images_2_0: Image[] = [
     new Image(0, {
-      img: 'assets/ArPI_V2.0/IMG_20231107_135118_600.jpg'
+      img: 'assets/ArPI_V2.0/arpi_01.webp'
     }),
     new Image(1, {
-      img: 'assets/ArPI_V2.0/IMG_20231107_135201_384.jpg'
+      img: 'assets/ArPI_V2.0/arpi_02.webp'
     }),
     new Image(2, {
-      img: 'assets/ArPI_V2.0/IMG_20231107_135226_259.jpg'
+      img: 'assets/ArPI_V2.0/arpi_03.webp'
+    })
+  ];
+
+  images_case_2_0: Image[] = [
+    new Image(0, {
+      img: 'assets/ArPI_V2.0/arpi_case_01.webp'
+    }),
+    new Image(1, {
+      img: 'assets/ArPI_V2.0/arpi_case_02.webp'
+    }),
+    new Image(2, {
+      img: 'assets/ArPI_V2.0/arpi_case_03.gif'
     })
   ];
 
