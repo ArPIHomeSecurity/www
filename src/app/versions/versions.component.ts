@@ -49,7 +49,7 @@ export class VersionsComponent implements OnInit {
       img: 'assets/ArPI_V2.0/arpi_case_02.webp'
     }),
     new Image(2, {
-      img: 'assets/ArPI_V2.0/arpi_case_03.gif'
+      img: 'assets/ArPI_V2.0/arpi_case_03.webp'
     })
   ];
 

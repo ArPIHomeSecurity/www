@@ -1,113 +1,171 @@
 <div class="versions text-light">
   <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <h2>{{ 'arpi.versions.hw.title' | translate }}</h2>
-        <h3>{{ 'arpi.versions.hw.subtitle' | translate }}</h3>
+    <div class="background">
+
+      <div class="row mb-5">
+        <div class="col-md-12">
+          <h2>{{ 'arpi.versions.hw.title' | translate }}</h2>
+          <h3>{{ 'arpi.versions.hw.subtitle' | translate }}</h3>
+        </div>
       </div>
-    </div>
-    <div class="row">
-      <div id="hw-accordion" class="col-12 mb-4">
-        <div class="card bg-transparent">
-          <div role="button" class="card-header" data-toggle="collapse" data-target="#version-2-0" aria-expanded="true" aria-controls="version-2-0">
-            <h4 class="float-left">{{ 'arpi.versions.hw.v2_0' | translate }}</h4>
-            <fa-icon [icon]="faDown" class="float-right"></fa-icon>
-          </div>
-          <div id="version-2-0" class="collapse show" data-parent="#hw-accordion">
-            <div class="card-body">
-              <ks-plain-gallery
-                [id]="0"
-                [images]="images_2_0"
-                [config]="libConfigPlainGalleryRowSpaceAround"
-                (clickImage)="onShow(202, $event, images_2_0)">
-              </ks-plain-gallery>
 
-              <ks-plain-gallery
-                [id]="0"
-                [images]="images_case_2_0"
-                [config]="libConfigPlainGalleryRowSpaceAround"
-                (clickImage)="onShow(202, $event, images_case_2_0)">
-              </ks-plain-gallery>
-
-              <div class="row mt-5">
-                <div class="col-12 text-center">
-                  <a href="assets/arpi_case.stl" download="arpi_case.stl" class="btn btn-lg download">
-                    <fa-icon [icon]="faDownload"></fa-icon>
-                    {{ 'arpi.versions.case.download' | translate }}
-                  </a>
-                </div>
+      <div class="row">
+        <div id="hw-accordion" class="col-12 mb-4">
+          <div class="card bg-transparent">
+            <div role="button" class="card-header" data-toggle="collapse" data-target="#version-2-0"
+              aria-expanded="true" aria-controls="version-2-0">
+              <h4 class="float-left">{{ 'arpi.versions.hw.v2_0' | translate }}</h4>
+              <fa-icon [icon]="faDown" class="float-right"></fa-icon>
+            </div>
+            <div id="version-2-0" class="collapse show" data-parent="#hw-accordion">
+              <div class="card-body">
+                <ks-plain-gallery [id]="0" [images]="images_2_0" [config]="libConfigPlainGalleryRowSpaceAround"
+                  (clickImage)="onShow(202, $event, images_2_0)">
+                </ks-plain-gallery>
               </div>
+            </div>
+          </div>
 
+          <div class="card bg-transparent">
+            <div role="button" class="card-header" data-toggle="collapse" data-target="#version-0-9"
+              aria-expanded="true" aria-controls="version-0-9">
+              <h4 class="float-left">{{ 'arpi.versions.hw.v0_9' | translate }}</h4>
+              <fa-icon [icon]="faDown" class="float-right"></fa-icon>
+            </div>
+            <div id="version-0-9" class="collapse" data-parent="#hw-accordion">
+              <div class="card-body">
+                <ks-plain-gallery [id]="0" [images]="images_0_9" [config]="libConfigPlainGalleryRowSpaceAround"
+                  (clickImage)="onShow(202, $event, images_0_9)">
+                </ks-plain-gallery>
+              </div>
+            </div>
+          </div>
+
+          <div class="card bg-transparent">
+            <div role="button" class="card-header" data-toggle="collapse" data-target="#version-0-8"
+              aria-expanded="true" aria-controls="version-0-8">
+              <h4 class="float-left">{{ 'arpi.versions.hw.v0_8' | translate }}</h4>
+              <fa-icon [icon]="faDown" class="float-right"></fa-icon>
+            </div>
+            <div id="version-0-8" class="collapse" data-parent="#hw-accordion">
+              <div class="card-body">
+                <ks-plain-gallery [id]="0" [images]="images_0_8" [config]="libConfigPlainGalleryRowSpaceAround"
+                  (clickImage)="onShow(202, $event, images_0_8)">
+                </ks-plain-gallery>
+              </div>
             </div>
           </div>
         </div>
+      </div>
+      <div class="row mb-5">
+        <div class="col-md-12">
+          <h2>{{ 'arpi.versions.sw.title' | translate }}</h2>
+          <h3>{{ 'arpi.versions.sw.subtitle' | translate }}</h3>
+          <ul>
+            <li>
+              <h3>
+                {{ 'arpi.versions.sw.v0_13' | translate }}
+                <a href="https://github.com/ArPIHomeSecurity/arpi_management/releases/tag/v0.13.0"
+                  target="_blank"><fa-icon class="download" [icon]="faDownload"></fa-icon></a>
+              </h3>
+            </li>
+            <li>
+              <h3>
+                {{ 'arpi.versions.sw.v0_12' | translate }}
+                <a href="https://github.com/ArPIHomeSecurity/arpi_management/releases/tag/v0.12.0"
+                  target="_blank"><fa-icon class="download" [icon]="faDownload"></fa-icon></a>
+              </h3>
+            </li>
+            <li>
+              <h3>{{ 'arpi.versions.sw.v0_11' | translate }}</h3>
+            </li>
+            <li>
+              <h3>{{ 'arpi.versions.sw.v0_10' | translate }}</h3>
+            </li>
+            <li>
+              <h3>{{ 'arpi.versions.sw.v0_9' | translate }}</h3>
+            </li>
+            <li>
+              <h3>{{ 'arpi.versions.sw.v0_7' | translate }}</h3>
+            </li>
+            <li>
+              <h3>{{ 'arpi.versions.sw.v0_6' | translate }}</h3>
+            </li>
+            <li>
+              <h3>{{ 'arpi.versions.sw.v0_5' | translate }}</h3>
+            </li>
+            <li>
+              <h3>{{ 'arpi.versions.sw.v0_4' | translate }}</h3>
+            </li>
+          </ul>
 
-        <div class="card bg-transparent">
-          <div role="button" class="card-header" data-toggle="collapse" data-target="#version-0-9" aria-expanded="true" aria-controls="version-0-9">
-            <h4 class="float-left">{{ 'arpi.versions.hw.v0_9' | translate }}</h4>
-            <fa-icon [icon]="faDown" class="float-right"></fa-icon>
-          </div>
-          <div id="version-0-9" class="collapse" data-parent="#hw-accordion">
-            <div class="card-body">
-              <ks-plain-gallery
-                [id]="0"
-                [images]="images_0_9"
-                [config]="libConfigPlainGalleryRowSpaceAround"
-                (clickImage)="onShow(202, $event, images_0_9)">
-              </ks-plain-gallery>
-            </div>
-          </div>
+          <h3>{{ 'arpi.versions.sw.plan' | translate }}</h3>
+          <ul>
+            <li>
+              <h3>{{ 'arpi.versions.sw.v0_14' | translate }}</h3>
+            </li>
+          </ul>
         </div>
+      </div>
 
-        <div class="card bg-transparent">
-          <div role="button" class="card-header" data-toggle="collapse" data-target="#version-0-8" aria-expanded="true" aria-controls="version-0-8">
-            <h4 class="float-left">{{ 'arpi.versions.hw.v0_8' | translate }}</h4>
-            <fa-icon [icon]="faDown" class="float-right"></fa-icon>
-          </div>
-          <div id="version-0-8" class="collapse" data-parent="#hw-accordion">
-            <div class="card-body">
-              <ks-plain-gallery
-                [id]="0"
-                [images]="images_0_8"
-                [config]="libConfigPlainGalleryRowSpaceAround"
-                (clickImage)="onShow(202, $event, images_0_8)">
-              </ks-plain-gallery>
+      <div class="row">
+        <div class="col-md-12">
+          <h2>{{ 'arpi.versions.case.title' | translate }}</h2>
+          <h3>{{ 'arpi.versions.case.subtitle' | translate }}</h3>
+
+          <ks-plain-gallery [id]="0" [images]="images_case_2_0" [config]="libConfigPlainGalleryRowSpaceAround"
+            (clickImage)="onShow(202, $event, images_case_2_0)">
+          </ks-plain-gallery>
+
+          <div class="row videos">
+            <div class="col-md-6">
+              <div class="video">
+                <iframe src="https://www.youtube.com/embed/Kf-6Tk6CrX4?si=TNpy8enAACvgvk6G" title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                </iframe>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="video">
+                <iframe src="https://www.youtube.com/embed/5_mPi1H5lZk?si=PRoj72LfRmD8aFWd" title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+              </iframe>
             </div>
           </div>
-        </div>        
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12">
-        <h2>{{ 'arpi.versions.sw.title' | translate }}</h2>
-        <h3>{{ 'arpi.versions.sw.subtitle' | translate }}</h3>
-        <ul>
-          <li>
-            <h3>
-            {{ 'arpi.versions.sw.v0_13' | translate }}
-            <a href="https://github.com/ArPIHomeSecurity/arpi_management/releases/tag/v0.13.0" target="_blank"><fa-icon class="download" [icon]="faDownload"></fa-icon></a>
-            </h3>
-          </li>
-          <li>
-            <h3>
-              {{ 'arpi.versions.sw.v0_12' | translate }}
-              <a href="https://github.com/ArPIHomeSecurity/arpi_management/releases/tag/v0.12.0" target="_blank"><fa-icon class="download" [icon]="faDownload"></fa-icon></a>
-            </h3>
-          </li>
-          <li><h3>{{ 'arpi.versions.sw.v0_11' | translate }}</h3></li>
-          <li><h3>{{ 'arpi.versions.sw.v0_10' | translate }}</h3></li>
-          <li><h3>{{ 'arpi.versions.sw.v0_9' | translate }}</h3></li>
-          <li><h3>{{ 'arpi.versions.sw.v0_7' | translate }}</h3></li>
-          <li><h3>{{ 'arpi.versions.sw.v0_6' | translate }}</h3></li>
-          <li><h3>{{ 'arpi.versions.sw.v0_5' | translate }}</h3></li>
-          <li><h3>{{ 'arpi.versions.sw.v0_4' | translate }}</h3></li>
-        </ul>
+          <div class="col-md-6">
+              <div class="video">
+                <iframe src="https://www.youtube.com/embed/mas0TQkX8iI?si=BeQGG3FwwuUR8Op5" title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+              </iframe>
+            </div>
+          </div>
+          <div class="col-md-6">
+              <div class="video">
+                <iframe src="https://www.youtube.com/embed/LaZPQanAB60?si=845tbHVCPs26LRQq" title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                </iframe>
+              </div>
+            </div>
+          </div>
 
-        <h3>{{ 'arpi.versions.sw.plan' | translate }}</h3>
-        <ul>
-          <li><h3>{{ 'arpi.versions.sw.v0_14' | translate }}</h3></li>
-        </ul>
+          <div class="w-100 text-center">
+            <a href="assets/arpi_case.stl" download="arpi_case.stl" class="btn btn-lg download my-4">
+              <fa-icon [icon]="faDownload"></fa-icon>
+              {{ 'arpi.versions.case.download' | translate }}
+            </a>
+          </div>
+
+        </div>
       </div>
+
     </div>
   </div>
 </div>

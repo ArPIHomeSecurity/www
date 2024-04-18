@@ -34,7 +34,7 @@
                 <img src="assets/screenshot-area-01.png" alt="Open source home security system" loading="lazy">
               </div>
             </div>
-            
+
             <a class="carousel-control-prev" href="#arpi-features-slider" role="button" data-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
               <span class="sr-only">Previous</span>
@@ -65,7 +65,8 @@
     <div class="container">
       <div *ngIf="odd" class="row">
         <div class="col-md-8 board">
-          <img [attr.src]="'assets/arpi_board_' + feature + '.png'" alt="Raspberry PI Zero W adapter" defaultImage="'https://via.placeholder.com/10x10'" loading="lazy">
+          <img [attr.src]="'assets/arpi_board_' + feature + '.png'" alt="Raspberry PI Zero W adapter"
+            defaultImage="'https://via.placeholder.com/10x10'" loading="lazy">
         </div>
         <div class="col-md-4 description d-flex">
           <div class="align-self-center">
@@ -82,7 +83,8 @@
           </div>
         </div>
         <div class="col-md-8 board">
-          <img [attr.src]="'assets/arpi_board_' + feature + '.png'" alt="Raspberry PI Zero W adapter" defaultImage="'https://via.placeholder.com/10x10'" loading="lazy">
+          <img [attr.src]="'assets/arpi_board_' + feature + '.png'" alt="Raspberry PI Zero W adapter"
+            defaultImage="'https://via.placeholder.com/10x10'" loading="lazy">
         </div>
       </div>
     </div>
@@ -92,7 +94,7 @@
     <div class="container">
       <div class="row title">
         <div class="col-md-12">
-          <h2>{{ 'arpi.feature.stack' | translate }}</h2>
+          <h2>{{ 'arpi.features.stack' | translate }}</h2>
         </div>
       </div>
       <div class="row">
@@ -100,7 +102,7 @@
           <div class="layer border">
             <h3>{{ layer.name | translate }}</h3>
             <div *ngFor="let item of layer.items;let i = index; let last=last">
-              <a [attr.href]="item.url"><img [attr.src]="item.image" loading="lazy"/></a>
+              <a [attr.href]="item.url"><img [attr.src]="item.image" loading="lazy" /></a>
               <hr *ngIf="!last" />
             </div>
           </div>
@@ -108,4 +110,3 @@
       </div>
     </div>
   </div>
-</div>
