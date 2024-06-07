@@ -36,6 +36,7 @@
   "arpi.feature.stack": "Felhasznált technológiák",
   "arpi.features.stack.hardware": "Hardver",
   "arpi.features.stack.connection": "Kapcsolat",
+  "arpi.features.stack.integration": "Integráció",
   "arpi.versions.hw.title": "ArPI panel",
   "arpi.versions.hw.subtitle": "A Raspberry PI illesztő az otthoni biztonsági rendszerhez",
   "arpi.versions.hw.v0_8": "2018 / v0.8 - fejlesztés",
