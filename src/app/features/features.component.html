@@ -98,7 +98,7 @@
         </div>
       </div>
       <div class="row">
-        <div *ngFor="let layer of technologies" class="col-md-3 text-center">
+        <div *ngFor="let layer of technologies" class="col text-center mb-3">
           <div class="layer border">
             <h3>{{ layer.name | translate }}</h3>
             <div *ngFor="let item of layer.items;let i = index; let last=last">
