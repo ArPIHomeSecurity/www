@@ -102,7 +102,7 @@
           <div class="layer border">
             <h3>{{ layer.name | translate }}</h3>
             <div *ngFor="let item of layer.items;let i = index; let last=last">
-              <a [attr.href]="item.url"><img [attr.src]="item.image" loading="lazy" /></a>
+              <a [attr.href]="item.url" target="_blank"><img [attr.src]="item.image" loading="lazy" [attr.alt]="item.text"></a>
               <hr *ngIf="!last" />
             </div>
           </div>
