@@ -16,22 +16,22 @@
           <div id="arpi-features-slider" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img src="assets/screenshot-home-01.png" alt="Open source home security system" loading="lazy">
+                <img src="assets/screenshot-home-01.png" alt="Open source home security system - web application home screen" loading="lazy">
               </div>
               <div class="carousel-item">
-                <img src="assets/screenshot-home-02.png" alt="Open source home security system" loading="lazy">
+                <img src="assets/screenshot-home-02.png" alt="Open source home security system - web application home screen" loading="lazy">
               </div>
               <div class="carousel-item">
-                <img src="assets/screenshot-sensor-01.png" alt="Open source home security system" loading="lazy">
+                <img src="assets/screenshot-sensor-01.png" alt="Open source home security system - web application sensors view" loading="lazy">
               </div>
               <div class="carousel-item">
-                <img src="assets/screenshot-zone-01.png" alt="Open source home security system" loading="lazy">
+                <img src="assets/screenshot-zone-01.png" alt="Open source home security system - web application zones view" loading="lazy">
               </div>
               <div class="carousel-item">
-                <img src="assets/screenshot-menu-01.png" alt="Open source home security system" loading="lazy">
+                <img src="assets/screenshot-menu-01.png" alt="Open source home security system  - web application menu" loading="lazy">
               </div>
               <div class="carousel-item">
-                <img src="assets/screenshot-area-01.png" alt="Open source home security system" loading="lazy">
+                <img src="assets/screenshot-area-01.png" alt="Open source home security system - web application areas view" loading="lazy">
               </div>
             </div>
 
@@ -65,25 +65,25 @@
     <div class="container">
       <div *ngIf="odd" class="row">
         <div class="col-md-8 board">
-          <img [attr.src]="'assets/arpi_board_' + feature + '.png'" alt="Raspberry PI Zero W adapter"
+          <img [attr.src]="'assets/arpi_board_' + feature.title + '.png'" [attr.alt]="'Raspberry PI adapter - ' + feature.text"
             defaultImage="'https://via.placeholder.com/10x10'" loading="lazy">
         </div>
         <div class="col-md-4 description d-flex">
           <div class="align-self-center">
-            <h2>{{ 'arpi.features.' + feature + '.title' | translate }}</h2>
-            <p class="text-justify">{{ 'arpi.features.' + feature + '.description' | translate }}</p>
+            <h2>{{ 'arpi.features.' + feature.title + '.title' | translate }}</h2>
+            <p class="text-justify">{{ 'arpi.features.' + feature.title + '.description' | translate }}</p>
           </div>
         </div>
       </div>
       <div *ngIf="even" class="row">
         <div class="col-md-4 description d-flex">
           <div class="align-self-center">
-            <h2>{{ 'arpi.features.' + feature + '.title' | translate }}</h2>
-            <p class="text-justify">{{ 'arpi.features.' + feature + '.description' | translate }}</p>
+            <h2>{{ 'arpi.features.' + feature.title + '.title' | translate }}</h2>
+            <p class="text-justify">{{ 'arpi.features.' + feature.title + '.description' | translate }}</p>
           </div>
         </div>
         <div class="col-md-8 board">
-          <img [attr.src]="'assets/arpi_board_' + feature + '.png'" alt="Raspberry PI Zero W adapter"
+          <img [attr.src]="'assets/arpi_board_' + feature.title + '.png'" [attr.alt]="'Raspberry PI adapter - ' + feature.text"
             defaultImage="'https://via.placeholder.com/10x10'" loading="lazy">
         </div>
       </div>

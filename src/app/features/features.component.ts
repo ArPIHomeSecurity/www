@@ -46,12 +46,12 @@ export class FeaturesComponent implements OnInit {
   ];
 
   features = [
-    'channels',
-    'outputs',
-    'keypad',
-    'ups',
-    'rtc',
-    'gsm'
+    {title: 'channels', text: 'input channels for sensors'},
+    {title: 'outputs', text: 'output channels for actuators'},
+    {title: 'keypad', text: 'keypad for physical access'},
+    {title: 'ups', text: 'uninterruptible power supply'},
+    {title: 'rtc', text: 'real-time clock'},
+    {title: 'gsm', text: 'gsm module for sms notifications and calls'},
   ];
 
   constructor() {}
