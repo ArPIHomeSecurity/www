@@ -53,7 +53,7 @@ export class VersionsComponent implements OnInit {
     })
   ];
 
-  libConfigPlainGalleryRowSpaceAround: PlainLibConfig = {
+  galleryConfig: PlainLibConfig = {
     plainGalleryConfig: {
       strategy: PlainGalleryStrategy.ROW,
       layout: new LineLayout(

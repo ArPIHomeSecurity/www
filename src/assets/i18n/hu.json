@@ -21,18 +21,31 @@
   "arpi.features.ui.title": "Felhasználói felület",
   "arpi.features.ui.description": "Használd és konfiguráld otthoni biztonsági rendszered egy könnyen kezelhető böngésző alkalmazással asztali számítógépről vagy akár a mobilodról.",
   "arpi.features.ui.description1": "Az ArPI web alkalmazás demo verziója kipróbálható egy simulált környezetben.",
+
   "arpi.features.channels.title": "Csatornák",
   "arpi.features.channels.description": "15 érzékelőt csatlakoztathatsz monitorozásra és riasztásra.",
+  "arpi.features.channels.silent": "Csendes riasztás sziréna nélkül érzékelő vagy rendszer alapján",
+  "arpi.features.channels.sensitivity": "Érzékelő zaj elnyomás érzékelő vagy rendszer alapján",
+
   "arpi.features.rtc.title": "Valós idejű óra",
   "arpi.features.rtc.description": "Valós idejű óra csatlakoztatási lehetőség, hogy internet kapcsolat nélküli működés esetén is pontos legyen a rendszer ideje.",
   "arpi.features.ups.title": "Tápegység",
   "arpi.features.ups.description": "Szünetmentes tápegység csatlakoztatható és az áramkimaradások felismerhetőek.",
+
   "arpi.features.keypad.title": "Billentyűzet",
   "arpi.features.keypad.description": "Wiegand protokoll alapú billentyűzet csatlakoztatható a riasztórendszer vezérléséhez.",
+  "arpi.features.keypad.disarm": "A billentyűzettől függően a rendszer deaktiválása PIN kóddal, RFID kártyával vagy ujjlenyomat azonosítással",
+
   "arpi.features.outputs.title": "Kimenetek",
   "arpi.features.outputs.description": "Két kimenet alkalmas a sziréna vezérlésére (vagy bármi ami a riasztásokkal vezérelhető), valamint két vezérelhető kimenet.",
+  "arpi.features.outputs.button": "Kimenetek közvetlen vezérlése a web felületen található gombokkal",
+  "arpi.features.outputs.state": "Rendszer vagy helyiség állapot függő kimenet vezérlés",
+
   "arpi.features.gsm.title": "GSM",
   "arpi.features.gsm.description": "Értesítések SMS-ben.",
+  "arpi.features.gsm.notifications": "SMS üzenetek és GSM hívások rendszer események alapján (riasztás, áramkimaradás)",
+  "arpi.features.gsm.sms": "SMS üzenetek olvasása a web felületről",
+
   "arpi.feature.stack": "Felhasznált technológiák",
   "arpi.features.stack.hardware": "Hardver",
   "arpi.features.stack.connection": "Kapcsolat",

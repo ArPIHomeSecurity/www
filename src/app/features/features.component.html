@@ -48,13 +48,17 @@
       </div>
 
       <div class="row">
-        <div class="col-md-5 offset-md-1 mt-5 embed-responsive embed-responsive-16by9">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/SXPr6w1OpdQ" frameborder="0"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div class="col-xl-6 p-3">
+          <div class="embed-responsive embed-responsive-4by3">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/SXPr6w1OpdQ" frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
         </div>
-        <div class="col-md-5 offset-md-1 mt-5 embed-responsive embed-responsive-16by9">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/uXUc3SM1nVA" frameborder="0"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div class="col-xl-6 p-3">
+          <div class="embed-responsive embed-responsive-4by3">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/uXUc3SM1nVA" frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
         </div>
       </div>
     </div>
@@ -65,13 +69,20 @@
     <div class="container">
       <div *ngIf="odd" class="row">
         <div class="col-md-8 board">
-          <img [attr.src]="'assets/arpi_board_' + feature.title + '.png'" [attr.alt]="'Raspberry PI adapter - ' + feature.text"
-            defaultImage="'https://via.placeholder.com/10x10'" loading="lazy">
+          <ks-plain-gallery 
+            [id]=feature.id
+            [images]="getImages(feature.title)"
+            [config]="galleryConfig"
+            (clickImage)="onShow(202, $event, feature.title)">
+          </ks-plain-gallery>
         </div>
         <div class="col-md-4 description d-flex">
           <div class="align-self-center">
             <h2>{{ 'arpi.features.' + feature.title + '.title' | translate }}</h2>
             <p class="text-justify">{{ 'arpi.features.' + feature.title + '.description' | translate }}</p>
+            <ul *ngIf="feature.properties">
+              <li *ngFor="let property of feature.properties">{{ 'arpi.features.' + feature.title + '.' + property | translate }}</li>
+            </ul>
           </div>
         </div>
       </div>
@@ -80,11 +91,18 @@
           <div class="align-self-center">
             <h2>{{ 'arpi.features.' + feature.title + '.title' | translate }}</h2>
             <p class="text-justify">{{ 'arpi.features.' + feature.title + '.description' | translate }}</p>
+            <ul *ngIf="feature.properties">
+              <li *ngFor="let property of feature.properties">{{ 'arpi.features.' + feature.title + '.' + property | translate }}</li>
+            </ul>
           </div>
         </div>
         <div class="col-md-8 board">
-          <img [attr.src]="'assets/arpi_board_' + feature.title + '.png'" [attr.alt]="'Raspberry PI adapter - ' + feature.text"
-            defaultImage="'https://via.placeholder.com/10x10'" loading="lazy">
+          <ks-plain-gallery 
+            [id]=feature.id
+            [images]="getImages(feature.title)"
+            [config]="galleryConfig"
+            (clickImage)="onShow(202, $event, feature.title)">
+          </ks-plain-gallery>
         </div>
       </div>
     </div>

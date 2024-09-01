@@ -6,6 +6,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { LazyLoadImageModule } from 'ng-lazyload-image';
 
 import { FeaturesComponent } from './features.component';
+import { GalleryModule } from '@ks89/angular-modal-gallery';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, 'assets/i18n/', '.json');
@@ -27,6 +28,7 @@ describe('FeaturesComponent', () => {
               deps: [HttpClient]
           }
         }),
+        GalleryModule,
         LazyLoadImageModule
       ],
       providers: [

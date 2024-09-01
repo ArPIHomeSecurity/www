@@ -19,7 +19,7 @@
             </div>
             <div id="version-2-0" class="collapse show" data-parent="#hw-accordion">
               <div class="card-body">
-                <ks-plain-gallery [id]="0" [images]="images_2_0" [config]="libConfigPlainGalleryRowSpaceAround"
+                <ks-plain-gallery [id]="0" [images]="images_2_0" [config]="galleryConfig"
                   (clickImage)="onShow(202, $event, images_2_0)">
                 </ks-plain-gallery>
               </div>
@@ -34,7 +34,7 @@
             </div>
             <div id="version-0-9" class="collapse" data-parent="#hw-accordion">
               <div class="card-body">
-                <ks-plain-gallery [id]="0" [images]="images_0_9" [config]="libConfigPlainGalleryRowSpaceAround"
+                <ks-plain-gallery [id]="1" [images]="images_0_9" [config]="galleryConfig"
                   (clickImage)="onShow(202, $event, images_0_9)">
                 </ks-plain-gallery>
               </div>
@@ -49,7 +49,7 @@
             </div>
             <div id="version-0-8" class="collapse" data-parent="#hw-accordion">
               <div class="card-body">
-                <ks-plain-gallery [id]="0" [images]="images_0_8" [config]="libConfigPlainGalleryRowSpaceAround"
+                <ks-plain-gallery [id]="2" [images]="images_0_8" [config]="galleryConfig"
                   (clickImage)="onShow(202, $event, images_0_8)">
                 </ks-plain-gallery>
               </div>
@@ -120,7 +120,7 @@
           <h2>{{ 'arpi.versions.case.title' | translate }}</h2>
           <h3>{{ 'arpi.versions.case.subtitle' | translate }}</h3>
 
-          <ks-plain-gallery [id]="0" [images]="images_case_2_0" [config]="libConfigPlainGalleryRowSpaceAround"
+          <ks-plain-gallery [id]="0" [images]="images_case_2_0" [config]="galleryConfig"
             (clickImage)="onShow(202, $event, images_case_2_0)">
           </ks-plain-gallery>
 
