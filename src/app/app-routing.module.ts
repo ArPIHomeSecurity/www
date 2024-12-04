@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { MainComponent } from './main/main.component';
+import { MainComponent } from './home/main/main.component';
+import { PrivacyComponent } from './privacy/privacy.component';
 
 const routes: Routes = [
   {
@@ -8,9 +9,13 @@ const routes: Routes = [
     component: MainComponent
   },
   {
+    path: 'privacy',
+    component: PrivacyComponent
+  },
+  {
     path: '**',
     redirectTo: '/'
-  }
+  },
 ];
 
 @NgModule({

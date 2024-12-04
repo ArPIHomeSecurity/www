@@ -14,18 +14,19 @@ import { ShareIconsModule } from 'ngx-sharebuttons/icons';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { FeaturesComponent } from './features/features.component';
-import { AboutComponent } from './about/about.component';
-import { MainComponent } from './main/main.component';
-import { FooterComponent } from './footer/footer.component';
-import { ContactComponent } from './contact/contact.component';
-import { OrderComponent } from './order/order.component';
-import { ShareComponent } from './share/share.component';
-import { VersionsComponent } from './versions/versions.component';
+import { HeaderComponent } from './home/header/header.component';
+import { FeaturesComponent } from './home/features/features.component';
+import { AboutComponent } from './home/about/about.component';
+import { MainComponent } from './home/main/main.component';
+import { FooterComponent } from './home/footer/footer.component';
+import { ContactComponent } from './home/contact/contact.component';
+import { OrderComponent } from './home/order/order.component';
+import { ShareComponent } from './home/share/share.component';
+import { VersionsComponent } from './home/versions/versions.component';
 
 import 'hammerjs';
 import 'mousetrap';
+import { PrivacyComponent } from './privacy/privacy.component';
 
 
 
@@ -44,7 +45,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     ContactComponent,
     OrderComponent,
     ShareComponent,
-    VersionsComponent
+    VersionsComponent,
+    PrivacyComponent
   ],
   imports: [
     BrowserModule,
