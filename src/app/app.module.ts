@@ -27,6 +27,7 @@ import { VersionsComponent } from './home/versions/versions.component';
 import 'hammerjs';
 import 'mousetrap';
 import { PrivacyComponent } from './privacy/privacy.component';
+import { TermsComponent } from './terms/terms.component';
 
 
 
@@ -46,7 +47,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     OrderComponent,
     ShareComponent,
     VersionsComponent,
-    PrivacyComponent
+    PrivacyComponent,
+    TermsComponent
   ],
   imports: [
     BrowserModule,
