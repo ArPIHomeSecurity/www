@@ -1,16 +1,13 @@
-.navbar {
-  .navbar-brand {
-    img {
-      width: 40px;
-      margin-right: 10px;
-      float: left;
-    }
+.background {
+    /*background-image: linear-gradient(#0949d3, #598eff);*/
+    background: #00c6ff;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #0072ff, #00c6ff);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #0072ff, #00c6ff);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-    h1 {
-      font-size: 20px;
-      font-weight: 400;
-      margin: 7px 0px;
-      line-height: 24px;
+    .container {
+        background: linear-gradient(to right, #ffffff, #e6e6e6);
     }
-  }
 }

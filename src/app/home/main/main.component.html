@@ -1,58 +1,3 @@
-<nav class="navbar fixed-top navbar-expand-md navbar-dark bg-primary">
-  <a class="navbar-brand d-none d-sm-block" href=".">
-    <img src="assets/arpi-logo-64.png"/>
-    <h1>{{ 'arpi.title.long' | translate }}</h1>
-  </a>
-  <a class="navbar-brand d-sm-none" href=".">
-    <img src="assets/arpi-logo-64.png"/>
-    <h1>{{ 'arpi.title.short' | translate }}</h1>
-  </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div id="navbarSupportedContent" class="collapse navbar-collapse">
-    <ul id="main-menu" class="navbar-nav ml-auto flex-column-reverse flex-md-row-reverse" role="navigation" snScrollSpy>
-      <li class="nav-item">
-        <a href="https://arpi-security.readthedocs.io" target="_blank" class="nav-link text-light">DOCS</a>
-      </li>
-
-      <li class="nav-item">
-        <a href="https://demo.arpi-security.info/" target="_blank" class="nav-link text-light">DEMO</a>
-      </li>
-      
-      <li class="nav-item">
-        <a class="nav-link" spyOn="order" activeClass="active" href="#order">{{ 'arpi.menu.order' | translate }}</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" spyOn="contact" activeClass="active" href="#contact">{{ 'arpi.menu.contact' | translate }}</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" spyOn="about" activeClass="active" href="#about">{{ 'arpi.menu.about' | translate }}</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" spyOn="versions" activeClass="active" href="#versions">{{ 'arpi.menu.versions' | translate }}</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" spyOn="features" activeClass="active" href="#features">{{ 'arpi.menu.features' | translate }}</a>
-      </li>
-    </ul>
-    <div class="dropdown">
-      <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        {{language}}
-      </button>
-      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <a class="dropdown-item" (click)="useLanguage('en')">EN</a>
-        <a class="dropdown-item" (click)="useLanguage('hu')">HU</a>
-      </div>
-    </div>
-    <button class="btn btn-primary" type="button" id="shareButton" data-toggle="modal" data-target="#shareDialog">
-      <fa-icon [icon]="faShareAlt"></fa-icon>
-    </button>
-    <a href="https://github.com/ArPIHomeSecurity" target="_blank" class="nav-link text-light"><fa-icon [icon]="github"></fa-icon></a>
-    <a href="https://arpi-security.slack.com/" target="_blank" class="nav-link text-light"><fa-icon [icon]="slack"></fa-icon></a>
-  </div>
-</nav>
-
 <div id="header" spyTarget="header">
   <app-header ></app-header>
 </div>
@@ -71,7 +16,3 @@
 <div id="contact" spyTarget="contact">
   <app-contact></app-contact>
 </div>
-
-<app-share></app-share>
-
-<app-footer></app-footer>

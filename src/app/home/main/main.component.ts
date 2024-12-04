@@ -1,9 +1,6 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 
-import { TranslateService } from '@ngx-translate/core';
 import { Meta } from '@angular/platform-browser';
-import { faGithub, faSlack } from '@fortawesome/free-brands-svg-icons';
-import { faShareAlt } from '@fortawesome/free-solid-svg-icons';
 
 import * as $ from 'jquery';
 import { ScrollSpyService } from 'ng-spy';
@@ -15,14 +12,8 @@ import { ScrollSpyService } from 'ng-spy';
 })
 export class MainComponent implements OnInit, AfterViewInit {
 
-  language = 'EN';
-  github = faGithub;
-  slack = faSlack;
-  faShareAlt = faShareAlt;
-
   constructor(
     private spyService: ScrollSpyService,
-    private translate: TranslateService,
     private meta: Meta
   ) { }
 
@@ -41,10 +32,5 @@ export class MainComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit() {
     this.spyService.spy({ thresholdBottom: 50 });
-  }
-
-  useLanguage(language: string) {
-    this.translate.use(language);
-    this.language = language.toUpperCase();
   }
 }
