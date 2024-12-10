@@ -1,13 +1,14 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClient, provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { TranslateModule, TranslateLoader, TranslateService } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 import { LazyLoadImageModule } from 'ng-lazyload-image';
-import { ShareButtonsModule } from 'ngx-sharebuttons/buttons';
-import { ShareIconsModule } from 'ngx-sharebuttons/icons';
+import { ShareButtons } from 'ngx-sharebuttons/buttons';
+import { provideShareButtonsOptions } from 'ngx-sharebuttons';
+import { shareIcons } from 'ngx-sharebuttons/icons';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { ShareComponent } from './share.component';
@@ -23,27 +24,27 @@ describe('ShareComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
+      declarations: [ShareComponent],
       imports: [
-        HttpClientModule,
         ReactiveFormsModule,
         TranslateModule.forRoot({
           loader: {
-              provide: TranslateLoader,
-              useFactory: HttpLoaderFactory,
-              deps: [HttpClient]
+            provide: TranslateLoader,
+            useFactory: HttpLoaderFactory,
+            deps: [HttpClient]
           }
         }),
         LazyLoadImageModule,
         FontAwesomeModule,
-        ShareButtonsModule,
-        ShareIconsModule
+        ShareButtons
       ],
       providers: [
-        TranslateService
-      ],
-      declarations: [ ShareComponent ]
+        TranslateService,
+        provideHttpClient(withInterceptorsFromDi()),
+        provideShareButtonsOptions(shareIcons())
+      ]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

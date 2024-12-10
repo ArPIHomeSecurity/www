@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClient, provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { TranslateModule, TranslateLoader, TranslateService } from '@ngx-translate/core';
@@ -7,8 +7,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { LazyLoadImageModule } from 'ng-lazyload-image';
 import { GalleryModule } from '@ks89/angular-modal-gallery';
-import { ShareIconsModule } from 'ngx-sharebuttons/icons';
-import { ShareButtonsModule } from 'ngx-sharebuttons/buttons';
+import { ShareButtons } from 'ngx-sharebuttons/buttons';
 
 import { MainComponent } from './main.component';
 import { HeaderComponent } from '../header/header.component';
@@ -18,6 +17,7 @@ import { FooterComponent } from '../footer/footer.component';
 import { ContactComponent } from '../contact/contact.component';
 import { VersionsComponent } from '../versions/versions.component';
 import { ShareComponent } from '../share/share.component';
+import { OrderComponent } from '../order/order.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, 'assets/i18n/', '.json');
@@ -31,25 +31,6 @@ describe('MainComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      imports: [
-        FontAwesomeModule,
-        HttpClientModule,
-        ReactiveFormsModule,
-        TranslateModule.forRoot({
-          loader: {
-              provide: TranslateLoader,
-              useFactory: HttpLoaderFactory,
-              deps: [HttpClient]
-          }
-        }),
-        LazyLoadImageModule,
-        GalleryModule,
-        ShareButtonsModule,
-        ShareIconsModule
-      ],
-      providers: [
-        TranslateService
-      ],
       declarations: [
         HeaderComponent,
         FeaturesComponent,
@@ -58,10 +39,29 @@ describe('MainComponent', () => {
         FooterComponent,
         MainComponent,
         ShareComponent,
-        VersionsComponent
+        VersionsComponent,
+        OrderComponent
+      ],
+      imports: [
+        FontAwesomeModule,
+        ReactiveFormsModule,
+        TranslateModule.forRoot({
+          loader: {
+            provide: TranslateLoader,
+            useFactory: HttpLoaderFactory,
+            deps: [HttpClient]
+          }
+        }),
+        LazyLoadImageModule,
+        GalleryModule,
+        ShareButtons
+      ],
+      providers: [
+        TranslateService,
+        provideHttpClient(withInterceptorsFromDi())
       ]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

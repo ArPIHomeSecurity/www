@@ -1,16 +1,16 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, provideClientHydration, withEventReplay } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { HttpClient, provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { GalleryModule } from '@ks89/angular-modal-gallery';
 import { LazyLoadImageModule } from 'ng-lazyload-image';
-import { ScrollSpyModule } from 'ng-spy';
-import { ShareButtonsModule } from 'ngx-sharebuttons/buttons';
-import { ShareIconsModule } from 'ngx-sharebuttons/icons';
+import { ShareButtons } from 'ngx-sharebuttons/buttons';
+import { provideShareButtonsOptions } from 'ngx-sharebuttons';
+import { shareIcons } from 'ngx-sharebuttons/icons';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -24,7 +24,6 @@ import { OrderComponent } from './home/order/order.component';
 import { ShareComponent } from './home/share/share.component';
 import { VersionsComponent } from './home/versions/versions.component';
 
-import 'hammerjs';
 import 'mousetrap';
 import { PrivacyComponent } from './privacy/privacy.component';
 import { TermsComponent } from './terms/terms.component';
@@ -50,30 +49,34 @@ export function HttpLoaderFactory(http: HttpClient) {
     PrivacyComponent,
     TermsComponent
   ],
+  bootstrap: [
+    AppComponent
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
 
     TranslateModule.forRoot({
       loader: {
-          provide: TranslateLoader,
-          useFactory: HttpLoaderFactory,
-          deps: [HttpClient]
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
       }
     }),
 
     FontAwesomeModule,
-    ShareButtonsModule,
-    ShareIconsModule,
     LazyLoadImageModule,
-    ScrollSpyModule,
-
-    GalleryModule
+    GalleryModule,
+    ShareButtons
   ],
-  providers: [],
-  bootstrap: [ AppComponent ]
+  providers: [
+    provideHttpClient(withInterceptorsFromDi()),
+    provideClientHydration(withEventReplay()),
+    provideShareButtonsOptions(
+      shareIcons()
+    )
+  ]
 })
 export class AppModule { }

@@ -1,11 +1,15 @@
 import { TestBed, waitForAsync } from '@angular/core/testing';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClient, provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 
 import { TranslateModule, TranslateLoader, TranslateService } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
-import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { ShareComponent } from './home/share/share.component';
+import { FooterComponent } from './home/footer/footer.component';
+import { AppRoutingModule } from './app-routing.module';
+import { ShareButtons } from 'ngx-sharebuttons/buttons';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, 'assets/i18n/', '.json');
@@ -16,23 +20,27 @@ describe('AppComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
+      declarations: [
+        AppComponent,
+        ShareComponent,
+        FooterComponent
+      ],
       imports: [
-        RouterTestingModule,
-        HttpClientModule,
+        AppRoutingModule,
+        FontAwesomeModule,
+        ShareButtons,
         TranslateModule.forRoot({
           loader: {
-              provide: TranslateLoader,
-              useFactory: HttpLoaderFactory,
-              deps: [HttpClient]
+            provide: TranslateLoader,
+            useFactory: HttpLoaderFactory,
+            deps: [HttpClient]
           }
         })
       ],
       providers: [
-        TranslateService
-      ],
-      declarations: [
-        AppComponent
-      ],
+        TranslateService,
+        provideHttpClient(withInterceptorsFromDi())
+      ]
     }).compileComponents();
   }));
 

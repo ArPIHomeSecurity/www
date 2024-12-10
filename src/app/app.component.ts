@@ -5,9 +5,10 @@ import { faGithub, faSlack } from '@fortawesome/free-brands-svg-icons';
 import { faShareAlt } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss'],
+    standalone: false
 })
 export class AppComponent {
 
@@ -18,6 +19,8 @@ export class AppComponent {
   language = 'EN';
 
   title = 'www';
+
+  menuClosed = true;
 
   constructor(private translate: TranslateService) {
     // this language will be used as a fallback when a translation isn't found in the current language
@@ -30,5 +33,14 @@ export class AppComponent {
   useLanguage(language: string) {
     this.translate.use(language);
     this.language = language.toUpperCase();
+    this.menuClosed = true;
+  }
+
+  onMenuClicked() {
+    this.menuClosed = !this.menuClosed;
+  }
+
+  onMenuClose() {
+    this.menuClosed = true;
   }
 }
