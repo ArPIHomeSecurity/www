@@ -5,9 +5,10 @@ import { Meta } from '@angular/platform-browser';
 import $ from 'jquery';
 
 @Component({
-  selector: 'app-main',
-  templateUrl: './main.component.html',
-  styleUrls: ['./main.component.scss']
+    selector: 'app-main',
+    templateUrl: './main.component.html',
+    styleUrls: ['./main.component.scss'],
+    standalone: false
 })
 export class MainComponent implements OnInit {
 

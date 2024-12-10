@@ -3,9 +3,10 @@ import { faChevronDown, faDownload } from '@fortawesome/free-solid-svg-icons';
 import { Image, PlainGalleryStrategy, LineLayout, ButtonsConfig, ButtonsStrategy, PlainLibConfig, ModalGalleryService, ModalGalleryRef, ModalLibConfig, DescriptionStrategy } from '@ks89/angular-modal-gallery';
 
 @Component({
-  selector: 'app-versions',
-  templateUrl: './versions.component.html',
-  styleUrls: ['./versions.component.scss']
+    selector: 'app-versions',
+    templateUrl: './versions.component.html',
+    styleUrls: ['./versions.component.scss'],
+    standalone: false
 })
 export class VersionsComponent implements OnInit {
 

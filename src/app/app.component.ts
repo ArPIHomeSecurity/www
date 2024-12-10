@@ -5,9 +5,10 @@ import { faGithub, faSlack } from '@fortawesome/free-brands-svg-icons';
 import { faShareAlt } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss'],
+    standalone: false
 })
 export class AppComponent {
 

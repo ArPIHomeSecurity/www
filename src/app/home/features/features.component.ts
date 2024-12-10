@@ -2,9 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { ButtonsStrategy, DescriptionStrategy, Image, LineLayout, ModalGalleryRef, ModalGalleryService, ModalLibConfig, PlainGalleryStrategy, PlainLibConfig } from '@ks89/angular-modal-gallery';
 
 @Component({
-  selector: 'app-features',
-  templateUrl: './features.component.html',
-  styleUrls: ['./features.component.scss']
+    selector: 'app-features',
+    templateUrl: './features.component.html',
+    styleUrls: ['./features.component.scss'],
+    standalone: false
 })
 export class FeaturesComponent implements OnInit {
   technologies = [
