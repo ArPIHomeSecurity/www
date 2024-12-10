@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { Meta } from '@angular/platform-browser';
 
-import * as $ from 'jquery';
+import $ from 'jquery';
 
 @Component({
   selector: 'app-main',
@@ -23,7 +23,7 @@ export class MainComponent implements OnInit {
     });
     $('a.nav-link, .dropdown-item').on('click', function () {
       if ($('.navbar-toggler').is(":visible")) {
-        $('.navbar-toggler').click();
+        $('.navbar-toggler').trigger('click');
       }
     });
   }
