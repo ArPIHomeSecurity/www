@@ -6,8 +6,9 @@ import { TranslateModule, TranslateLoader, TranslateService } from '@ngx-transla
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 import { LazyLoadImageModule } from 'ng-lazyload-image';
-import { ShareButtonsModule } from 'ngx-sharebuttons/buttons';
-import { ShareIconsModule } from 'ngx-sharebuttons/icons';
+import { ShareButtons } from 'ngx-sharebuttons/buttons';
+import { provideShareButtonsOptions } from 'ngx-sharebuttons';
+import { shareIcons } from 'ngx-sharebuttons/icons';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { ShareComponent } from './share.component';
@@ -35,12 +36,12 @@ describe('ShareComponent', () => {
         }),
         LazyLoadImageModule,
         FontAwesomeModule,
-        ShareButtonsModule,
-        ShareIconsModule
+        ShareButtons
       ],
       providers: [
         TranslateService,
-        provideHttpClient(withInterceptorsFromDi())
+        provideHttpClient(withInterceptorsFromDi()),
+        provideShareButtonsOptions(shareIcons())
       ]
     })
       .compileComponents();

@@ -9,8 +9,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ShareComponent } from './home/share/share.component';
 import { FooterComponent } from './home/footer/footer.component';
 import { AppRoutingModule } from './app-routing.module';
-import { ShareButtonsModule } from 'ngx-sharebuttons/buttons';
-import { ShareIconsModule } from 'ngx-sharebuttons/icons';
+import { ShareButtons } from 'ngx-sharebuttons/buttons';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, 'assets/i18n/', '.json');
@@ -29,8 +28,7 @@ describe('AppComponent', () => {
       imports: [
         AppRoutingModule,
         FontAwesomeModule,
-        ShareButtonsModule,
-        ShareIconsModule,
+        ShareButtons,
         TranslateModule.forRoot({
           loader: {
             provide: TranslateLoader,

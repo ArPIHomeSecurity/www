@@ -16,7 +16,7 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
   }
 
-  imageLoaded(event) {
+  imageLoaded(event: Event) {
     this.displayPlaceholder = false;
   }
 }

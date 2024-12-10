@@ -27,13 +27,13 @@
           "builder": "@angular-devkit/build-angular:application",
           "options": {
             "outputPath": {
-              "base": "dist/www"
+              "base": "dist"
             },
             "index": "src/index.html",
             "polyfills": [
-              "src/polyfills.ts"
+              "zone.js"
             ],
-            "tsConfig": "tsconfig.json",
+            "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/assets",
               "src/favicon.ico",
@@ -55,10 +55,18 @@
             "sourceMap": true,
             "optimization": false,
             "namedChunks": true,
-            "browser": "src/main.ts"
+            "browser": "src/main.ts",
+            "server": "src/main.server.ts",
+            "prerender": true,
+            "ssr": {
+              "entry": "src/server.ts"
+            }
           },
           "configurations": {
             "production": {
+              "outputPath": {
+                "base": "dist-prod"
+              },
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",

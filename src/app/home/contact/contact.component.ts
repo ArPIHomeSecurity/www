@@ -10,7 +10,7 @@ import { UntypedFormGroup } from '@angular/forms';
 })
 export class ContactComponent implements OnInit {
 
-  public contactForm: UntypedFormGroup;
+  public contactForm: UntypedFormGroup = new UntypedFormGroup({});
   email = "Z2tvdmFjczgxQGdtYWlsLmNvbQ==";
 
   constructor() {

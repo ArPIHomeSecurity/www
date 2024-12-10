@@ -1,4 +1,4 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, provideClientHydration, withEventReplay } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClient, provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
@@ -8,8 +8,9 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { GalleryModule } from '@ks89/angular-modal-gallery';
 import { LazyLoadImageModule } from 'ng-lazyload-image';
-import { ShareButtonsModule } from 'ngx-sharebuttons/buttons';
-import { ShareIconsModule } from 'ngx-sharebuttons/icons';
+import { ShareButtons } from 'ngx-sharebuttons/buttons';
+import { provideShareButtonsOptions } from 'ngx-sharebuttons';
+import { shareIcons } from 'ngx-sharebuttons/icons';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -23,7 +24,6 @@ import { OrderComponent } from './home/order/order.component';
 import { ShareComponent } from './home/share/share.component';
 import { VersionsComponent } from './home/versions/versions.component';
 
-import 'hammerjs';
 import 'mousetrap';
 import { PrivacyComponent } from './privacy/privacy.component';
 import { TermsComponent } from './terms/terms.component';
@@ -67,11 +67,16 @@ export function HttpLoaderFactory(http: HttpClient) {
     }),
 
     FontAwesomeModule,
-    ShareButtonsModule,
-    ShareIconsModule,
     LazyLoadImageModule,
-    GalleryModule
+    GalleryModule,
+    ShareButtons
   ],
-  providers: [provideHttpClient(withInterceptorsFromDi())]
+  providers: [
+    provideHttpClient(withInterceptorsFromDi()),
+    provideClientHydration(withEventReplay()),
+    provideShareButtonsOptions(
+      shareIcons()
+    )
+  ]
 })
 export class AppModule { }

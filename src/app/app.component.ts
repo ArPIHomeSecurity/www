@@ -20,6 +20,8 @@ export class AppComponent {
 
   title = 'www';
 
+  menuClosed = true;
+
   constructor(private translate: TranslateService) {
     // this language will be used as a fallback when a translation isn't found in the current language
     translate.setDefaultLang('en');
@@ -31,5 +33,14 @@ export class AppComponent {
   useLanguage(language: string) {
     this.translate.use(language);
     this.language = language.toUpperCase();
+    this.menuClosed = true;
+  }
+
+  onMenuClicked() {
+    this.menuClosed = !this.menuClosed;
+  }
+
+  onMenuClose() {
+    this.menuClosed = true;
   }
 }

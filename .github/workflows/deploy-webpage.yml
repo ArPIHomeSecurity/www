@@ -31,7 +31,7 @@ jobs:
 
       - name: Build application 💪
         run: |
-          ng build --configuration production --output-path dist/prod --base-href  "https://www.arpi-security.info"
+          ng build --configuration production --base-href  "https://www.arpi-security.info"
 
       - name: Test application 🤞
         run: |
@@ -41,4 +41,4 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@4.1.7
         with:
           branch: gh-pages
-          folder: dist/prod
+          folder: dist-prod/browser

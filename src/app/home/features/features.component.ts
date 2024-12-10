@@ -107,7 +107,7 @@ export class FeaturesComponent implements OnInit {
     })];
   }
 
-  onShow(id: number, index: number, title): void {
+  onShow(id: number, index: number, title: string): void {
     const images: Image[] = this.getImages(title);
 
     const dialogRef: ModalGalleryRef = this.modalGalleryService.open({
