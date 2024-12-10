@@ -8,7 +8,6 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { GalleryModule } from '@ks89/angular-modal-gallery';
 import { LazyLoadImageModule } from 'ng-lazyload-image';
-import { ScrollSpyModule } from 'ng-spy';
 import { ShareButtonsModule } from 'ngx-sharebuttons/buttons';
 import { ShareIconsModule } from 'ngx-sharebuttons/icons';
 
@@ -69,7 +68,6 @@ export function HttpLoaderFactory(http: HttpClient) {
     ShareButtonsModule,
     ShareIconsModule,
     LazyLoadImageModule,
-    ScrollSpyModule,
 
     GalleryModule
   ],

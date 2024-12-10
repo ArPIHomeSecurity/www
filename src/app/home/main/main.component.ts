@@ -1,19 +1,17 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { Meta } from '@angular/platform-browser';
 
 import * as $ from 'jquery';
-import { ScrollSpyService } from 'ng-spy';
 
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.scss']
 })
-export class MainComponent implements OnInit, AfterViewInit {
+export class MainComponent implements OnInit {
 
   constructor(
-    private spyService: ScrollSpyService,
     private meta: Meta
   ) { }
 
@@ -28,9 +26,5 @@ export class MainComponent implements OnInit, AfterViewInit {
         $('.navbar-toggler').click();
       }
     });
-  }
-
-  ngAfterViewInit() {
-    this.spyService.spy({ thresholdBottom: 50 });
   }
 }
