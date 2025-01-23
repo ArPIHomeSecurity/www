@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
-import { HttpClient, provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
+import { HttpClient, provideHttpClient, withFetch } from '@angular/common/http';
 
 import { TranslateModule, TranslateLoader, TranslateService } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
@@ -31,7 +31,7 @@ describe('FeaturesComponent', () => {
         LazyLoadImageModule],
     providers: [
         TranslateService,
-        provideHttpClient(withInterceptorsFromDi())
+        provideHttpClient(withFetch())
     ]
 })
     .compileComponents();
