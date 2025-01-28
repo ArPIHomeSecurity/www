@@ -2,8 +2,16 @@
   <div class="col-md-4 offset-md-4 text-center">
     &#169; <span class="year" data-testid="footer-year">{{year}}</span> - <a href="https://github.com/ArPIHomeSecurity" target="_blank" class="text-light">ArPIHomeSecurity <fa-icon [icon]="github"></fa-icon> Github</a>
     <br>
-    <a routerLink="/privacy" class="text-light">Privacy</a>
+    <a routerLink="/privacy" class="text-light">
+      <fa-icon [icon]="faPrivacy"></fa-icon> {{ 'arpi.footer.privacy' | translate }}
+    </a>
     <br>
-    <a routerLink="/terms" class="text-light">Terms of usage</a>
+    <a routerLink="/terms" class="text-light">
+      <fa-icon [icon]="faTerms"></fa-icon> {{ 'arpi.footer.terms' | translate }}
+    </a>
+    <br>
+    <a id="consent-link" routerLink="#" class="text-light glow-effect" data-toggle="modal" data-target="#consentDialog">
+      <fa-icon [icon]="faCookie"></fa-icon> {{ 'arpi.footer.consent' | translate }} 
+    </a>
   </div>
 </div>

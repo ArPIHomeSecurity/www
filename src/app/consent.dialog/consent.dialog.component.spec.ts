@@ -1,24 +1,22 @@
-import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { HttpClient, provideHttpClient, withFetch } from '@angular/common/http';
 
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { TranslateLoader, TranslateModule, TranslateService } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { TranslateLoader, TranslateModule, TranslateService } from '@ngx-translate/core';
 
-import { FooterComponent } from './footer.component';
+import { ConsentDialogComponent } from './consent.dialog.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, 'assets/i18n/', '.json');
 }
 
-describe('FooterComponent', () => {
-  let component: FooterComponent;
-  let fixture: ComponentFixture<FooterComponent>;
+describe('ConsentDialogComponent', () => {
+  let component: ConsentDialogComponent;
+  let fixture: ComponentFixture<ConsentDialogComponent>;
 
-  beforeEach(waitForAsync(() => {
-    TestBed.configureTestingModule({
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
       imports: [
-        FontAwesomeModule,
         TranslateModule.forRoot({
           loader: {
             provide: TranslateLoader,
@@ -31,13 +29,11 @@ describe('FooterComponent', () => {
         TranslateService,
         provideHttpClient(withFetch())
       ],
-      declarations: [FooterComponent]
+      declarations: [ConsentDialogComponent]
     })
       .compileComponents();
-  }));
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(FooterComponent);
+    fixture = TestBed.createComponent(ConsentDialogComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

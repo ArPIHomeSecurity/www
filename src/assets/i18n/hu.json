@@ -90,5 +90,14 @@
   "arpi.order.title": "ArPI interfész kártya megrendelése",
   "arpi.order.description": "Ha szeretnél rendelni egy kártyát kérlek küldj egy üzenetet itt vagy a Slacken, vagy vásorolj a Tindie-n!",
   "arpi.order.external": "Vásárlás",
-  "arpi.share.title": "Megosztás"
+  "arpi.share.title": "Megosztás",
+
+  "arpi.consent.title": "Süti hozzájárulás",
+  "arpi.consent.message": "Sütiket használunk az oldal használat statisztikájának gyűjtésére Google Analytics segítségével. Kérjük fogadd el a sütik használatát.",
+  "arpi.consent.grant": "Elfogad",
+  "arpi.consent.deny": "Elutasít",
+
+  "arpi.footer.privacy": "Adatvédelmi irányelvek",
+  "arpi.footer.terms": "Szolgáltatási feltételek",
+  "arpi.footer.consent": "Süti hozzájárulás"
 }

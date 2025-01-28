@@ -23,11 +23,11 @@ import { ContactComponent } from './home/contact/contact.component';
 import { OrderComponent } from './home/order/order.component';
 import { ShareComponent } from './home/share/share.component';
 import { VersionsComponent } from './home/versions/versions.component';
-
-import 'mousetrap';
 import { PrivacyComponent } from './privacy/privacy.component';
 import { TermsComponent } from './terms/terms.component';
+import { ConsentDialogComponent } from "./consent.dialog/consent.dialog.component";
 
+import 'mousetrap';
 
 
 export function HttpLoaderFactory(http: HttpClient) {
@@ -47,7 +47,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     ShareComponent,
     VersionsComponent,
     PrivacyComponent,
-    TermsComponent
+    TermsComponent,
+    ConsentDialogComponent
   ],
   bootstrap: [
     AppComponent
@@ -57,20 +58,18 @@ export function HttpLoaderFactory(http: HttpClient) {
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-
     TranslateModule.forRoot({
-      loader: {
-        provide: TranslateLoader,
-        useFactory: HttpLoaderFactory,
-        deps: [HttpClient]
-      }
+        loader: {
+            provide: TranslateLoader,
+            useFactory: HttpLoaderFactory,
+            deps: [HttpClient]
+        }
     }),
-
     FontAwesomeModule,
     LazyLoadImageModule,
     GalleryModule,
     ShareButtons
-  ],
+],
   providers: [
     provideHttpClient(withFetch()),
     provideClientHydration(withEventReplay()),

@@ -139,17 +139,26 @@
   </script>
   <!-- End Google Tag Manager -->
 
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-28DZK2C517"></script>
+  <script>
+    // check local storage for google analytics consent
+    var consent = localStorage.getItem('google-analytics-consent') || 'denied';
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('consent', 'default', {
+      'ad_storage': consent,
+      'ad_user_data': consent,
+      'ad_personalization': consent,
+      'analytics_storage': consent,
+    });
+
+    gtag('config', 'G-28DZK2C517');
+  </script>
+  <!-- End Google tag (gtag.js) -->
 </head>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-28DZK2C517"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag() { dataLayer.push(arguments); }
-  gtag('js', new Date());
-
-  gtag('config', 'G-28DZK2C517');
-</script>
 
 <body class="bg-light">
   <app-root>
@@ -160,7 +169,8 @@
 <!-- Google Tag Manager (noscript) -->
 <noscript>
   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5QZ2RD9" height="0" width="0"
-    style="display:none;visibility:hidden"></iframe>
+    style="display:none;visibility:hidden">
+  </iframe>
 </noscript>
 <!-- End Google Tag Manager (noscript) -->
 

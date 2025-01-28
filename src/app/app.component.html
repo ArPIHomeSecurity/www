@@ -60,6 +60,9 @@
     <a href="https://arpi-security.slack.com/" target="_blank" class="nav-link text-light" (click)="onMenuClose()">
       <fa-icon [icon]="slack"></fa-icon>
     </a>
+    <button #consentButton class="btn nav-link text-light glow-effect" data-toggle="modal" data-target="#consentDialog">
+      <fa-icon [icon]="faCookie"></fa-icon>
+    </button>
   </div>
 </nav>
 
@@ -68,3 +71,5 @@
 <app-share></app-share>
 
 <app-footer></app-footer>
+
+<app-consent-dialog (onClosed)="onConsentDialogClosed()"></app-consent-dialog>

@@ -90,5 +90,14 @@
   "arpi.order.title": "Order your ArPI interface board",
   "arpi.order.description": "If you want to order an ArPI interface board, please contact us in a message here or on Slack or buy on on Tindie!",
   "arpi.order.external": "Buy",
-  "arpi.share.title": "Share"
+  "arpi.share.title": "Share",
+
+  "arpi.consent.title": "Cookie consent",
+  "arpi.consent.message": "We use cookies to get information about the usage of our website with Google Analytics. Please accept the use of cookies.",
+  "arpi.consent.grant": "Accept",
+  "arpi.consent.deny": "Decline",
+
+  "arpi.footer.privacy": "Privacy policy",
+  "arpi.footer.terms": "Terms of service",
+  "arpi.footer.consent": "Cookie consent"
 }
