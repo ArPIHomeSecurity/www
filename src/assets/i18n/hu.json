@@ -21,6 +21,7 @@
   "arpi.about.contributors.team": "A projektet fejlesztő GitHub csoport",
   "arpi.about.title": "ArPI - Raspberry PI alapú otthoni riasztórendszer",
   "arpi.about.description": "Riasztód vezérlő paneljének cseréjével és a telepített komponensek (érzékelők, sziréna, billentyúzet) felokosíthatod otthoni riasztó rendszeredet. A rendszernek két fő komponense van: egy adapter kártya a Raspberry PI és a riasztó rendszer illesztéséhez, és egy nyílt forrású szoftver a rendszer konfigurálására és használatára.",
+  "arpi.about.references.docs": "Dokumentáció",
 
   "arpi.features.general.title": "Funkciók",
   "arpi.features.general.secureaccess.title": "Biztonságos hozzáférés",

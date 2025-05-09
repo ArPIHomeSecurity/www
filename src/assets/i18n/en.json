@@ -21,6 +21,7 @@
   "arpi.about.contributors.team": "Project is developed by GitHub team",
   "arpi.about.title": "ArPI - Raspberry PI based home security system",
   "arpi.about.description": "Only replacing the main board of your old security system and reuse the installed components (sensors, syren, keypad) you can make your home security system smart. The system has two major components: an adapter component for interfacing between the Raspberry PI and the security system components and the open source software to configure and use the system.",
+  "arpi.about.references.docs": "Documentation",
 
   "arpi.features.general.title": "Features",
   "arpi.features.general.secureaccess.title": "Secure access",

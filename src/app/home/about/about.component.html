@@ -1,11 +1,11 @@
 <div class="background">
   <div class="container">
-    <div class="about">
+    <div id="about" class="section">
       <h2>{{ 'arpi.about.title' | translate }}</h2>
       <p class="text-justify">{{ 'arpi.about.description' | translate }}</p>
     </div>
 
-    <div class="contributors">
+    <div id="contributors" class="section">
       <div class="row ">
         <div class="col-md-8">
           
@@ -95,21 +95,38 @@
       </div>
     </div>
 
-    <div class="diy">
-      <div class="row">
-        <div class="col">
-          <h2>DIY</h2>
+    <div id="references" class="section row">
+      <div class="col-6">
+        <div class="row">
+          <div class="col">
+            <h2>DIY</h2>
+          </div>
+        </div>
+        <div class="row">
+          <ul>
+            <li>
+              <a href="https://www.instructables.com/ArPI-Home-Security-System/">Instructables</a>
+            </li>
+            <li>
+              <a href="https://www.hackster.io/gkovacs81/arpi-home-security-system-a18e57">Hackster.io</a>
+            </li>
+          </ul>
         </div>
       </div>
-      <div class="row">
-        <ul>
-          <li>
-            <a href="https://www.instructables.com/ArPI-Home-Security-System/">Instructables</a>
-          </li>
-          <li>
-            <a href="https://www.hackster.io/gkovacs81/arpi-home-security-system-a18e57">Hackster.io</a>
-          </li>
-        </ul>
+
+      <div class="col-6">
+        <div class="row">
+          <div class="col">
+            <h2>DOCS</h2>
+          </div>
+        </div>
+        <div class="row">
+          <ul>
+            <li>
+              <a href="https://docs.arpi-security.info">{{ 'arpi.about.references.docs' | translate }}</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
 
