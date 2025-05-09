@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { faBell, faBolt, faClock, faCog, faGlobe, faLock, faMapMarked, faUsers } from '@fortawesome/free-solid-svg-icons';
 import { ButtonsStrategy, DescriptionStrategy, Image, LineLayout, ModalGalleryRef, ModalGalleryService, ModalLibConfig, PlainGalleryStrategy, PlainLibConfig } from '@ks89/angular-modal-gallery';
 
 @Component({
@@ -82,6 +83,49 @@ export class FeaturesComponent implements OnInit {
       text: 'real-time clock',
       properties: []
     },
+  ];
+
+  generalFeatures = [
+    {
+      icon: faLock,
+      title: 'arpi.features.general.secureaccess.title',
+      description: 'arpi.features.general.secureaccess.description'
+    },
+    {
+      icon: faUsers,
+      title: 'arpi.features.general.users.title',
+      description: 'arpi.features.general.users.description'
+    },
+    {
+      icon: faMapMarked,
+      title: 'arpi.features.general.locations.title',
+      description: 'arpi.features.general.locations.description'
+    },
+    {
+      icon: faCog,
+      title: 'arpi.features.general.programmable.title',
+      description: 'arpi.features.general.programmable.description'
+    },
+    {
+      icon: faGlobe,
+      title: 'arpi.features.general.remoteaccess.title',
+      description: 'arpi.features.general.remoteaccess.description'
+    },
+    {
+      icon: faBell,
+      title: 'arpi.features.general.notifications.title',
+      description: 'arpi.features.general.notifications.description'
+    },
+    {
+      icon: faBolt,
+      title: 'arpi.features.general.poweroutage.title',
+      description: 'arpi.features.general.poweroutage.description'
+    },
+    {
+      icon: faClock,
+      title: 'arpi.features.general.delayedalert.title',
+      description: 'arpi.features.general.delayedalert.description'
+    }
   ];
 
   galleryConfig: PlainLibConfig = {
