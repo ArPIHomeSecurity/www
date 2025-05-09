@@ -36,6 +36,8 @@
   "arpi.features.general.programmable.description": "You can use the board for controlling other devices with the programmable outputs.",
   "arpi.features.general.locations.title": "Locations/areas",
   "arpi.features.general.locations.description": "You can manage multiple locations or areas",
+  "arpi.features.general.homeautomation.title": "Home automation",
+  "arpi.features.general.homeautomation.description": "You can integrate the system with other home automation systems like Home Assistant, Domoticz.",
 
   "arpi.features.ui.title": "User interface",
   "arpi.features.ui.description": "Experience complete control of your home security system with our intuitive and user-friendly application, accessible from both mobile devices and desktop computers.",

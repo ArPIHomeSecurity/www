@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { faBell, faBolt, faClock, faCog, faGlobe, faLock, faMapMarked, faUsers } from '@fortawesome/free-solid-svg-icons';
+import { faBell, faBolt, faClock, faCog, faGlobe, faHome, faLock, faMapMarked, faUsers } from '@fortawesome/free-solid-svg-icons';
 import { ButtonsStrategy, DescriptionStrategy, Image, LineLayout, ModalGalleryRef, ModalGalleryService, ModalLibConfig, PlainGalleryStrategy, PlainLibConfig } from '@ks89/angular-modal-gallery';
 
 @Component({
@@ -125,7 +125,12 @@ export class FeaturesComponent implements OnInit {
       icon: faClock,
       title: 'arpi.features.general.delayedalert.title',
       description: 'arpi.features.general.delayedalert.description'
-    }
+    },
+    {
+      icon: faHome,
+      title: 'arpi.features.general.homeautomation.title',
+      description: 'arpi.features.general.homeautomation.description'
+    },
   ];
 
   galleryConfig: PlainLibConfig = {

@@ -36,6 +36,8 @@
   "arpi.features.general.programmable.description": "A kártyát használhatod más eszközök vezérlésére a programozható kimenetekkel.",
   "arpi.features.general.locations.title": "Helyek/területek",
   "arpi.features.general.locations.description": "Több helyet vagy területet kezelhetsz",
+  "arpi.features.general.homeautomation.title": "Otthonautomatizálás",
+  "arpi.features.general.homeautomation.description": "Integrálhatod a rendszert más otthonautomatizálási rendszerekkel, mint például a Home Assistant vagy a Domoticz.",
   
   "arpi.features.ui.title": "Felhasználói felület",
   "arpi.features.ui.description": "Használd és konfiguráld otthoni biztonsági rendszered egy könnyen kezelhető böngésző alkalmazással asztali számítógépről vagy akár a mobilodról.",
