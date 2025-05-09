@@ -2,6 +2,9 @@
   "arpi.title.long": "ArPI - Home Security System",
   "arpi.title.short": "ArPI",
   "arpi.menu.features": "Funkciók",
+  "arpi.menu.user_interface": "Felhasználói felület",
+  "arpi.menu.board": "Kártya",
+  "arpi.menu.technologies": "Technológiák",
   "arpi.menu.about": "Névjegy",
   "arpi.menu.versions": "Verziók",
   "arpi.menu.order": "Megrendelés",
@@ -80,7 +83,7 @@
   "arpi.features.gsm.notifications": "SMS üzenetek és GSM hívások rendszer események alapján (riasztás, áramkimaradás)",
   "arpi.features.gsm.sms": "SMS üzenetek olvasása a web felületről",
 
-  "arpi.feature.stack": "Felhasznált technológiák",
+  "arpi.features.stack": "Felhasznált technológiák",
   "arpi.features.stack.hardware": "Hardver",
   "arpi.features.stack.connection": "Kapcsolat",
   "arpi.features.stack.integration": "Integráció",

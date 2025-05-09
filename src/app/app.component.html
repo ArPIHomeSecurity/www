@@ -36,9 +36,16 @@
         <a class="nav-link" activeClass="active" href="#versions" (click)="onMenuClose()">{{ 'arpi.menu.versions' |
           translate }}</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" activeClass="active" href="#features" (click)="onMenuClose()">{{ 'arpi.menu.features' |
-          translate }}</a>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="featuresDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          {{ 'arpi.menu.features' | translate }}
+        </a>
+        <div class="dropdown-menu" aria-labelledby="featuresDropdown">
+          <a class="dropdown-item" href="#features" (click)="onMenuClose()">{{ 'arpi.menu.features' | translate }}</a>
+          <a class="dropdown-item" href="#user-interface" (click)="onMenuClose()">{{ 'arpi.menu.user_interface' | translate }}</a>
+          <a class="dropdown-item" href="#board" (click)="onMenuClose()">{{ 'arpi.menu.board' | translate }}</a>
+          <a class="dropdown-item" href="#technologies" (click)="onMenuClose()">{{ 'arpi.menu.technologies' | translate }}</a>
+        </div>
       </li>
     </ul>
     <div class="dropdown">
