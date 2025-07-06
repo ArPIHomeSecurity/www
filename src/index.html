@@ -15,6 +15,29 @@
   <meta name="robots" content="index, follow">
   <meta name="language" content="English">
   
+  <!-- Additional SEO Tags for better search results -->
+  <meta name="category" content="Technology">
+  <meta name="coverage" content="Worldwide">
+  <meta name="distribution" content="Global">
+  <meta name="rating" content="General">
+  <meta name="revisit-after" content="7 days">
+  <meta name="target" content="all">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  
+  <!-- Site Links structured data hints -->
+  <link rel="alternate" type="application/rss+xml" title="ArPI Security News" href="https://www.arpi-security.info/feed.xml">
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="https://www.arpi-security.info/sitemap.xml">
+  
+  <!-- Navigation hints for search engines -->
+  <link rel="section" href="https://www.arpi-security.info/#features" title="Features">
+  <link rel="section" href="https://demo.arpi-security.info" title="Demo">
+  <link rel="section" href="https://github.com/ArPIHomeSecurity" title="Source Code">
+  <link rel="section" href="https://docs.arpi-security.info" title="Documentation">
+  <link rel="section" href="https://arpi-security.slack.com/" title="Community">
+  <link rel="section" href="https://www.arpi-security.info/#order" title="Order">
+  <link rel="section" href="https://www.arpi-security.info/#contact" title="Contact">
+  
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.arpi-security.info/">
@@ -204,6 +227,85 @@
     gtag('config', 'G-28DZK2C517');
   </script>
   <!-- End Google tag (gtag.js) -->
+  
+  <!-- Core Structured Data for Search Results -->
+  <script type="application/ld+json">
+/*  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "ArPI Security",
+    "alternateName": "ArPI Home Security System",
+    "url": "https://www.arpi-security.info",
+    "description": "ArPI is an open-source Raspberry Pi based home security system",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://www.arpi-security.info/?q={search_term_string}"
+      },
+      "query-input": "required name=search_term_string"
+    },
+    "mainEntity": {
+      "@type": "SoftwareApplication",
+      "name": "ArPI Home Security System",
+      "applicationCategory": "SecurityApplication",
+      "operatingSystem": "Linux",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+  } */
+  </script>
+  
+  <!-- Navigation Structure for Sitelinks -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SiteNavigationElement",
+    "name": "ArPI Main Navigation",
+    "url": "https://www.arpi-security.info",
+    "hasPart": [
+      {
+        "@type": "SiteNavigationElement",
+        "name": "Demo",
+        "description": "Live demo of ArPI security system",
+        "url": "https://demo.arpi-security.info"
+      },
+      {
+        "@type": "SiteNavigationElement",
+        "name": "Features",
+        "description": "ArPI features and capabilities",
+        "url": "https://www.arpi-security.info/#features"
+      },
+      {
+        "@type": "SiteNavigationElement",
+        "name": "GitHub",
+        "description": "Source code repository",
+        "url": "https://github.com/ArPIHomeSecurity"
+      },
+      {
+        "@type": "SiteNavigationElement",
+        "name": "Documentation",
+        "description": "Official documentation",
+        "url": "https://docs.arpi-security.info"
+      },
+      {
+        "@type": "SiteNavigationElement",
+        "name": "Community",
+        "description": "Join our Slack community",
+        "url": "https://arpi-security.slack.com/"
+      },
+      {
+        "@type": "SiteNavigationElement",
+        "name": "ArPI Board",
+        "description": "Purchase ArPI Board v2.0",
+        "url": "https://www.tindie.com/products/gkovacs81/arpi-board-v20/"
+      }
+    ]
+  }
+  </script>
 </head>
 
 

@@ -3,9 +3,23 @@ Allow: /
 Disallow: /cgi-bin/
 Disallow: /admin/
 Disallow: /private/
+Disallow: /node_modules/
+Disallow: /dist/
+Disallow: /src/
+
+# Important pages for search engines
+Allow: /#features
+Allow: /#demo
+Allow: /#order
+Allow: /#contact
+Allow: /privacy
+Allow: /terms
 
 # Sitemap location
 Sitemap: https://www.arpi-security.info/sitemap.xml
 
 # Crawl-delay for respectful crawling
 Crawl-delay: 1
+
+# Host preference
+Host: https://www.arpi-security.info

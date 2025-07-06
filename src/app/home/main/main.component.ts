@@ -30,7 +30,7 @@ export class MainComponent implements OnInit {
       content: "ArPI, Raspberry Pi, home security, alarm system, DIY security, open source, home automation, security system, IoT, smart home, sensors, keypad, siren"
     });
 
-    // Add structured data for better SEO
+    // Add structured data for better SEO and sitelinks
     this.structuredDataService.insertStructuredData(
       this.structuredDataService.createOrganizationStructuredData()
     );
@@ -39,6 +39,24 @@ export class MainComponent implements OnInit {
     );
     this.structuredDataService.insertStructuredData(
       this.structuredDataService.createWebsiteStructuredData()
+    );
+    this.structuredDataService.insertStructuredData(
+      this.structuredDataService.createSiteNavigationElementStructuredData()
+    );
+    this.structuredDataService.insertStructuredData(
+      this.structuredDataService.createBreadcrumbListStructuredData()
+    );
+    this.structuredDataService.insertStructuredData(
+      this.structuredDataService.createFAQPageStructuredData()
+    );
+    this.structuredDataService.insertStructuredData(
+      this.structuredDataService.createItemListStructuredData()
+    );
+    this.structuredDataService.insertStructuredData(
+      this.structuredDataService.createTechArticleStructuredData()
+    );
+    this.structuredDataService.insertStructuredData(
+      this.structuredDataService.createHowToStructuredData()
     );
   }
 }
