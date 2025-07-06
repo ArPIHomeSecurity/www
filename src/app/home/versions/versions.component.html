@@ -8,12 +8,12 @@
       </div>
       <div id="hw-accordion" class="col-12 mb-4">
         <div class="card bg-transparent">
-          <div role="button" class="card-header" data-toggle="collapse" data-target="#version-2-0"
+          <div role="button" class="card-header" data-bs-toggle="collapse" data-bs-target="#version-2-0"
             aria-expanded="true" aria-controls="version-2-0">
-            <h4 class="float-left">{{ 'arpi.versions.hw.v2_0' | translate }}</h4>
-            <fa-icon [icon]="faDown" class="float-right"></fa-icon>
+            <h4 class="float-start">{{ 'arpi.versions.hw.v2_0' | translate }}</h4>
+            <fa-icon [icon]="faDown" class="float-end"></fa-icon>
           </div>
-          <div id="version-2-0" class="collapse show" data-parent="#hw-accordion">
+          <div id="version-2-0" class="collapse show" data-bs-parent="#hw-accordion">
             <div class="card-body">
               <ks-plain-gallery [id]="0" [images]="images_2_0" [config]="galleryConfig"
                 (clickImage)="onShow(202, $event, images_2_0)">
@@ -23,12 +23,12 @@
         </div>
 
         <div class="card bg-transparent">
-          <div role="button" class="card-header" data-toggle="collapse" data-target="#version-0-9"
+          <div role="button" class="card-header" data-bs-toggle="collapse" data-bs-target="#version-0-9"
             aria-expanded="true" aria-controls="version-0-9">
-            <h4 class="float-left">{{ 'arpi.versions.hw.v0_9' | translate }}</h4>
-            <fa-icon [icon]="faDown" class="float-right"></fa-icon>
+            <h4 class="float-start">{{ 'arpi.versions.hw.v0_9' | translate }}</h4>
+            <fa-icon [icon]="faDown" class="float-end"></fa-icon>
           </div>
-          <div id="version-0-9" class="collapse" data-parent="#hw-accordion">
+          <div id="version-0-9" class="collapse" data-bs-parent="#hw-accordion">
             <div class="card-body">
               <ks-plain-gallery [id]="1" [images]="images_0_9" [config]="galleryConfig"
                 (clickImage)="onShow(202, $event, images_0_9)">
@@ -38,12 +38,12 @@
         </div>
 
         <div class="card bg-transparent">
-          <div role="button" class="card-header" data-toggle="collapse" data-target="#version-0-8"
+          <div role="button" class="card-header" data-bs-toggle="collapse" data-bs-target="#version-0-8"
             aria-expanded="true" aria-controls="version-0-8">
-            <h4 class="float-left">{{ 'arpi.versions.hw.v0_8' | translate }}</h4>
-            <fa-icon [icon]="faDown" class="float-right"></fa-icon>
+            <h4 class="float-start">{{ 'arpi.versions.hw.v0_8' | translate }}</h4>
+            <fa-icon [icon]="faDown" class="float-end"></fa-icon>
           </div>
-          <div id="version-0-8" class="collapse" data-parent="#hw-accordion">
+          <div id="version-0-8" class="collapse" data-bs-parent="#hw-accordion">
             <div class="card-body">
               <ks-plain-gallery [id]="2" [images]="images_0_8" [config]="galleryConfig"
                 (clickImage)="onShow(202, $event, images_0_8)">

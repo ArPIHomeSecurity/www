@@ -1,9 +1,9 @@
-<nav class="navbar fixed-top navbar-expand-md navbar-dark bg-primary">
-  <a class="navbar-brand d-none d-sm-block" href=".">
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand d-none d-lg-block" href=".">
     <img src="assets/arpi-logo-64.png" />
     <h1>{{ 'arpi.title.long' | translate }}</h1>
   </a>
-  <a class="navbar-brand d-sm-none" href=".">
+  <a class="navbar-brand d-lg-none" href=".">
     <img src="assets/arpi-logo-64.png" />
     <h1>{{ 'arpi.title.short' | translate }}</h1>
   </a>
@@ -11,7 +11,7 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <div id="navbarSupportedContent" [ngClass]="{'collapse navbar-collapse': true, 'show': !menuClosed}">
-    <ul id="main-menu" class="navbar-nav ml-auto flex-column-reverse flex-md-row-reverse" role="navigation">
+    <ul id="main-menu" class="navbar-nav ms-auto flex-column-reverse flex-lg-row-reverse" role="navigation">
       <li class="nav-item">
         <a href="https://arpi-security.readthedocs.io" target="_blank" class="nav-link text-light" (click)="onMenuClose()">DOCS</a>
       </li>
@@ -37,7 +37,7 @@
           translate }}</a>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="featuresDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a class="nav-link dropdown-toggle" href="#" id="featuresDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           {{ 'arpi.menu.features' | translate }}
         </a>
         <div class="dropdown-menu" aria-labelledby="featuresDropdown">
@@ -49,7 +49,7 @@
       </li>
     </ul>
     <div class="dropdown">
-      <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+      <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
         aria-haspopup="true" aria-expanded="false">
         {{language}}
       </button>
@@ -58,17 +58,17 @@
         <a class="dropdown-item" (click)="useLanguage('hu')">HU</a>
       </div>
     </div>
-    <button class="btn btn-primary" type="button" id="shareButton" data-toggle="modal" data-target="#shareDialog">
-      <fa-icon [icon]="faShareAlt"></fa-icon>
+    <button class="btn btn-primary p-2" type="button" id="shareButton" data-bs-toggle="modal" data-bs-target="#shareDialog">
+      <fa-icon [icon]="faShareAlt" class="fs-5"></fa-icon>
     </button>
-    <a href="https://github.com/ArPIHomeSecurity" target="_blank" class="nav-link text-light" (click)="onMenuClose()">
-      <fa-icon [icon]="github"></fa-icon>
+    <a href="https://github.com/ArPIHomeSecurity" target="_blank" class="nav-link text-light p-2" (click)="onMenuClose()">
+      <fa-icon [icon]="github" class="fs-5"></fa-icon>
     </a>
-    <a href="https://arpi-security.slack.com/" target="_blank" class="nav-link text-light" (click)="onMenuClose()">
-      <fa-icon [icon]="slack"></fa-icon>
+    <a href="https://arpi-security.slack.com/" target="_blank" class="nav-link text-light p-2" (click)="onMenuClose()">
+      <fa-icon [icon]="slack" class="fs-5"></fa-icon>
     </a>
-    <button #consentButton class="btn nav-link text-light glow-effect" data-toggle="modal" data-target="#consentDialog">
-      <fa-icon [icon]="faCookie"></fa-icon>
+    <button #consentButton class="btn nav-link text-light glow-effect p-2" data-bs-toggle="modal" data-bs-target="#consentDialog">
+      <fa-icon [icon]="faCookie" class="fs-5"></fa-icon>
     </button>
   </div>
 </nav>
