@@ -26,8 +26,7 @@ module.exports = {
         "eslint-plugin-import",
         "eslint-plugin-jsdoc",
         "@angular-eslint/eslint-plugin",
-        "@typescript-eslint",
-        "@typescript-eslint/tslint"
+        "@typescript-eslint"
     ],
     "root": true,
     "rules": {
@@ -173,25 +172,13 @@ module.exports = {
                 ]
             }
         ],
-        "@typescript-eslint/tslint/config": [
-            "error",
-            {
-                "rules": {
-                    "import-spacing": true,
-                    "use-host-property-decorator": true,
-                    "use-input-property-decorator": true,
-                    "use-life-cycle-interface": true,
-                    "use-output-property-decorator": true,
-                    "whitespace": [
-                        true,
-                        "check-branch",
-                        "check-decl",
-                        "check-operator",
-                        "check-separator",
-                        "check-type"
-                    ]
-                }
-            }
-        ]
+        // Converted from TSLint rules
+        "@typescript-eslint/no-unused-vars": "error",
+        "space-before-blocks": "error",
+        "keyword-spacing": "error",
+        "space-infix-ops": "error",
+        "comma-spacing": "error",
+        "object-curly-spacing": ["error", "always"],
+        "array-bracket-spacing": ["error", "never"]
     }
 };
