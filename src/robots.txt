@@ -1,4 +1,11 @@
 User-agent: *
-Disallow: 
+Allow: /
 Disallow: /cgi-bin/
-Sitemap: https://www.arpi-security.info
+Disallow: /admin/
+Disallow: /private/
+
+# Sitemap location
+Sitemap: https://www.arpi-security.info/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1

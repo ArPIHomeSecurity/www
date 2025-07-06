@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Meta } from '@angular/platform-browser';
+import { StructuredDataService } from '../../shared/structured-data.service';
 
 
 @Component({
@@ -12,14 +13,32 @@ import { Meta } from '@angular/platform-browser';
 export class MainComponent implements OnInit {
 
   constructor(
-    private meta: Meta
+    private meta: Meta,
+    private structuredDataService: StructuredDataService
   ) { }
 
   ngOnInit() {
-    // close menu after click in mobile view
+    // Enhanced meta description for SEO
     this.meta.addTag({
       name: "description",
-      content: "An easy to use Raspberry PI Zero based home security system to replace your old mainboard"
+      content: "ArPI is an open-source Raspberry Pi based home security system. Replace your old alarm system mainboard and reuse existing sensors, keypads, and sirens. Easy DIY installation with modern web interface, notifications, and remote access. Download for free!"
     });
+    
+    // Additional meta tags for better SEO
+    this.meta.addTag({
+      name: "keywords",
+      content: "ArPI, Raspberry Pi, home security, alarm system, DIY security, open source, home automation, security system, IoT, smart home, sensors, keypad, siren"
+    });
+
+    // Add structured data for better SEO
+    this.structuredDataService.insertStructuredData(
+      this.structuredDataService.createOrganizationStructuredData()
+    );
+    this.structuredDataService.insertStructuredData(
+      this.structuredDataService.createSoftwareApplicationStructuredData()
+    );
+    this.structuredDataService.insertStructuredData(
+      this.structuredDataService.createWebsiteStructuredData()
+    );
   }
 }
