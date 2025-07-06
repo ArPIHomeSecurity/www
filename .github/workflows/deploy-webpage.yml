@@ -5,31 +5,39 @@ on:
     branches:
       - master
 
+# Add permissions for GitHub Pages deployment
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Ensure only one deployment runs at a time
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
 jobs:
   deploy-webpage:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Checkout 🛎️
-        uses: actions/checkout@v2.3.1
+        uses: actions/checkout@v4
 
-      - name: Cache node modules 💽
-        uses: actions/cache@v4
-        env:
-          cache-name: cache-node-modules
+      - name: Setup Node.js 🔧
+        uses: actions/setup-node@v4
         with:
-          path: ~/.npm
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-build-${{ env.cache-name }}-
-            ${{ runner.os }}-build-
-            ${{ runner.os }}-
+          node-version: '20'
+          cache: 'npm'
 
       - name: Install dependencies 🔧
         run: |
           npm ci
           npm install -g @angular/cli
 
-      - name: Build application 💪
+      - name: Build application (SSG) 💪
         run: |
           ng build --configuration production --base-href  "https://www.arpi-security.info"
 
@@ -37,8 +45,14 @@ jobs:
         run: |
           LANGUAGE=en ng test --watch false
 
-      - name: Deploy application 🚀
-        uses: JamesIves/github-pages-deploy-action@4.1.7
+      - name: Setup Pages 📄
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact 📦
+        uses: actions/upload-pages-artifact@v3
         with:
-          branch: gh-pages
-          folder: dist-prod/browser
+          path: './dist-prod/browser'
+
+      - name: Deploy to GitHub Pages 🚀
+        id: deployment
+        uses: actions/deploy-pages@v4
