@@ -14,11 +14,30 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 ## Build
 
-Builds
+### Static Site Generation (SSG)
+This site is configured for Static Site Generation with prerendering enabled.
+
+**Build for production:**
+```bash
+npm run build:ssg
+```
+
+**Serve locally:**
+```bash
+npm run serve:static
+```
+
+**Routes prerendered:**
+- `/` - Home page
+- `/privacy` - Privacy policy  
+- `/terms` - Terms of service
+
+**Deploy:** Upload contents of `dist-prod/browser/` to any static hosting service.
+
+### Development Build
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
 ![Build Status](https://github.com/ArPIHomeSecurity/www/actions/workflows/deploy-webpage.yml/badge.svg)
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
 ## Running unit tests
 

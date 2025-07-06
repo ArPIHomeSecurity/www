@@ -1,1 +1,4 @@
-export { AppServerModule as default } from './app/app.module.server';
+import { platformServer } from '@angular/platform-server';
+import { AppServerModule } from './app/app.module.server';
+
+export default AppServerModule;

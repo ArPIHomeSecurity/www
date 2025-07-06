@@ -78,6 +78,7 @@
               "sourceMap": false,
               "namedChunks": false,
               "extractLicenses": true,
+              "scripts": [],
               "budgets": [
                 {
                   "type": "initial",
