@@ -4,7 +4,7 @@ import { TranslateService } from '@ngx-translate/core';
 import { faGithub, faSlack } from '@fortawesome/free-brands-svg-icons';
 import { faCookie, faShareAlt } from '@fortawesome/free-solid-svg-icons';
 
-declare var bootstrap: any;
+declare let bootstrap: any;
 
 
 @Component({

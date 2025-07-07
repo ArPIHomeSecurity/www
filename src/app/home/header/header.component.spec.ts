@@ -17,20 +17,20 @@ describe('HeaderComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-    declarations: [HeaderComponent],
-    imports: [TranslateModule.forRoot({
-            loader: {
-                provide: TranslateLoader,
-                useFactory: HttpLoaderFactory,
-                deps: [HttpClient]
-            }
-        })],
-    providers: [
+      declarations: [HeaderComponent],
+      imports: [TranslateModule.forRoot({
+        loader: {
+          provide: TranslateLoader,
+          useFactory: HttpLoaderFactory,
+          deps: [HttpClient]
+        }
+      })],
+      providers: [
         TranslateService,
         provideHttpClient(withFetch())
-    ]
-})
-    .compileComponents();
+      ]
+    })
+      .compileComponents();
   }));
 
   beforeEach(() => {

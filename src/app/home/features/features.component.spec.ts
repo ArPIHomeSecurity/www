@@ -19,22 +19,22 @@ describe('FeaturesComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-    declarations: [FeaturesComponent],
-    imports: [TranslateModule.forRoot({
-            loader: {
-                provide: TranslateLoader,
-                useFactory: HttpLoaderFactory,
-                deps: [HttpClient]
-            }
-        }),
-        GalleryModule,
-        LazyLoadImageModule],
-    providers: [
+      declarations: [FeaturesComponent],
+      imports: [TranslateModule.forRoot({
+        loader: {
+          provide: TranslateLoader,
+          useFactory: HttpLoaderFactory,
+          deps: [HttpClient]
+        }
+      }),
+      GalleryModule,
+      LazyLoadImageModule],
+      providers: [
         TranslateService,
         provideHttpClient(withFetch())
-    ]
-})
-    .compileComponents();
+      ]
+    })
+      .compileComponents();
   }));
 
   beforeEach(() => {

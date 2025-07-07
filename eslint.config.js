@@ -60,7 +60,7 @@ module.exports = [
             ],
             
             // Standard ESLint 9.x rules
-            'indent': ['error', 4],
+            'indent': ['error', 2],
             'quotes': ['error', 'single'],
             'semi': ['error', 'always'],
             'no-console': 'warn',

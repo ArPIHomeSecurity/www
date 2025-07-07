@@ -25,7 +25,7 @@ import { ShareComponent } from './home/share/share.component';
 import { VersionsComponent } from './home/versions/versions.component';
 import { PrivacyComponent } from './privacy/privacy.component';
 import { TermsComponent } from './terms/terms.component';
-import { ConsentDialogComponent } from "./consent.dialog/consent.dialog.component";
+import { ConsentDialogComponent } from './consent.dialog/consent.dialog.component';
 
 import 'mousetrap';
 

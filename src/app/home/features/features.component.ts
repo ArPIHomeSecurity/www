@@ -1,49 +1,69 @@
 import { Component, OnInit } from '@angular/core';
-import { faBell, faBolt, faClock, faCog, faGlobe, faHome, faLock, faMapMarked, faUsers } from '@fortawesome/free-solid-svg-icons';
-import { ButtonsStrategy, DescriptionStrategy, Image, LineLayout, ModalGalleryRef, ModalGalleryService, ModalLibConfig, PlainGalleryStrategy, PlainLibConfig } from '@ks89/angular-modal-gallery';
+import {
+  faBell,
+  faBolt,
+  faClock,
+  faCog,
+  faGlobe,
+  faHome,
+  faLock,
+  faMapMarked,
+  faUsers
+} from '@fortawesome/free-solid-svg-icons';
+import {
+  ButtonsStrategy,
+  DescriptionStrategy,
+  Image,
+  LineLayout,
+  ModalGalleryRef,
+  ModalGalleryService,
+  ModalLibConfig,
+  PlainGalleryStrategy,
+  PlainLibConfig
+} from '@ks89/angular-modal-gallery';
 
 @Component({
-    selector: 'app-features',
-    templateUrl: './features.component.html',
-    styleUrls: ['./features.component.scss'],
-    standalone: false
+  selector: 'app-features',
+  templateUrl: './features.component.html',
+  styleUrls: ['./features.component.scss'],
+  standalone: false
 })
 export class FeaturesComponent implements OnInit {
   technologies = [
     {
       name: 'arpi.features.stack.hardware',
       items: [
-        {image: 'assets/logo/raspberry_pi.png', url: 'https://www.raspberrypi.org', text: 'Raspberry Pi'},
+        { image: 'assets/logo/raspberry_pi.png', url: 'https://www.raspberrypi.org', text: 'Raspberry Pi' },
       ]
     },
     {
       name: 'Backend',
       items: [
-        {image: 'assets/logo/python.svg', url: 'https://www.python.org', text: 'Python'},
-        {image: 'assets/logo/postgresql.svg', url: 'https://www.postgresql.org/', text: 'PostgreSQL'},
-        {image: 'assets/logo/nginx.svg', url: 'https://nginx.org/', text: 'Nginx'},
-        {image: 'assets/logo/mqtt.png', url: 'https://mqtt.org/', text: 'MQTT'},
+        { image: 'assets/logo/python.svg', url: 'https://www.python.org', text: 'Python' },
+        { image: 'assets/logo/postgresql.svg', url: 'https://www.postgresql.org/', text: 'PostgreSQL' },
+        { image: 'assets/logo/nginx.svg', url: 'https://nginx.org/', text: 'Nginx' },
+        { image: 'assets/logo/mqtt.png', url: 'https://mqtt.org/', text: 'MQTT' },
       ]
     },
     {
       name: 'arpi.features.stack.connection',
       items: [
-        {image: 'assets/logo/letsencrypt.svg', url: 'https://letsencrypt.org/', text: 'Let\'s Encrypt'},
-        {image: 'assets/logo/socketio.svg', url: 'https://socket.io/', text: 'Socket.IO'},
+        { image: 'assets/logo/letsencrypt.svg', url: 'https://letsencrypt.org/', text: 'Let\'s Encrypt' },
+        { image: 'assets/logo/socketio.svg', url: 'https://socket.io/', text: 'Socket.IO' },
       ]
     },
     {
       name: 'Frontend',
       items: [
-        {image: 'assets/logo/angular.svg', url: 'https://angular.io/', text: 'Angular'},
-        {image: 'assets/logo/angular_material.svg', url: 'https://material.angular.io/', text: 'Angular Material'},
+        { image: 'assets/logo/angular.svg', url: 'https://angular.io/', text: 'Angular' },
+        { image: 'assets/logo/angular_material.svg', url: 'https://material.angular.io/', text: 'Angular Material' },
       ]
     },
     {
       name: 'arpi.features.stack.integration',
       items: [
-        {image: 'assets/logo/homeassistant.png', url: 'https://www.home-assistant.io/', text: 'Home Assistant'},
-        {image: 'assets/logo/domoticz.png', url: 'https://www.domoticz.com/', text: 'Domoticz'},
+        { image: 'assets/logo/homeassistant.png', url: 'https://www.home-assistant.io/', text: 'Home Assistant' },
+        { image: 'assets/logo/domoticz.png', url: 'https://www.domoticz.com/', text: 'Domoticz' },
       ]
     },
   ];
@@ -53,12 +73,12 @@ export class FeaturesComponent implements OnInit {
       id: 11,
       title: 'channels',
       text: 'input channels for sensors',
-      properties: ['silent', 'sensitivity']},
+      properties: ['silent', 'sensitivity'] },
     {
       id: 12,
       title: 'outputs',
       text: 'output channels for actuators',
-      properties: ['state', 'button']},
+      properties: ['state', 'button'] },
     {
       id: 13,
       title: 'keypad',
@@ -69,7 +89,7 @@ export class FeaturesComponent implements OnInit {
       id: 14,
       title: 'gsm',
       text: 'gsm module for sms notifications and calls',
-      properties: ['notifications','sms']
+      properties: ['notifications', 'sms']
     },
     {
       id: 15,
@@ -137,8 +157,8 @@ export class FeaturesComponent implements OnInit {
     plainGalleryConfig: {
       strategy: PlainGalleryStrategy.ROW,
       layout: new LineLayout(
-        {width:'100%', height: 'auto'},
-        {length: 1, wrap: true},
+        { width:'100%', height: 'auto' },
+        { length: 1, wrap: true },
         ''
       )
     }

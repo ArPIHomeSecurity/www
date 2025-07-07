@@ -3,10 +3,10 @@ import { faChevronDown, faDownload } from '@fortawesome/free-solid-svg-icons';
 import { Image, PlainGalleryStrategy, LineLayout, ButtonsConfig, ButtonsStrategy, PlainLibConfig, ModalGalleryService, ModalGalleryRef, ModalLibConfig, DescriptionStrategy } from '@ks89/angular-modal-gallery';
 
 @Component({
-    selector: 'app-versions',
-    templateUrl: './versions.component.html',
-    styleUrls: ['./versions.component.scss'],
-    standalone: false
+  selector: 'app-versions',
+  templateUrl: './versions.component.html',
+  styleUrls: ['./versions.component.scss'],
+  standalone: false
 })
 export class VersionsComponent implements OnInit {
 
@@ -58,8 +58,8 @@ export class VersionsComponent implements OnInit {
     plainGalleryConfig: {
       strategy: PlainGalleryStrategy.ROW,
       layout: new LineLayout(
-        {width:'30%', height: 'auto'},
-        {length: 3, wrap: true},
+        { width:'30%', height: 'auto' },
+        { length: 3, wrap: true },
         'space-around'
       )
     }
@@ -70,8 +70,8 @@ export class VersionsComponent implements OnInit {
     strategy: ButtonsStrategy.DEFAULT
   };
 
-  faDown = faChevronDown
-  faDownload = faDownload
+  faDown = faChevronDown;
+  faDownload = faDownload;
 
   constructor(
     private modalGalleryService: ModalGalleryService

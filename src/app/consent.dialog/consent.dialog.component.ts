@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 
-declare var gtag: (...args: any[]) => void;
+declare let gtag: (...args: any[]) => void;
 
 @Component({
   selector: 'app-consent-dialog',

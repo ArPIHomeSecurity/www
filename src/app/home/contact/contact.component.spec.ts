@@ -19,22 +19,22 @@ describe('ContactComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-    declarations: [ContactComponent],
-    imports: [ReactiveFormsModule,
+      declarations: [ContactComponent],
+      imports: [ReactiveFormsModule,
         TranslateModule.forRoot({
-            loader: {
-                provide: TranslateLoader,
-                useFactory: HttpLoaderFactory,
-                deps: [HttpClient]
-            }
+          loader: {
+            provide: TranslateLoader,
+            useFactory: HttpLoaderFactory,
+            deps: [HttpClient]
+          }
         }),
         LazyLoadImageModule],
-    providers: [
+      providers: [
         TranslateService,
         provideHttpClient(withFetch())
-    ]
-})
-    .compileComponents();
+      ]
+    })
+      .compileComponents();
   }));
 
   beforeEach(() => {

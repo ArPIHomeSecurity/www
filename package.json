@@ -9,6 +9,7 @@
     "build:prod": "ng build --configuration=production",
     "test": "ng test",
     "lint": "eslint --ext .ts src",
+    "lint:fix": "eslint --ext .ts src --fix",
     "e2e": "ng e2e",
     "serve:static": "npx http-server dist-prod/browser -p 8080 -c-1",
     "serve:ssr": "node dist-prod/server/server.mjs"
