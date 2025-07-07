@@ -4,6 +4,8 @@ import { TranslateService } from '@ngx-translate/core';
 import { faGithub, faSlack } from '@fortawesome/free-brands-svg-icons';
 import { faCookie, faShareAlt } from '@fortawesome/free-solid-svg-icons';
 
+declare var bootstrap: any;
+
 
 @Component({
   selector: 'app-root',
@@ -44,7 +46,11 @@ export class AppComponent implements AfterViewInit {
     if (localStorage.getItem('google-analytics-consent') === null) {
       // trigger the consent dialog
       setTimeout(() => {
-        this.button.nativeElement.click();
+        const consentDialogElement = document.getElementById('consentDialog');
+        if (consentDialogElement) {
+          const modal = new bootstrap.Modal(consentDialogElement);
+          modal.show();
+        }
       }, 2000);
     }
   }
