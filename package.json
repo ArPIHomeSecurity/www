@@ -38,7 +38,6 @@
     "@ngx-translate/core": "^16.0.4",
     "@ngx-translate/http-loader": "^16.0.1",
     "acorn": "^8.15.0",
-    "angular-cli-ghpages": "^2.0.3",
     "bootstrap": "^5.3.7",
     "braces": "^3.0.3",
     "core-js": "^3.43.0",
