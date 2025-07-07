@@ -3,10 +3,11 @@ import { HttpClient, provideHttpClient, withFetch } from '@angular/common/http';
 import { TranslateService, TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
 import { GalleryModule } from '@ks89/angular-modal-gallery';
 
 import { VersionsComponent } from './versions.component';
+import { faChevronDown, faDownload } from '@fortawesome/free-solid-svg-icons';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, 'assets/i18n/', '.json');
@@ -34,6 +35,9 @@ describe('VersionsComponent', () => {
       ]
     })
       .compileComponents();
+
+    const library = TestBed.inject(FaIconLibrary);
+    library.addIcons(faChevronDown, faDownload);
   }));
 
   beforeEach(() => {

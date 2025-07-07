@@ -8,5 +8,8 @@ if (environment.production) {
   enableProdMode();
 }
 
-platformBrowserDynamic().bootstrapModule(AppModule)
-  .catch(err => console.error(err));
+// Note: platformBrowserDynamic is deprecated in favor of bootstrapApplication for standalone components
+// For module-based applications, this remains the correct approach
+platformBrowserDynamic()
+  .bootstrapModule(AppModule)
+  .catch((err: unknown) => console.error(err));

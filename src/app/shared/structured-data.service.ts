@@ -33,7 +33,8 @@ export class StructuredDataService {
         'width': 256,
         'height': 256
       },
-      'description': 'ArPI is an open-source Raspberry Pi based home security system that allows you to replace your old alarm system mainboard and reuse existing sensors, keypads, and sirens.',
+      'description': 'ArPI is an open-source Raspberry Pi based home security system that allows you to replace ' +
+                     'your old alarm system mainboard and reuse existing sensors, keypads, and sirens.',
       'foundingDate': '2019',
       'founder': {
         '@type': 'Person',
@@ -90,7 +91,8 @@ export class StructuredDataService {
       '@type': 'SoftwareApplication',
       'name': 'ArPI Home Security System',
       'alternateName': 'ArPI',
-      'description': 'Open-source Raspberry Pi based home security system with web interface, mobile app, and DIY installation support.',
+      'description': 'Open-source Raspberry Pi based home security system with web interface, mobile app,' +
+                     ' and DIY installation support.',
       'applicationCategory': 'SecurityApplication',
       'operatingSystem': 'Linux, Raspberry Pi OS',
       'offers': {
@@ -253,7 +255,8 @@ export class StructuredDataService {
           'name': 'What is ArPI?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'ArPI is an open-source Raspberry Pi based home security system that allows you to replace your old alarm system mainboard and reuse existing sensors, keypads, and sirens.'
+            'text': 'ArPI is an open-source Raspberry Pi based home security system that allows you to replace ' +
+                    'your old alarm system mainboard and reuse existing sensors, keypads, and sirens.'
           }
         },
         {
@@ -261,7 +264,8 @@ export class StructuredDataService {
           'name': 'How do I get started with ArPI?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'You can download the source code from GitHub, follow our documentation, or purchase a pre-configured kit. The system is designed for easy DIY installation.'
+            'text': 'You can download the source code from GitHub, follow our documentation, or purchase a ' +
+                    'pre-configured kit. The system is designed for easy DIY installation.'
           }
         },
         {
@@ -269,7 +273,8 @@ export class StructuredDataService {
           'name': 'Is ArPI free to use?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'Yes, ArPI is completely open-source and free to use. You only need to purchase the hardware components like Raspberry Pi and sensors.'
+            'text': 'Yes, ArPI is completely open-source and free to use. You only need to purchase the hardware ' +
+                    'components like Raspberry Pi and sensors.'
           }
         },
         {
@@ -277,7 +282,8 @@ export class StructuredDataService {
           'name': 'Where can I get support?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'You can get support through our GitHub repository, Slack community, or contact us directly through our website.'
+            'text': 'You can get support through our GitHub repository, Slack community, or contact us directly ' +
+                    'through our website.'
           }
         }
       ]
@@ -318,7 +324,8 @@ export class StructuredDataService {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       'headline': 'ArPI - Open Source Raspberry Pi Home Security System',
-      'description': 'Complete guide to ArPI home security system: features, installation, and usage of this open-source Raspberry Pi based security solution.',
+      'description': 'Complete guide to ArPI home security system: features, installation, and usage of this ' +
+                     'open-source Raspberry Pi based security solution.',
       'author': {
         '@type': 'Organization',
         'name': 'ArPIHomeSecurity'

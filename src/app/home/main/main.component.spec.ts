@@ -4,7 +4,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { TranslateModule, TranslateLoader, TranslateService } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
 import { LazyLoadImageModule } from 'ng-lazyload-image';
 import { GalleryModule } from '@ks89/angular-modal-gallery';
 import { ShareButtons } from 'ngx-sharebuttons/buttons';
@@ -18,6 +18,26 @@ import { ContactComponent } from '../contact/contact.component';
 import { VersionsComponent } from '../versions/versions.component';
 import { ShareComponent } from '../share/share.component';
 import { OrderComponent } from '../order/order.component';
+
+// Import all the icons used in the components
+import {
+  faBell,
+  faBolt,
+  faClock,
+  faCog,
+  faGlobe,
+  faHome,
+  faLock,
+  faMapMarked,
+  faUsers,
+  faCookie,
+  faFileSignature,
+  faShieldHalved,
+  faExternalLinkAlt,
+  faChevronDown,
+  faDownload
+} from '@fortawesome/free-solid-svg-icons';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, 'assets/i18n/', '.json');
@@ -62,6 +82,9 @@ describe('MainComponent', () => {
       ]
     })
       .compileComponents();
+
+    const library = TestBed.inject(FaIconLibrary);
+    library.addIcons(faBell, faBolt, faClock, faCog, faGlobe, faHome, faLock, faMapMarked, faUsers, faCookie, faFileSignature, faShieldHalved, faGithub, faExternalLinkAlt, faChevronDown, faDownload);
   }));
 
   beforeEach(() => {

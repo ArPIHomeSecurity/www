@@ -1,15 +1,21 @@
-import { TestBed, waitForAsync } from '@angular/core/testing';
+import { TestBed, waitForAsync, ComponentFixture } from '@angular/core/testing';
+import { provideRouter } from '@angular/router';
 import { HttpClient, provideHttpClient, withFetch } from '@angular/common/http';
 
 import { TranslateModule, TranslateLoader, TranslateService } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 import { AppComponent } from './app.component';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { ConsentDialogComponent } from './consent.dialog/consent.dialog.component';
+import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
 import { ShareComponent } from './home/share/share.component';
 import { FooterComponent } from './home/footer/footer.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ShareButtons } from 'ngx-sharebuttons/buttons';
+
+// Import icons used in child components
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faCookie, faFileSignature, faShieldHalved } from '@fortawesome/free-solid-svg-icons';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, 'assets/i18n/', '.json');
@@ -22,6 +28,7 @@ describe('AppComponent', () => {
     TestBed.configureTestingModule({
       declarations: [
         AppComponent,
+        ConsentDialogComponent,
         ShareComponent,
         FooterComponent
       ],
@@ -39,9 +46,13 @@ describe('AppComponent', () => {
       ],
       providers: [
         TranslateService,
-        provideHttpClient(withFetch())
+        provideHttpClient(withFetch()),
+        provideRouter([])
       ]
     }).compileComponents();
+
+    const library = TestBed.inject(FaIconLibrary);
+    library.addIcons(faGithub, faCookie, faFileSignature, faShieldHalved);
   }));
 
   it('should create the app', () => {

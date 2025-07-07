@@ -7,6 +7,18 @@ import { LazyLoadImageModule } from 'ng-lazyload-image';
 
 import { FeaturesComponent } from './features.component';
 import { GalleryModule } from '@ks89/angular-modal-gallery';
+import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
+import {
+  faBell,
+  faBolt,
+  faClock,
+  faCog,
+  faGlobe,
+  faHome,
+  faLock,
+  faMapMarked,
+  faUsers
+} from '@fortawesome/free-solid-svg-icons';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, 'assets/i18n/', '.json');
@@ -20,21 +32,26 @@ describe('FeaturesComponent', () => {
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [FeaturesComponent],
-      imports: [TranslateModule.forRoot({
-        loader: {
-          provide: TranslateLoader,
-          useFactory: HttpLoaderFactory,
-          deps: [HttpClient]
-        }
-      }),
-      GalleryModule,
-      LazyLoadImageModule],
+      imports: [
+        FontAwesomeModule,
+        TranslateModule.forRoot({
+          loader: {
+            provide: TranslateLoader,
+            useFactory: HttpLoaderFactory,
+            deps: [HttpClient]
+          }
+        }),
+        GalleryModule,
+        LazyLoadImageModule],
       providers: [
         TranslateService,
         provideHttpClient(withFetch())
       ]
     })
       .compileComponents();
+
+    const library = TestBed.inject(FaIconLibrary);
+    library.addIcons(faBell, faBolt, faClock, faCog, faGlobe, faHome, faLock, faMapMarked, faUsers);
   }));
 
   beforeEach(() => {
