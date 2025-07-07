@@ -18,18 +18,6 @@ export class MainComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    // Enhanced meta description for SEO
-    this.meta.addTag({
-      name: "description",
-      content: "ArPI is an open-source Raspberry Pi based home security system. Replace your old alarm system mainboard and reuse existing sensors, keypads, and sirens. Easy DIY installation with modern web interface, notifications, and remote access. Download for free!"
-    });
-    
-    // Additional meta tags for better SEO
-    this.meta.addTag({
-      name: "keywords",
-      content: "ArPI, Raspberry Pi, home security, alarm system, DIY security, open source, home automation, security system, IoT, smart home, sensors, keypad, siren"
-    });
-
     // Add structured data for better SEO and sitelinks
     this.structuredDataService.insertStructuredData(
       this.structuredDataService.createOrganizationStructuredData()
