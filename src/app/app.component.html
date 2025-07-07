@@ -1,11 +1,10 @@
 <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
-  <a class="navbar-brand d-none d-lg-block" href=".">
+  <a class="navbar-brand" href=".">
     <img src="assets/arpi-logo-64.png" />
-    <h1>{{ 'arpi.title.long' | translate }}</h1>
-  </a>
-  <a class="navbar-brand d-lg-none" href=".">
-    <img src="assets/arpi-logo-64.png" />
-    <h1>{{ 'arpi.title.short' | translate }}</h1>
+    <h1>
+      <span class="d-none d-sm-inline">{{ 'arpi.title.long' | translate }}</span>
+      <span class="d-sm-none">{{ 'arpi.title.short' | translate }}</span>
+    </h1>
   </a>
   <button class="navbar-toggler" type="button" aria-expanded="false" aria-label="Toggle navigation" (click)="onMenuClicked()">
     <span class="navbar-toggler-icon"></span>
