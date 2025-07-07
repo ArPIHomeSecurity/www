@@ -59,4 +59,12 @@
 
 .carousel-inner {
   text-align: center;
+
+  img {
+    width: auto;
+    height: auto;
+    max-width: none;
+    max-height: none;
+    object-fit: none;
+  }
 }
