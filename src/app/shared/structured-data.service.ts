@@ -35,18 +35,14 @@ export class StructuredDataService {
       },
       'description': 'ArPI is an open-source Raspberry Pi based home security system that allows you to replace ' +
                      'your old alarm system mainboard and reuse existing sensors, keypads, and sirens.',
-      'foundingDate': '2019',
+      'foundingDate': '2016',
       'founder': {
         '@type': 'Person',
         'name': 'Gábor Kovács'
       },
       'sameAs': [
         'https://github.com/ArPIHomeSecurity',
-        'https://docs.arpi-security.info',
         'https://arpi-security.slack.com/',
-        'https://www.tindie.com/products/gkovacs81/arpi-board-v20/',
-        'https://www.instructables.com/ArPI-Home-Security-System/',
-        'https://www.hackster.io/gkovacs81/arpi-home-security-system-a18e57'
       ],
       'contactPoint': {
         '@type': 'ContactPoint',
@@ -59,11 +55,18 @@ export class StructuredDataService {
           '@type': 'Product',
           'name': 'ArPI Board v2.0',
           'description': 'ArPI Board v2.0 - Raspberry Pi expansion board for home security system',
-          'url': 'https://www.tindie.com/products/gkovacs81/arpi-board-v20/'
-        },
-        'seller': {
-          '@type': 'Organization',
-          'name': 'ArPIHomeSecurity'
+          'url': 'https://www.tindie.com/products/gkovacs81/arpi-board-v20/',
+          'image': 'https://www.arpi-security.info/assets/arpi_board_v2.png',
+          'offers': {
+            '@type': 'Offer',
+            'priceCurrency': 'USD',
+            'price': '39.00',
+            'url': 'https://www.tindie.com/products/gkovacs81/arpi-board-v20/'
+          },
+          'seller': {
+            '@type': 'Organization',
+            'name': 'ArPIHomeSecurity'
+          }
         },
         'availability': 'https://schema.org/InStock',
         'url': 'https://www.tindie.com/products/gkovacs81/arpi-board-v20/'
@@ -91,30 +94,24 @@ export class StructuredDataService {
       '@type': 'SoftwareApplication',
       'name': 'ArPI Home Security System',
       'alternateName': 'ArPI',
-      'description': 'Open-source Raspberry Pi based home security system with web interface, mobile app,' +
-                     ' and DIY installation support.',
-      'applicationCategory': 'SecurityApplication',
-      'operatingSystem': 'Linux, Raspberry Pi OS',
-      'offers': {
-        '@type': 'Offer',
-        'price': '0',
-        'priceCurrency': 'USD'
-      },
+      'description': 'Open-source Raspberry Pi based home security system with web interface, mobile app, ' +
+                     'and DIY installation support.',
+      'applicationCategory': 'Security',
+      'operatingSystem': 'Raspberry Pi OS',
       'downloadUrl': 'https://github.com/ArPIHomeSecurity/arpi_management/releases',
       'author': {
         '@type': 'Organization',
         'name': 'ArPIHomeSecurity'
       },
-      'programmingLanguage': 'Python',
+      'programmingLanguage': 'Python,Typescript',
       'releaseNotes': 'https://github.com/ArPIHomeSecurity/arpi_management/releases',
       'softwareVersion': '1.0.0',
-      'datePublished': '2019-01-01',
-      'dateModified': '2025-01-01',
-      'aggregateRating': {
-        '@type': 'AggregateRating',
-        'ratingValue': '4.5',
-        'ratingCount': '127'
-      }
+      'codeRepository': [
+        'https://github.com/ArPIHomeSecurity/arpi_management/',
+        'https://github.com/ArPIHomeSecurity/arpi_webapplication/',
+        'https://github.com/ArPIHomeSecurity/arpi_server/',
+        'https://github.com/ArPIHomeSecurity/arpi_documentation'
+      ]
     };
 
     return structuredData;
@@ -274,7 +271,7 @@ export class StructuredDataService {
           'acceptedAnswer': {
             '@type': 'Answer',
             'text': 'Yes, ArPI is completely open-source and free to use. You only need to purchase the hardware ' +
-                    'components like Raspberry Pi and sensors.'
+                    'components like ArPI board, Raspberry Pi and sensors.'
           }
         },
         {
@@ -339,7 +336,6 @@ export class StructuredDataService {
         }
       },
       'datePublished': '2019-01-01',
-      'dateModified': '2025-07-06',
       'mainEntityOfPage': {
         '@type': 'WebPage',
         '@id': 'https://www.arpi-security.info'
@@ -390,7 +386,7 @@ export class StructuredDataService {
       'supply': [
         {
           '@type': 'HowToSupply',
-          'name': 'Raspberry Pi 4'
+          'name': 'Raspberry Pi'
         },
         {
           '@type': 'HowToSupply',
