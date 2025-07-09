@@ -29,9 +29,9 @@ export class MainComponent implements OnInit {
       this.structuredDataService.insertStructuredData(
         this.structuredDataService.createSoftwareApplicationStructuredData()
       );
-      this.structuredDataService.insertStructuredData(
-        this.structuredDataService.createWebsiteStructuredData()
-      );
+      // this.structuredDataService.insertStructuredData(
+      //   this.structuredDataService.createWebsiteStructuredData()
+      // );
       this.structuredDataService.insertStructuredData(
         this.structuredDataService.createSiteNavigationElementStructuredData()
       );

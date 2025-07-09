@@ -211,6 +211,7 @@ export class StructuredDataService {
     const structuredData = {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
+      'name': 'ArPI Home Security Breadcrumbs',
       'itemListElement': [
         {
           '@type': 'ListItem',
@@ -246,6 +247,8 @@ export class StructuredDataService {
     const structuredData = {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
+      'name': 'ArPI Home Security FAQ',
+      'description': 'Frequently Asked Questions about ArPI Home Security System',
       'mainEntity': [
         {
           '@type': 'Question',
@@ -320,6 +323,7 @@ export class StructuredDataService {
     const structuredData = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
+      'name': 'ArPI - Open Source Raspberry Pi Home Security System',
       'headline': 'ArPI - Open Source Raspberry Pi Home Security System',
       'description': 'Complete guide to ArPI home security system: features, installation, and usage of this ' +
                      'open-source Raspberry Pi based security solution.',
