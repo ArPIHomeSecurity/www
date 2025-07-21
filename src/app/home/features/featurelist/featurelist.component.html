@@ -1,0 +1,19 @@
+<div class="feature odd text-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h2 class="text-center mt-5">{{ 'arpi.features.general.title' | translate }}</h2>
+      </div>
+      <div class="col-md-4 mb-3" *ngFor="let feature of generalFeatures">
+        <div class="card h-100 border border-primary shadow">
+          <div class="card-body">
+            <h3 class="card-title">
+              <fa-icon [icon]="feature.icon"></fa-icon> {{ feature.title | translate }}
+            </h3>
+            <p class="card-text">{{ feature.description | translate }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

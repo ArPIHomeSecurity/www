@@ -1,0 +1,25 @@
+/* Shared styles for all features components. */
+.feature {
+  padding: 35px;
+  .description { margin-bottom: 25px; }
+  .demo img { margin: auto; width: 50%; }
+  #google-play-store-qr-code { border: 10px solid #007bff; border-radius: 5px; }
+  #web-application-icon { margin: auto; width: 160px; height: 195px; object-fit: none; }
+  .card { background-color: rgba(240, 248, 255, 0.26); }
+}
+
+.feature.odd {
+  background: #00c6ff;
+  background: -webkit-linear-gradient(to right, #0072ff, #00c6ff);
+  background: linear-gradient(to right, #0072ff, #00c6ff);
+}
+
+.feature.technologies {
+  .layer { padding: 20px; height: 100%; border-radius: 10px; }
+  img { width: auto; height: auto; max-width: 100px; max-height: 100px; }
+}
+
+.carousel-inner {
+  text-align: center;
+  img { width: auto; height: auto; max-width: none; max-height: none; object-fit: none; }
+}

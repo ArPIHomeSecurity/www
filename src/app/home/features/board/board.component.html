@@ -1,0 +1,50 @@
+<div class="feature board">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="text-center mt-5">{{ 'arpi.features.board.title' | translate }}</h2>
+      </div>
+    </div>
+    <div *ngFor="let feature of features; let index=index; let odd=odd; let even=even;"
+      [ngClass]="{ 'odd text-light': odd, feature: true, 'even': even }">
+      <div *ngIf="odd" class="row">
+        <div class="col-md-8 board">
+          <ks-plain-gallery 
+            [id]=feature.id
+            [images]="getImages(feature.title)"
+            [config]="galleryConfig"
+            (clickImage)="onShow(202, $event, feature.title)">
+          </ks-plain-gallery>
+        </div>
+        <div class="col-md-4 description d-flex">
+          <div class="align-self-center">
+            <h2>{{ 'arpi.features.' + feature.title + '.title' | translate }}</h2>
+            <p class="text-justify">{{ 'arpi.features.' + feature.title + '.description' | translate }}</p>
+            <ul *ngIf="feature.properties">
+              <li *ngFor="let property of feature.properties">{{ 'arpi.features.' + feature.title + '.' + property | translate }}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="even" class="row">
+        <div class="col-md-4 description d-flex">
+          <div class="align-self-center">
+            <h2>{{ 'arpi.features.' + feature.title + '.title' | translate }}</h2>
+            <p class="text-justify">{{ 'arpi.features.' + feature.title + '.description' | translate }}</p>
+            <ul *ngIf="feature.properties">
+              <li *ngFor="let property of feature.properties">{{ 'arpi.features.' + feature.title + '.' + property | translate }}</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-8 board">
+          <ks-plain-gallery 
+            [id]=feature.id
+            [images]="getImages(feature.title)"
+            [config]="galleryConfig"
+            (clickImage)="onShow(202, $event, feature.title)">
+          </ks-plain-gallery>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

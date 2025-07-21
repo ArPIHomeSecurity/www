@@ -12,10 +12,6 @@
   <div id="navbarSupportedContent" [ngClass]="{'collapse navbar-collapse': true, 'show': !menuClosed}">
     <ul id="main-menu" class="navbar-nav ms-auto flex-column-reverse flex-lg-row-reverse" role="navigation">
       <li class="nav-item">
-        <a href="https://arpi-security.readthedocs.io" target="_blank" class="nav-link text-light" (click)="onMenuClose()">DOCS</a>
-      </li>
-
-      <li class="nav-item">
         <a href="https://demo.arpi-security.info/" target="_blank" class="nav-link text-light" (click)="onMenuClose()">DEMO</a>
       </li>
 
@@ -33,6 +29,10 @@
       </li>
       <li class="nav-item">
         <a class="nav-link" activeClass="active" href="#versions" (click)="onMenuClose()">{{ 'arpi.menu.versions' |
+          translate }}</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" activeClass="active" href="#documentation" (click)="onMenuClose()">{{ 'arpi.menu.documentation' |
           translate }}</a>
       </li>
       <li class="nav-item dropdown">

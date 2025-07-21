@@ -15,7 +15,10 @@ import { shareIcons } from 'ngx-sharebuttons/icons';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './home/header/header.component';
-import { FeaturesComponent } from './home/features/features.component';
+import { UserInterfaceComponent } from './home/features/user-interface/user-interface.component';
+import { FeatureListComponent } from './home/features/featurelist/featurelist.component';
+import { BoardComponent } from './home/features/board/board.component';
+import { TechnologiesComponent } from './home/features/technologies/technologies.component';
 import { AboutComponent } from './home/about/about.component';
 import { MainComponent } from './home/main/main.component';
 import { FooterComponent } from './home/footer/footer.component';
@@ -26,6 +29,7 @@ import { VersionsComponent } from './home/versions/versions.component';
 import { PrivacyComponent } from './privacy/privacy.component';
 import { TermsComponent } from './terms/terms.component';
 import { ConsentDialogComponent } from './consent.dialog/consent.dialog.component';
+import { DocumentationComponent } from './home/documentation/documentation.component';
 
 import 'mousetrap';
 
@@ -38,7 +42,10 @@ export function HttpLoaderFactory(http: HttpClient) {
   declarations: [
     AppComponent,
     HeaderComponent,
-    FeaturesComponent,
+    FeatureListComponent,
+    UserInterfaceComponent,
+    BoardComponent,
+    TechnologiesComponent,
     AboutComponent,
     MainComponent,
     FooterComponent,
@@ -48,7 +55,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     VersionsComponent,
     PrivacyComponent,
     TermsComponent,
-    ConsentDialogComponent
+    ConsentDialogComponent,
+    DocumentationComponent
   ],
   bootstrap: [
     AppComponent
