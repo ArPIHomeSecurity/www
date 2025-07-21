@@ -1,5 +1,14 @@
 @import "../features.scss";
 
+.carousel-inner {
+  .carousel-item {
+    img {
+      width: 100%;
+      max-width: 400px;
+    }
+  }
+}
+
 #web-application-icon {
   margin: auto;
   width: 160px;
