@@ -55,7 +55,10 @@
 
   "arpi.features.web.title": "Web application",
   "arpi.features.web.description": "You can use our web application anytime from the internet.",
-  "arpi.features.demo.description": "You can test a demo version of the ArPI web application in a simulated environment.",
+  "arpi.features.demo.description": "Try the ArPI web application in demo mode: a live site with no real backend, where you can log in and simulate sensor activities directly from the interface—just like using a real system.",
+  "arpi.features.demo.link": "Open demo site",
+  "arpi.features.simulator.description": "Install the ArPI system on a Raspberry Pi without the ArPI board. Simulate sensor activities using scripts for testing.",
+  "arpi.features.simulator.link": "See simulator documentation",
 
   "arpi.features.android.title": "Android application",
   "arpi.features.android.description": "You can download our Android application from the Google Play Store.",

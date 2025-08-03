@@ -55,7 +55,10 @@
 
   "arpi.features.web.title": "Web alkalmazás",
   "arpi.features.web.description": "Használhatod a web alkalmazásunkat bármikor az interneten keresztül.",
-  "arpi.features.demo.description": "Kipróbálhatod az ArPI web alkalmazás demó verzióját egy szimulált környezetben.",
+  "arpi.features.demo.description": "Próbáld ki az ArPI webalkalmazást demó módban: élő oldal valódi háttérrendszer nélkül, ahol bejelentkezhetsz és az érzékelők működését közvetlenül a felületen szimulálhatod, mintha igazi rendszert használnál.",
+  "arpi.features.demo.link": "Demó oldal megnyitása",
+  "arpi.features.simulator.description": "Telepítsd az ArPI rendszert Raspberry Pi-re ArPI kártya nélkül. Az érzékelők működését szkriptekkel szimulálhatod teszteléshez.",
+  "arpi.features.simulator.link": "Szimulátor dokumentáció megtekintése",
 
   "arpi.features.android.title": "Android alkalmazás",
   "arpi.features.android.description": "Letöltheted az Android alkalmazásunkat a Google Play Store-ból.",
