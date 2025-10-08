@@ -10,6 +10,7 @@
   "arpi.menu.versions": "Verziók",
   "arpi.menu.order": "Megrendelés",
   "arpi.menu.contact": "Kapcsolat",
+  "arpi.menu.news": "Hírek",
   "arpi.header.github": "Project Github Repository",
   "arpi.footer.changelog": "Show changelog",
   "arpi.about.contributors.description1": "Részt vennél az ArPI nyilt forrású fejlesztésében?",
@@ -156,5 +157,12 @@
 
   "arpi.footer.privacy": "Adatvédelmi irányelvek",
   "arpi.footer.terms": "Szolgáltatási feltételek",
-  "arpi.footer.consent": "Süti hozzájárulás"
+  "arpi.footer.consent": "Süti hozzájárulás",
+
+  "arpi.news.title": "Hírek",
+  "arpi.news.readMore": "Tovább olvasom",
+  "arpi.news.readLess": "Kevesebb",
+
+  "arpi.news.01.title": "Hamarosan érkezik az ArPI Board v3.0",
+  "arpi.news.01.content": "Az új ArPI Board v3.0 a következő 3 hónapon belül elérhető lesz! Zóna duplázást kínál (15 csatorna, 30 érzékelő), integrált szintillesztőt és feszültségszabályzót, valamint fejlett hibadetektálást tartalmaz. Kövesd híreinket a további frissítésekért!"
 }

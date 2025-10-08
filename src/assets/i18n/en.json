@@ -10,6 +10,7 @@
   "arpi.menu.versions": "Versions",
   "arpi.menu.order": "Order",
   "arpi.menu.contact": "Contact",
+  "arpi.menu.news": "News",
   "arpi.header.github": "Project Github Repository",
   "arpi.footer.changelog": "Show changelog",
   "arpi.about.contributors.description1": "Want to start contributing to open source with ArPI?",
@@ -156,5 +157,12 @@
 
   "arpi.footer.privacy": "Privacy policy",
   "arpi.footer.terms": "Terms of service",
-  "arpi.footer.consent": "Cookie consent"
+  "arpi.footer.consent": "Cookie consent",
+
+  "arpi.news.title": "News",
+  "arpi.news.readMore": "Read more",
+  "arpi.news.readLess": "Read less",
+
+  "arpi.news.01.title": "ArPI Board v3.0 is coming",
+  "arpi.news.01.content": "The new ArPI Board v3.0 is launching within the next 3 months! It features zone doubling (15 channels, 30 sensors), an integrated level shifter and voltage regulator, plus advanced error detection. Stay tuned for more updates!"
 }

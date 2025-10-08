@@ -30,6 +30,7 @@ import { PrivacyComponent } from './privacy/privacy.component';
 import { TermsComponent } from './terms/terms.component';
 import { ConsentDialogComponent } from './consent.dialog/consent.dialog.component';
 import { DocumentationComponent } from './home/documentation/documentation.component';
+import { NewsComponent } from './news/news.component';
 
 import 'mousetrap';
 
@@ -56,7 +57,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     PrivacyComponent,
     TermsComponent,
     ConsentDialogComponent,
-    DocumentationComponent
+    DocumentationComponent,
+    NewsComponent
   ],
   bootstrap: [
     AppComponent
