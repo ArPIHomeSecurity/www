@@ -1,6 +1,9 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { NewsComponent } from './news.component';
+import { TranslateLoader, TranslateModule, TranslateService } from '@ngx-translate/core';
+import { HttpLoaderFactory } from '../app.module';
+import { HttpClient, provideHttpClient, withFetch } from '@angular/common/http';
 
 describe('NewsComponent', () => {
   let component: NewsComponent;
@@ -8,7 +11,20 @@ describe('NewsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [NewsComponent]
+      declarations: [NewsComponent],
+      imports: [
+        TranslateModule.forRoot({
+          loader: {
+            provide: TranslateLoader,
+            useFactory: HttpLoaderFactory,
+            deps: [HttpClient]
+          }
+        })
+      ],
+      providers: [
+        TranslateService,
+        provideHttpClient(withFetch())
+      ] 
     })
       .compileComponents();
 

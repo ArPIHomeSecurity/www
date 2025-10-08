@@ -20,15 +20,17 @@ describe('VersionsComponent', () => {
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [VersionsComponent],
-      imports: [TranslateModule.forRoot({
-        loader: {
-          provide: TranslateLoader,
-          useFactory: HttpLoaderFactory,
-          deps: [HttpClient]
-        }
-      }),
-      GalleryModule,
-      FontAwesomeModule],
+      imports: [
+        TranslateModule.forRoot({
+          loader: {
+            provide: TranslateLoader,
+            useFactory: HttpLoaderFactory,
+            deps: [HttpClient]
+          }
+        }),
+        GalleryModule,
+        FontAwesomeModule
+      ],
       providers: [
         TranslateService,
         provideHttpClient(withFetch())

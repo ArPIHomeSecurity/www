@@ -72,7 +72,13 @@ export class NavigationService {
       url: 'https://www.arpi-security.info/#contact',
       description: 'Get in touch with ArPI team',
       priority: 0.5
-    }
+    },
+    {
+      label: 'News',
+      url: 'https://www.arpi-security.info/news',
+      description: 'News of ArPI Home Security',
+      priority: 0.5
+    } 
   ];
 
   constructor() { }

@@ -20,7 +20,8 @@ describe('ContactComponent', () => {
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ContactComponent],
-      imports: [ReactiveFormsModule,
+      imports: [
+        ReactiveFormsModule,
         TranslateModule.forRoot({
           loader: {
             provide: TranslateLoader,
@@ -28,7 +29,8 @@ describe('ContactComponent', () => {
             deps: [HttpClient]
           }
         }),
-        LazyLoadImageModule],
+        LazyLoadImageModule
+      ],
       providers: [
         TranslateService,
         provideHttpClient(withFetch())

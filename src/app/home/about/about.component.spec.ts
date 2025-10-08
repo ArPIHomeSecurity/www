@@ -14,19 +14,20 @@ export function HttpLoaderFactory(http: HttpClient) {
 describe('AboutComponent', () => {
   let component: AboutComponent;
   let fixture: ComponentFixture<AboutComponent>;
-  let translate: TranslateService;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [AboutComponent],
-      imports: [TranslateModule.forRoot({
-        loader: {
-          provide: TranslateLoader,
-          useFactory: HttpLoaderFactory,
-          deps: [HttpClient]
-        }
-      }),
-      LazyLoadImageModule],
+      imports: [
+        TranslateModule.forRoot({
+          loader: {
+            provide: TranslateLoader,
+            useFactory: HttpLoaderFactory,
+            deps: [HttpClient]
+          }
+        }),
+        LazyLoadImageModule
+      ],
       providers: [
         TranslateService,
         provideHttpClient(withFetch())
