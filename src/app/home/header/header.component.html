@@ -5,7 +5,7 @@
       <div *ngIf="displayPlaceholder" style="height: 500px"></div>
       <img [attr.src]="'assets/header_' + slide + '.jpg'" (load)="imageLoaded($event)">
 
-      <div class="carousel-caption">
+      <div class="carousel-caption bg-black bg-opacity-75 rounded">
         <h2>{{ 'arpi.home.' + slide + '.title' | translate }}</h2>
         <h3>{{ 'arpi.home.' + slide + '.description' | translate }}</h3>
       </div>

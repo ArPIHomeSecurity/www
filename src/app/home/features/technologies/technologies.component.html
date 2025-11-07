@@ -7,7 +7,7 @@
     </div>
     <div class="row">
       <div *ngFor="let layer of technologies" class="col text-center mb-3">
-        <div class="layer border">
+        <div class="layer border bg-white bg-opacity-75 text-dark">
           <h3>{{ layer.name | translate }}</h3>
           <div *ngFor="let item of layer.items;let i = index; let last=last">
             <a [attr.href]="item.url" target="_blank"><img [attr.src]="item.image" loading="lazy" [attr.alt]="item.text"></a>
