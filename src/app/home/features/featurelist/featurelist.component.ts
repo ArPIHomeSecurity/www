@@ -9,15 +9,15 @@ import { faLock, faUsers, faMapMarked, faCog, faGlobe, faBell, faBolt, faClock, 
 })
 export class FeatureListComponent implements OnInit {
   generalFeatures = [
-    { icon: faLock, title: 'arpi.features.general.secureaccess.title', description: 'arpi.features.general.secureaccess.description' },
-    { icon: faUsers, title: 'arpi.features.general.users.title', description: 'arpi.features.general.users.description' },
-    { icon: faMapMarked, title: 'arpi.features.general.locations.title', description: 'arpi.features.general.locations.description' },
-    { icon: faCog, title: 'arpi.features.general.programmable.title', description: 'arpi.features.general.programmable.description' },
-    { icon: faGlobe, title: 'arpi.features.general.remoteaccess.title', description: 'arpi.features.general.remoteaccess.description' },
-    { icon: faBell, title: 'arpi.features.general.notifications.title', description: 'arpi.features.general.notifications.description' },
-    { icon: faBolt, title: 'arpi.features.general.poweroutage.title', description: 'arpi.features.general.poweroutage.description' },
-    { icon: faClock, title: 'arpi.features.general.delayedalert.title', description: 'arpi.features.general.delayedalert.description' },
-    { icon: faHome, title: 'arpi.features.general.homeautomation.title', description: 'arpi.features.general.homeautomation.description' }
+    { icon: faLock, color: 'text-primary', title: 'arpi.features.general.secureaccess.title', description: 'arpi.features.general.secureaccess.description' },
+    { icon: faUsers, color: 'text-success', title: 'arpi.features.general.users.title', description: 'arpi.features.general.users.description' },
+    { icon: faMapMarked, color: 'text-info', title: 'arpi.features.general.locations.title', description: 'arpi.features.general.locations.description' },
+    { icon: faCog, color: 'text-warning', title: 'arpi.features.general.programmable.title', description: 'arpi.features.general.programmable.description' },
+    { icon: faGlobe, color: 'text-secondary', title: 'arpi.features.general.remoteaccess.title', description: 'arpi.features.general.remoteaccess.description' },
+    { icon: faBell, color: 'text-danger', title: 'arpi.features.general.notifications.title', description: 'arpi.features.general.notifications.description' },
+    { icon: faBolt, color: 'text-primary', title: 'arpi.features.general.poweroutage.title', description: 'arpi.features.general.poweroutage.description' },
+    { icon: faClock, color: 'text-info', title: 'arpi.features.general.delayedalert.title', description: 'arpi.features.general.delayedalert.description' },
+    { icon: faHome, color: 'text-success', title: 'arpi.features.general.homeautomation.title', description: 'arpi.features.general.homeautomation.description' }
   ];
   ngOnInit() {}
 }
