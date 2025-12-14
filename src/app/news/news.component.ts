@@ -21,6 +21,12 @@ export class NewsComponent {
       date: '2025-10-08',
       content: 'arpi.news.01.content'
     },
+    {
+      title: 'arpi.news.02.title',
+      image: 'assets/news/2025-12-14.webp',
+      date: '2025-12-14',
+      content: 'arpi.news.02.content'
+    }
     // {
     //   title: 'arpi.news.02.title',
     //   image: 'assets/news/news-2025-09-15.jpg',

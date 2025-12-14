@@ -164,5 +164,8 @@
   "arpi.news.readLess": "Kevesebb",
 
   "arpi.news.01.title": "Hamarosan érkezik az ArPI Board v3.0",
-  "arpi.news.01.content": "Az új ArPI Board v3.0 a következő 3 hónapon belül elérhető lesz! Zóna duplázást kínál (15 csatorna, 30 érzékelő), integrált szintillesztőt és feszültségszabályzót, valamint fejlett hibadetektálást tartalmaz. Kövesd híreinket a további frissítésekért!"
+  "arpi.news.01.content": "Az új ArPI Board v3.0 a következő 3 hónapon belül elérhető lesz! Zóna duplázást kínál (15 csatorna, 30 érzékelő), integrált szintillesztőt és feszültségszabályzót, valamint fejlett hibadetektálást tartalmaz. Kövesd híreinket a további frissítésekért!",
+
+  "arpi.news.02.title": "Megérkezett az ArPI Board v3.0",
+  "arpi.news.02.content": "Az új ArPI Board v3.0 tesztelése befejeződött, és örömmel jelentjük be, hogy mostantól megrendelhető!"
 }
