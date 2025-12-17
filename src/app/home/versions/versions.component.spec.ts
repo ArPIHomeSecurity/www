@@ -8,6 +8,7 @@ import { GalleryModule } from '@ks89/angular-modal-gallery';
 
 import { VersionsComponent } from './versions.component';
 import { faChevronDown, faDownload } from '@fortawesome/free-solid-svg-icons';
+import { MatCardModule } from '@angular/material/card';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, 'assets/i18n/', '.json');
@@ -30,6 +31,7 @@ describe('VersionsComponent', () => {
         }),
         GalleryModule,
         FontAwesomeModule,
+        MatCardModule,
       ],
       providers: [TranslateService, provideHttpClient(withFetch())],
     }).compileComponents();

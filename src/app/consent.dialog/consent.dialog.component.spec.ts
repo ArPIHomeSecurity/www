@@ -5,6 +5,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { TranslateLoader, TranslateModule, TranslateService } from '@ngx-translate/core';
 
 import { ConsentDialogComponent } from './consent.dialog.component';
+import { MatDialogRef } from '@angular/material/dialog';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, 'assets/i18n/', '.json');
@@ -25,7 +26,16 @@ describe('ConsentDialogComponent', () => {
           },
         }),
       ],
-      providers: [TranslateService, provideHttpClient(withFetch())],
+      providers: [
+        {
+          provide: MatDialogRef,
+          useValue: {
+            close: jasmine.createSpy('close'), // or jest.fn() if using Jest
+          },
+        },
+        TranslateService,
+        provideHttpClient(withFetch()),
+      ],
       declarations: [ConsentDialogComponent],
     }).compileComponents();
 
