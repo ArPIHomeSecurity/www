@@ -32,7 +32,6 @@ module.exports = function (config) {
     ],
     crossOriginAttribute: false,
     files: [
-      '../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js'
     ]
   });
 };
