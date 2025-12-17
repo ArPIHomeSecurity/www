@@ -1,58 +1,140 @@
-<div class="documentation bg-blue py-5">
+<div class="documentation background">
   <div class="container">
-    <h2 class="text-center text-light mb-4">{{ 'arpi.documentation.title' | translate }}</h2>
-    <p class="text-center text-light mb-5">
-      {{ 'arpi.documentation.intro' | translate }}
-      <a href="https://docs.arpi-security.info" target="_blank" rel="noopener" class="text-warning text-decoration-underline">docs.arpi-security.info</a>.
-    </p>
-    <div class="row justify-content-center">
-      <div class="col-md-4 text-center mb-3">
-        <a href="https://docs.arpi-security.info/en/latest/end_users/" target="_blank" class="text-decoration-none">
-          <div class="section border h-100 d-flex flex-column align-items-center justify-content-start p-4 bg-white bg-opacity-75">
-            <fa-icon [icon]="'user'" size="3x" class="mb-3 text-primary"></fa-icon>
-            <h3 class="mb-2 text-dark">{{ 'arpi.documentation.enduser.title' | translate }}</h3>
-            <p class="mb-0 text-dark">{{ 'arpi.documentation.enduser.description' | translate }}</p>
-          </div>
-        </a>
-      </div>
-      <div class="col-md-4 text-center mb-3">
-        <a href="https://docs.arpi-security.info/en/latest/security_engineers/" target="_blank" class="text-decoration-none">
-          <div class="section border h-100 d-flex flex-column align-items-center justify-content-start p-4 bg-white bg-opacity-75">
-            <fa-icon [icon]="'shield-alt'" size="3x" class="mb-3 text-success"></fa-icon>
-            <h3 class="mb-2 text-dark">{{ 'arpi.documentation.engineer.title' | translate }}</h3>
-            <p class="mb-0 text-dark">{{ 'arpi.documentation.engineer.description' | translate }}</p>
-          </div>
-        </a>
-      </div>
-      <div class="col-md-4 text-center mb-3">
-        <a href="https://docs.arpi-security.info/en/latest/developers/" target="_blank" class="text-decoration-none">
-          <div class="section border h-100 d-flex flex-column align-items-center justify-content-start p-4 bg-white bg-opacity-75">
-            <fa-icon [icon]="'code'" size="3x" class="mb-3 text-info"></fa-icon>
-            <h3 class="mb-2 text-dark">{{ 'arpi.documentation.developer.title' | translate }}</h3>
-            <p class="mb-0 text-dark">{{ 'arpi.documentation.developer.description' | translate }}</p>
-          </div>
-        </a>
-      </div>
+    <div class="grid">
+      <h2 class="col-12">{{ 'arpi.documentation.title' | translate }}</h2>
     </div>
-
-    <div class="row justify-content-center mt-4">
-      <div class="col-md-4 text-center mb-3">
-        <a href="https://www.instructables.com/ArPI-Home-Security-System/" target="_blank" class="text-decoration-none">
-          <div class="section border h-100 d-flex flex-column align-items-center justify-content-start p-4 bg-white bg-opacity-75">
-            <fa-icon [icon]="'lightbulb'" size="3x" class="mb-3 text-warning"></fa-icon>
-            <h3 class="mb-2 text-dark">{{ 'arpi.documentation.instructables.title' | translate }}</h3>
-            <p class="mb-0 text-dark">{{ 'arpi.documentation.instructables.description' | translate }}</p>
-          </div>
+    <div class="grid">
+      <p class="col-12 header">
+        {{ 'arpi.documentation.intro' | translate }}
+        <a
+          matButton
+          href="https://docs.arpi-security.info"
+          target="_blank"
+          rel="noopener"
+          class="text-warning text-decoration-underline"
+          >docs.arpi-security.info
+          <mat-icon fontSet="material-symbols-outlined">open_in_new</mat-icon>
         </a>
+      </p>
+    </div>
+    <div class="grid">
+      <div class="col-12 col-md-6 col-lg-4">
+        <mat-card class="h-100">
+          <mat-card-header>
+            <mat-card-title>{{ 'arpi.documentation.enduser.title' | translate }}</mat-card-title>
+            <mat-icon mat-card-avatar fontSet="material-symbols-outlined">person</mat-icon>
+          </mat-card-header>
+          <mat-card-content class="h-100">
+            <p class="text-justify">{{ 'arpi.documentation.enduser.description' | translate }}</p>
+          </mat-card-content>
+          <mat-card-actions align="end">
+            <a
+              mat-raised-button
+              color="primary"
+              href="https://docs.arpi-security.info/en/latest/end_users/"
+              target="_blank"
+              rel="noopener"
+            >
+              {{ 'arpi.action.open' | translate }}
+              <mat-icon fontSet="material-symbols-outlined">open_in_new</mat-icon>
+            </a>
+          </mat-card-actions>
+        </mat-card>
       </div>
-      <div class="col-md-4 text-center mb-3">
-        <a href="https://www.hackster.io/gkovacs81/arpi-home-security-system-a18e57" target="_blank" class="text-decoration-none">
-          <div class="section border h-100 d-flex flex-column align-items-center justify-content-start p-4 bg-white bg-opacity-75">
-            <fa-icon [icon]="'microchip'" size="3x" class="mb-3 text-secondary"></fa-icon>
-            <h3 class="mb-2 text-dark">{{ 'arpi.documentation.hackster.title' | translate }}</h3>
-            <p class="mb-0 text-dark">{{ 'arpi.documentation.hackster.description' | translate }}</p>
-          </div>
-        </a>
+      <div class="col-12 col-md-6 col-lg-4">
+        <mat-card class="h-100">
+          <mat-card-header>
+            <mat-card-title>{{ 'arpi.documentation.engineer.title' | translate }}</mat-card-title>
+            <mat-icon mat-card-avatar fontSet="material-symbols-outlined">security</mat-icon>
+          </mat-card-header>
+          <mat-card-content class="h-100">
+            <p class="text-justify">{{ 'arpi.documentation.engineer.description' | translate }}</p>
+          </mat-card-content>
+          <mat-card-actions align="end">
+            <a
+              mat-raised-button
+              color="primary"
+              href="https://docs.arpi-security.info/en/latest/security_engineers/"
+              target="_blank"
+              rel="noopener"
+            >
+              {{ 'arpi.action.open' | translate }}
+              <mat-icon fontSet="material-symbols-outlined">open_in_new</mat-icon>
+            </a>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4">
+        <mat-card class="h-100">
+          <mat-card-header>
+            <mat-card-title>{{ 'arpi.documentation.developer.title' | translate }}</mat-card-title>
+            <mat-icon mat-card-avatar fontSet="material-symbols-outlined">code</mat-icon>
+          </mat-card-header>
+          <mat-card-content class="h-100">
+            <p class="text-justify">{{ 'arpi.documentation.developer.description' | translate }}</p>
+          </mat-card-content>
+          <mat-card-actions align="end">
+            <a
+              mat-raised-button
+              color="primary"
+              href="https://docs.arpi-security.info/en/latest/developers/"
+              target="_blank"
+              rel="noopener"
+            >
+              {{ 'arpi.action.open' | translate }}
+              <mat-icon fontSet="material-symbols-outlined">open_in_new</mat-icon>
+            </a>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4">
+        <mat-card class="h-100">
+          <mat-card-header>
+            <mat-card-title>{{
+              'arpi.documentation.instructables.title' | translate
+            }}</mat-card-title>
+            <mat-icon mat-card-avatar fontSet="material-symbols-outlined">lightbulb</mat-icon>
+          </mat-card-header>
+          <mat-card-content class="h-100">
+            <p class="text-justify">
+              {{ 'arpi.documentation.instructables.description' | translate }}
+            </p>
+          </mat-card-content>
+          <mat-card-actions align="end">
+            <a
+              mat-raised-button
+              color="primary"
+              href="https://www.instructables.com/ArPI-Home-Security-System/"
+              target="_blank"
+            >
+              {{ 'arpi.action.open' | translate }}
+              <mat-icon fontSet="material-symbols-outlined">open_in_new</mat-icon>
+            </a>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4">
+        <mat-card class="h-100">
+          <mat-card-header>
+            <mat-card-title>{{ 'arpi.documentation.hackster.title' | translate }}</mat-card-title>
+            <mat-icon mat-card-avatar fontSet="material-symbols-outlined">memory</mat-icon>
+          </mat-card-header>
+          <mat-card-content class="h-100">
+            <p class="text-justify">{{ 'arpi.documentation.hackster.description' | translate }}</p>
+          </mat-card-content>
+          <mat-card-actions align="end">
+            <a
+              mat-raised-button
+              color="primary"
+              href="https://www.hackster.io/gkovacs81/arpi-home-security-system-a18e57"
+              target="_blank"
+            >
+              {{ 'arpi.action.open' | translate }}
+              <mat-icon fontSet="material-symbols-outlined">open_in_new</mat-icon>
+            </a>
+          </mat-card-actions>
+        </mat-card>
       </div>
     </div>
   </div>

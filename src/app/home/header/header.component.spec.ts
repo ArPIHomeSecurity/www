@@ -23,16 +23,12 @@ describe('HeaderComponent', () => {
           loader: {
             provide: TranslateLoader,
             useFactory: HttpLoaderFactory,
-            deps: [HttpClient]
-          }
-        })
+            deps: [HttpClient],
+          },
+        }),
       ],
-      providers: [
-        TranslateService,
-        provideHttpClient(withFetch())
-      ]
-    })
-      .compileComponents();
+      providers: [TranslateService, provideHttpClient(withFetch())],
+    }).compileComponents();
   }));
 
   beforeEach(() => {

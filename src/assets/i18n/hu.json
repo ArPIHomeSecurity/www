@@ -1,6 +1,9 @@
 {
   "arpi.title.long": "ArPI - Home Security System",
   "arpi.title.short": "ArPI",
+
+  "arpi.action.close": "Bezárás",
+
   "arpi.menu.features": "Funkciók",
   "arpi.menu.user_interface": "Felhasználói felület",
   "arpi.menu.board": "Kártya",
@@ -21,7 +24,7 @@
   "arpi.about.contributors.issues": "nyitott problémák",
   "arpi.about.contributors.title": "Közreműködés",
   "arpi.about.contributors.team": "A projektet fejlesztő GitHub csoport",
-  "arpi.about.title": "ArPI - Raspberry PI alapú otthoni riasztórendszer",
+  "arpi.about.title": "A projekt célja",
   "arpi.about.description": "Riasztód vezérlő paneljének cseréjével és a telepített komponensek (érzékelők, sziréna, billentyúzet) felokosíthatod otthoni riasztó rendszeredet. A rendszernek két fő komponense van: egy adapter kártya a Raspberry PI és a riasztó rendszer illesztéséhez, és egy nyílt forrású szoftver a rendszer konfigurálására és használatára.",
   "arpi.about.references.docs": "Dokumentáció",
 
@@ -59,7 +62,7 @@
   "arpi.features.demo.description": "Próbáld ki az ArPI webalkalmazást demó módban: élő oldal valódi háttérrendszer nélkül, ahol bejelentkezhetsz és az érzékelők működését közvetlenül a felületen szimulálhatod, mintha igazi rendszert használnál.",
   "arpi.features.demo.link": "Demó oldal megnyitása",
   "arpi.features.simulator.description": "Telepítsd az ArPI rendszert Raspberry Pi-re ArPI kártya nélkül. Az érzékelők működését szkriptekkel szimulálhatod teszteléshez.",
-  "arpi.features.simulator.link": "Szimulátor dokumentáció megtekintése",
+  "arpi.features.simulator.link": "Dokumentáció megtekintése",
 
   "arpi.features.android.title": "Android alkalmazás",
   "arpi.features.android.description": "Letöltheted az Android alkalmazásunkat a Google Play Store-ból.",
@@ -111,9 +114,11 @@
   "arpi.versions.hw.subtitle": "A Raspberry PI illesztő az otthoni biztonsági rendszerhez",
   "arpi.versions.hw.v0_8": "2018 / v0.8 - fejlesztés",
   "arpi.versions.hw.v0_9": "2021 / v0.9 - fejlesztés",
-  "arpi.versions.hw.v2_0": "2023 / v2.0 - megrendelésre",
+  "arpi.versions.hw.v2_0": "2023 / v2.0",
+  "arpi.versions.hw.v3_0": "2025 / v3.0 - rendelhető",
   "arpi.versions.sw.title": "ArPI szoftver",
   "arpi.versions.sw.subtitle": "Az otthoni biztonsági rendszer nyílt forráskódú szoftvere",
+  "arpi.versions.sw.releases": "Szoftver kiadások",
   "arpi.versions.sw.v1_1_0": "V3.0 kártya támogatás",
   "arpi.versions.sw.v1_0_0": "2025.05 / v1.0.0 - Android alkalmazás",
   "arpi.versions.sw.v0_16": "2024.11 / v0.16 - Frissítés a 'bookworm' OS verzióra, hálozati fejlesztések",

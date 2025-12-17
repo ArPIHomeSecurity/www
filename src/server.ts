@@ -8,9 +8,12 @@ const DIST_FOLDER = join(process.cwd(), 'dist-prod');
 
 app.set('views', join(DIST_FOLDER, 'browser'));
 
-app.get('*.*', express.static(join(DIST_FOLDER, 'browser'), {
-  maxAge: '1y'
-}));
+app.get(
+  '*.*',
+  express.static(join(DIST_FOLDER, 'browser'), {
+    maxAge: '1y',
+  }),
+);
 
 app.get('*', (req, res) => {
   res.sendFile(join(DIST_FOLDER, 'browser', 'index.html'));

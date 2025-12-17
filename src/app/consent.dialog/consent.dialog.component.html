@@ -1,16 +1,12 @@
-<div class="modal fade" id="consentDialog" tabindex="-1" role="dialog" aria-labelledby="consentDialogTitle" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="consentDialogTitle">{{ 'arpi.consent.title' | translate }}</h5>
-            </div>
-            <div class="modal-body">
-                <p>{{ 'arpi.consent.message' | translate }}</p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-primary" (click)="updateConsent('granted')" data-bs-dismiss="modal">{{ 'arpi.consent.grant' | translate }}</button>
-                <button type="button" class="btn btn-secondary" (click)="updateConsent('denied')" data-bs-dismiss="modal">{{ 'arpi.consent.deny' | translate }}</button>
-            </div>
-        </div>
-    </div>
-</div>
+<h2 mat-dialog-title>{{ 'arpi.consent.title' | translate }}</h2>
+<mat-dialog-content>
+  <p>{{ 'arpi.consent.message' | translate }}</p>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-flat-button color="primary" (click)="updateConsent('granted'); dialogRef.close()">
+    {{ 'arpi.consent.grant' | translate }}
+  </button>
+  <button mat-button (click)="updateConsent('denied'); dialogRef.close()">
+    {{ 'arpi.consent.deny' | translate }}
+  </button>
+</mat-dialog-actions>

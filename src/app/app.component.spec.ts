@@ -8,7 +8,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { AppComponent } from './app.component';
 import { ConsentDialogComponent } from './consent.dialog/consent.dialog.component';
 import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
-import { ShareComponent } from './home/share/share.component';
+import { ShareComponent } from './share/share.component';
 import { FooterComponent } from './home/footer/footer.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ShareButtons } from 'ngx-sharebuttons/buttons';
@@ -26,12 +26,7 @@ describe('AppComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [
-        AppComponent,
-        ConsentDialogComponent,
-        ShareComponent,
-        FooterComponent
-      ],
+      declarations: [AppComponent, ConsentDialogComponent, ShareComponent, FooterComponent],
       imports: [
         AppRoutingModule,
         FontAwesomeModule,
@@ -40,15 +35,11 @@ describe('AppComponent', () => {
           loader: {
             provide: TranslateLoader,
             useFactory: HttpLoaderFactory,
-            deps: [HttpClient]
-          }
-        })
+            deps: [HttpClient],
+          },
+        }),
       ],
-      providers: [
-        TranslateService,
-        provideHttpClient(withFetch()),
-        provideRouter([])
-      ]
+      providers: [TranslateService, provideHttpClient(withFetch()), provideRouter([])],
     }).compileComponents();
 
     const library = TestBed.inject(FaIconLibrary);

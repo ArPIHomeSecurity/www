@@ -1,98 +1,142 @@
-<div class="background">
+<div class="about background">
   <div class="container">
-    <div id="about" class="section">
-      <h2>{{ 'arpi.about.title' | translate }}</h2>
-      <p class="text-justify">{{ 'arpi.about.description' | translate }}</p>
-    </div>
+    <div class="grid">
+      <mat-card class="col-12 col-lg-4">
+        <mat-card-header>
+          <mat-card-title>{{ 'arpi.about.title' | translate }}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p class="text-justify">{{ 'arpi.about.description' | translate }}</p>
+        </mat-card-content>
+      </mat-card>
 
-    <div id="contributors" class="section">
-      <div class="row ">
-        <div class="col-md-8">
-          
-          <h2>{{ 'arpi.about.contributors.title' | translate }}</h2>
-          <p>{{ 'arpi.about.contributors.description1' | translate }}</p>
-          <p>{{ 'arpi.about.contributors.join' | translate }}</p>
-          <p>
-            {{ 'arpi.about.contributors.description3' | translate }}
-            <a href="https://github.com/ArPIHomeSecurity/arpi_server/issues" target="_blank">
-              {{'arpi.about.contributors.issues' | translate}}
-            </a>/
-            <a href="https://github.com/ArPIHomeSecurity/arpi_webapplication/issues" target="_blank">
-              {{'arpi.about.contributors.issues' | translate}}
-            </a>!
-          </p>
-        </div>
+      <mat-card class="col-12 col-lg-8">
+        <mat-card-header>
+          <mat-card-title>{{ 'arpi.about.contributors.title' | translate }}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <div class="grid">
+            <div class="col-12 col-md-7">
+              <p>{{ 'arpi.about.contributors.description1' | translate }}</p>
+              <p>{{ 'arpi.about.contributors.join' | translate }}</p>
+              <p>
+                {{ 'arpi.about.contributors.description3' | translate }}
+                <a href="https://github.com/ArPIHomeSecurity/arpi_server/issues" target="_blank">
+                  {{ 'arpi.about.contributors.issues' | translate }} </a
+                >/
+                <a
+                  href="https://github.com/ArPIHomeSecurity/arpi_webapplication/issues"
+                  target="_blank"
+                >
+                  {{ 'arpi.about.contributors.issues' | translate }} </a
+                >!
+              </p>
+            </div>
 
-        <div class="col-md-4">
-          <p>{{ 'arpi.about.contributors.team' | translate }}</p>
-          <a
-            class="link d-none d-sm-inline"
-            href="https://github.com/ArPIHomeSecurity"
-            target="_blank">
-            ArPIHomeSecurity
-          </a>
+            <div class="col-12 col-md-5">
+              <p>{{ 'arpi.about.contributors.team' | translate }}</p>
+              <a
+                matButton
+                color="primary"
+                href="https://github.com/ArPIHomeSecurity"
+                target="_blank"
+                aria-label="GitHub"
+              >
+                <fa-icon [icon]="github" class="fs-5"></fa-icon>
+                ArPIHomeSecurity
+              </a>
 
-          <a href="https://github.com/ArPIHomeSecurity">
-            <img src="https://badges.pufler.dev/repos/ArPIHomeSecurity" alt="GitHub repositories">
-          </a>
-  
-          <ul>
-            <li>UI: <img src="https://badges.pufler.dev/contributors/ArPIHomeSecurity/arpi_webapplication?size=25&padding=5&bots=true" alt="GitHub contributors"></li>
-            <li>BACKEND: <img src="https://badges.pufler.dev/contributors/ArPIHomeSecurity/arpi_server?size=25&padding=5&bots=true" alt="GitHub contributors"></li>
-          </ul>
-        </div>
-      </div>
-      
-      <div class="row badges">
-        <div class="col-md-3">
-          <div
-            class="badge-base LI-profile-badge"
-            data-locale="en_US"
-            data-size="medium"
-            data-theme="light"
-            data-type="VERTICAL"
-            data-vanity="kovg"
-            data-version="v1">
-            <a class="badge-base__link LI-simple-link" href="https://hu.linkedin.com/in/kovg?trk=profile-badge">Gábor Kovács</a>
+              <ul>
+                <li>
+                  FRONTEND:
+                  <img
+                    src="https://img.shields.io/github/contributors/ArPIHomeSecurity/arpi_webapplication"
+                    alt="GitHub contributors"
+                  />
+                </li>
+                <li>
+                  BACKEND:
+                  <img
+                    src="https://img.shields.io/github/contributors/ArPIHomeSecurity/arpi_server"
+                    alt="GitHub contributors"
+                  />
+                </li>
+              </ul>
+            </div>
           </div>
-        </div>
-        <div class="col-md-3">
-          <div
-            class="badge-base LI-profile-badge"
-            data-locale="en_US"
-            data-size="medium"
-            data-theme="light"
-            data-type="VERTICAL"
-            data-vanity="norbert-toth-a6b49a65"
-            data-version="v1">
-            <a class="badge-base__link LI-simple-link" href="https://hu.linkedin.com/in/norbert-toth-a6b49a65?trk=profile-badge">Norbert Tóth</a>
+
+          <div class="grid badges">
+            <div class="col-12 col-md-3">
+              <div
+                class="badge-base LI-profile-badge"
+                data-locale="en_US"
+                data-size="medium"
+                data-theme="light"
+                data-type="VERTICAL"
+                data-vanity="kovg"
+                data-version="v1"
+              >
+                <a
+                  class="badge-base__link LI-simple-link"
+                  href="https://hu.linkedin.com/in/kovg?trk=profile-badge"
+                  >Gábor Kovács</a
+                >
+              </div>
+            </div>
+            <div class="col-12 col-md-3">
+              <div
+                class="badge-base LI-profile-badge"
+                data-locale="en_US"
+                data-size="medium"
+                data-theme="light"
+                data-type="VERTICAL"
+                data-vanity="norbert-toth-a6b49a65"
+                data-version="v1"
+              >
+                <a
+                  class="badge-base__link LI-simple-link"
+                  href="https://hu.linkedin.com/in/norbert-toth-a6b49a65?trk=profile-badge"
+                  >Norbert Tóth</a
+                >
+              </div>
+            </div>
+            <div class="col-12 col-md-3">
+              <div
+                class="badge-base LI-profile-badge"
+                data-locale="en_US"
+                data-size="medium"
+                data-theme="light"
+                data-type="VERTICAL"
+                data-vanity="tibor-wappler-33063798"
+                data-version="v1"
+              >
+                <a
+                  class="badge-base__link LI-simple-link"
+                  href="https://hu.linkedin.com/in/tibor-wappler-33063798?trk=profile-badge"
+                  >Tibor Wappler</a
+                >
+              </div>
+            </div>
+            <div class="col-12 col-md-3">
+              <div
+                class="badge-base LI-profile-badge"
+                data-locale="en_US"
+                data-size="medium"
+                data-theme="light"
+                data-type="HORIZONTAL"
+                data-vanity="valerio-tagliabue-4184aa9"
+                data-version="v1"
+              >
+                <a
+                  class="badge-base__link LI-simple-link"
+                  href="https://it.linkedin.com/in/valerio-tagliabue-4184aa9?trk=profile-badge"
+                  >Valerio Tagliabue</a
+                >
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="col-md-3">
-          <div
-            class="badge-base LI-profile-badge"
-            data-locale="en_US"
-            data-size="medium"
-            data-theme="light"
-            data-type="VERTICAL"
-            data-vanity="tibor-wappler-33063798"
-            data-version="v1">
-            <a class="badge-base__link LI-simple-link" href="https://hu.linkedin.com/in/tibor-wappler-33063798?trk=profile-badge">Tibor Wappler</a>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div
-            class="badge-base LI-profile-badge"
-            data-locale="en_US"
-            data-size="medium"
-            data-theme="light"
-            data-type="HORIZONTAL"
-            data-vanity="valerio-tagliabue-4184aa9"
-            data-version="v1">
-            <a class="badge-base__link LI-simple-link" href="https://it.linkedin.com/in/valerio-tagliabue-4184aa9?trk=profile-badge">Valerio Tagliabue</a>
-          </div>
-        </div>
-      </div>
+        </mat-card-content>
+      </mat-card>
     </div>
   </div>
 </div>

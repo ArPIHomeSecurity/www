@@ -15,7 +15,7 @@ import { AboutComponent } from '../about/about.component';
 import { FooterComponent } from '../footer/footer.component';
 import { ContactComponent } from '../contact/contact.component';
 import { VersionsComponent } from '../versions/versions.component';
-import { ShareComponent } from '../share/share.component';
+import { ShareComponent } from '../../share/share.component';
 import { OrderComponent } from '../order/order.component';
 
 // Import all the icons used in the components
@@ -34,7 +34,7 @@ import {
   faShieldHalved,
   faExternalLinkAlt,
   faChevronDown,
-  faDownload
+  faDownload,
 } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
@@ -47,7 +47,6 @@ describe('MainComponent', () => {
   let fixture: ComponentFixture<MainComponent>;
   let translate: TranslateService;
 
-
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [
@@ -58,7 +57,7 @@ describe('MainComponent', () => {
         MainComponent,
         ShareComponent,
         VersionsComponent,
-        OrderComponent
+        OrderComponent,
       ],
       imports: [
         FontAwesomeModule,
@@ -67,22 +66,35 @@ describe('MainComponent', () => {
           loader: {
             provide: TranslateLoader,
             useFactory: HttpLoaderFactory,
-            deps: [HttpClient]
-          }
+            deps: [HttpClient],
+          },
         }),
         LazyLoadImageModule,
         GalleryModule,
-        ShareButtons
+        ShareButtons,
       ],
-      providers: [
-        TranslateService,
-        provideHttpClient(withFetch())
-      ]
-    })
-      .compileComponents();
+      providers: [TranslateService, provideHttpClient(withFetch())],
+    }).compileComponents();
 
     const library = TestBed.inject(FaIconLibrary);
-    library.addIcons(faBell, faBolt, faClock, faCog, faGlobe, faHome, faLock, faMapMarked, faUsers, faCookie, faFileSignature, faShieldHalved, faGithub, faExternalLinkAlt, faChevronDown, faDownload);
+    library.addIcons(
+      faBell,
+      faBolt,
+      faClock,
+      faCog,
+      faGlobe,
+      faHome,
+      faLock,
+      faMapMarked,
+      faUsers,
+      faCookie,
+      faFileSignature,
+      faShieldHalved,
+      faGithub,
+      faExternalLinkAlt,
+      faChevronDown,
+      faDownload,
+    );
   }));
 
   beforeEach(() => {

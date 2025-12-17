@@ -1,85 +1,135 @@
-<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
-  <a class="navbar-brand" href=".">
-    <img src="assets/arpi-logo-64.png" />
-    <h1>
-      <span class="d-none d-sm-inline">{{ 'arpi.title.long' | translate }}</span>
-      <span class="d-sm-none">{{ 'arpi.title.short' | translate }}</span>
-    </h1>
-  </a>
-  <button class="navbar-toggler" type="button" aria-expanded="false" aria-label="Toggle navigation" (click)="onMenuClicked()">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div id="navbarSupportedContent" [ngClass]="{'collapse navbar-collapse': true, 'show': !menuClosed}">
-    <ul id="main-menu" class="navbar-nav ms-auto flex-column-reverse flex-lg-row-reverse" role="navigation">
-      <li class="nav-item">
-        <a href="https://demo.arpi-security.info/" target="_blank" class="nav-link text-light" (click)="onMenuClose()">DEMO</a>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/news" routerLinkActive="active" (click)="onMenuClose()">{{ 'arpi.menu.news' | translate }}</a>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link" activeClass="active" href="#order" (click)="onMenuClose()">{{ 'arpi.menu.order' | translate
-          }}</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" activeClass="active" href="#contact" (click)="onMenuClose()">{{ 'arpi.menu.contact' |
-          translate }}</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" activeClass="active" href="#about" (click)="onMenuClose()">{{ 'arpi.menu.about' |
-          translate }}</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" activeClass="active" href="#versions" (click)="onMenuClose()">{{ 'arpi.menu.versions' |
-          translate }}</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" activeClass="active" href="#documentation" (click)="onMenuClose()">{{ 'arpi.menu.documentation' |
-          translate }}</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="featuresDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          {{ 'arpi.menu.features' | translate }}
-        </a>
-        <div class="dropdown-menu" aria-labelledby="featuresDropdown">
-          <a class="dropdown-item" href="#features" (click)="onMenuClose()">{{ 'arpi.menu.features' | translate }}</a>
-          <a class="dropdown-item" href="#user-interface" (click)="onMenuClose()">{{ 'arpi.menu.user_interface' | translate }}</a>
-          <a class="dropdown-item" href="#board" (click)="onMenuClose()">{{ 'arpi.menu.board' | translate }}</a>
-          <a class="dropdown-item" href="#technologies" (click)="onMenuClose()">{{ 'arpi.menu.technologies' | translate }}</a>
-        </div>
-      </li>
-    </ul>
-    <div class="dropdown">
-      <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
-        aria-haspopup="true" aria-expanded="false">
-        {{language}}
-      </button>
-      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <a class="dropdown-item" (click)="useLanguage('en')">EN</a>
-        <a class="dropdown-item" (click)="useLanguage('hu')">HU</a>
-      </div>
-    </div>
-    <button class="btn btn-primary p-2" type="button" id="shareButton" data-bs-toggle="modal" data-bs-target="#shareDialog">
+<!-- Desktop Toolbar and Content -->
+@if (isDesktop) {
+  <mat-toolbar color="primary" class="sticky-toolbar toolbar-desktop">
+    <a mat-flat-button color="primary" href="#">
+      {{ 'arpi.title.long' | translate }}
+      <mat-icon iconPositionStart>
+        <img class="arpi-logo" src="assets/arpi-logo-64.png" alt="ArPI Home" />
+      </mat-icon>
+    </a>
+    <span class="spacer"></span>
+    <a mat-flat-button color="primary" href="/news">{{ 'arpi.menu.news' | translate }}</a>
+    <a mat-flat-button color="primary" href="#order">{{ 'arpi.menu.order' | translate }}</a>
+    <a mat-flat-button color="primary" href="#contact">{{ 'arpi.menu.contact' | translate }}</a>
+    <a mat-flat-button color="primary" href="#about">{{ 'arpi.menu.about' | translate }}</a>
+    <a mat-flat-button color="primary" href="#versions">{{ 'arpi.menu.versions' | translate }}</a>
+    <a mat-flat-button color="primary" href="#documentation">{{
+      'arpi.menu.documentation' | translate
+    }}</a>
+    <!-- Features Menu -->
+    <a mat-flat-button color="primary" [matMenuTriggerFor]="featuresMenu">
+      {{ 'arpi.menu.features' | translate }}
+      <mat-icon fontSet="material-symbols-outlined" iconPositionEnd>arrow_drop_down</mat-icon>
+    </a>
+    <mat-menu #featuresMenu="matMenu">
+      <a mat-menu-item href="#features">{{ 'arpi.menu.features' | translate }}</a>
+      <a mat-menu-item href="#user-interface">{{ 'arpi.menu.user_interface' | translate }}</a>
+      <a mat-menu-item href="#board">{{ 'arpi.menu.board' | translate }}</a>
+      <a mat-menu-item href="#technologies">{{ 'arpi.menu.technologies' | translate }}</a>
+    </mat-menu>
+    <!-- Language Selection -->
+    <button mat-button [matMenuTriggerFor]="langMenu">
+      {{ language }}
+      <mat-icon fontSet="material-symbols-outlined" iconPositionEnd>arrow_drop_down</mat-icon>
+    </button>
+    <mat-menu #langMenu="matMenu">
+      <button mat-menu-item (click)="useLanguage('en')">EN</button>
+      <button mat-menu-item (click)="useLanguage('hu')">HU</button>
+    </mat-menu>
+    <button mat-icon-button type="button" (click)="openShareDialog()">
       <fa-icon [icon]="faShareAlt" class="fs-5"></fa-icon>
     </button>
-    <a href="https://github.com/ArPIHomeSecurity" target="_blank" class="nav-link text-light p-2" (click)="onMenuClose()">
+    <a mat-icon-button href="https://github.com/ArPIHomeSecurity" target="_blank">
       <fa-icon [icon]="github" class="fs-5"></fa-icon>
     </a>
-    <a href="https://arpi-security.slack.com/" target="_blank" class="nav-link text-light p-2" (click)="onMenuClose()">
+    <a mat-icon-button href="https://arpi-security.slack.com/" target="_blank">
       <fa-icon [icon]="slack" class="fs-5"></fa-icon>
     </a>
-    <button #consentButton class="btn nav-link text-light glow-effect p-2" data-bs-toggle="modal" data-bs-target="#consentDialog">
+    <!--button mat-icon-button class="glow-effect" (click)="openConsentDialog()">
       <fa-icon [icon]="faCookie" class="fs-5"></fa-icon>
-    </button>
-  </div>
-</nav>
+    </button-->
+  </mat-toolbar>
+  <main class="main-content">
+    <router-outlet></router-outlet>
+  </main>
+  <app-footer></app-footer>
+} @else {
+  <mat-sidenav-container class="sidebar-mobile">
+    <mat-sidenav #sidenav mode="over" class="sidebar" [opened]="false">
+      <mat-list>
+        <a mat-list-item href="#features" (click)="sidenav.close()">{{
+          'arpi.menu.features' | translate
+        }}</a>
+        <a mat-list-item href="#user-interface" (click)="sidenav.close()">{{
+          'arpi.menu.user_interface' | translate
+        }}</a>
+        <a mat-list-item href="#board" (click)="sidenav.close()">{{
+          'arpi.menu.board' | translate
+        }}</a>
+        <a mat-list-item href="#technologies" (click)="sidenav.close()">{{
+          'arpi.menu.technologies' | translate
+        }}</a>
+        <a mat-list-item href="#versions" (click)="sidenav.close()">{{
+          'arpi.menu.versions' | translate
+        }}</a>
+        <a mat-list-item href="#documentation" (click)="sidenav.close()">{{
+          'arpi.menu.documentation' | translate
+        }}</a>
+        <a mat-list-item href="#order" (click)="sidenav.close()">{{
+          'arpi.menu.order' | translate
+        }}</a>
+        <a mat-list-item href="#contact" (click)="sidenav.close()">{{
+          'arpi.menu.contact' | translate
+        }}</a>
+        <a mat-list-item href="#about" (click)="sidenav.close()">{{
+          'arpi.menu.about' | translate
+        }}</a>
+        <a mat-list-item href="/news" (click)="sidenav.close()">{{
+          'arpi.menu.news' | translate
+        }}</a>
 
-<router-outlet></router-outlet>
+        <mat-divider></mat-divider>
 
-<app-share></app-share>
+        <a mat-list-item (click)="useLanguage('en'); sidenav.close()">EN</a>
+        <a mat-list-item (click)="useLanguage('hu'); sidenav.close()">HU</a>
 
-<app-footer></app-footer>
+        <mat-divider></mat-divider>
 
-<app-consent-dialog (onClosed)="onConsentDialogClosed()"></app-consent-dialog>
+        <a mat-list-item routerLink="/privacy" class="col-lg-4">
+          <fa-icon [icon]="faPrivacy"></fa-icon> {{ 'arpi.footer.privacy' | translate }}
+        </a>
+
+        <a mat-list-item routerLink="/terms" class="col-lg-4">
+          <fa-icon [icon]="faTerms"></fa-icon> {{ 'arpi.footer.terms' | translate }}
+        </a>
+
+        <mat-divider></mat-divider>
+
+        <a mat-icon-button href="https://github.com/ArPIHomeSecurity" target="_blank">
+          <fa-icon [icon]="github" class="fs-5"></fa-icon>
+        </a>
+        <a mat-icon-button href="https://arpi-security.slack.com/" target="_blank">
+          <fa-icon [icon]="slack" class="fs-5"></fa-icon>
+        </a>
+        <button mat-icon-button type="button" (click)="openShareDialog(); sidenav.close()">
+          <fa-icon [icon]="faShareAlt" class="fs-5"></fa-icon>
+        </button>
+        <button mat-icon-button (click)="openConsentDialog(); sidenav.close()">
+          <fa-icon [icon]="faCookie" class="fs-5"></fa-icon>
+        </button>
+      </mat-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <mat-toolbar color="primary" class="sticky-toolbar">
+        <button mat-icon-button (click)="sidenav.open()">
+          <mat-icon fontSet="material-symbols-outlined">menu</mat-icon>
+        </button>
+        <span class="toolbar-title">{{ 'arpi.title.short' | translate }}</span>
+      </mat-toolbar>
+      <main class="main-content">
+        <router-outlet></router-outlet>
+      </main>
+      <app-footer></app-footer>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+}

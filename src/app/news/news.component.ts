@@ -5,13 +5,14 @@ interface NewsItem {
   image: string;
   date: string;
   content: string; // translation id
+  link?: string;
 }
 
 @Component({
   selector: 'app-news',
   templateUrl: './news.component.html',
   styleUrls: ['./news.component.scss'],
-  standalone: false
+  standalone: false,
 })
 export class NewsComponent {
   newsList: NewsItem[] = [
@@ -19,14 +20,15 @@ export class NewsComponent {
       title: 'arpi.news.01.title',
       image: 'assets/news/2025-10-08.webp',
       date: '2025-10-08',
-      content: 'arpi.news.01.content'
+      content: 'arpi.news.01.content',
     },
     {
       title: 'arpi.news.02.title',
       image: 'assets/news/2025-12-14.webp',
       date: '2025-12-14',
-      content: 'arpi.news.02.content'
-    }
+      content: 'arpi.news.02.content',
+      link: 'https://www.tindie.com/products/gkovacs81/arpi-board-v30/',
+    },
     // {
     //   title: 'arpi.news.02.title',
     //   image: 'assets/news/news-2025-09-15.jpg',

@@ -1,15 +1,33 @@
-
-.carousel {
-  img {
-    width: 100%;
-  }
+:host ::ng-deep .mat-mdc-tab-header {
+  display: none !important;
 }
 
-.carousel-caption {
-  background-color: #55555559;
-  
-  /* vertical center */
+.background {
+  background: -webkit-linear-gradient(to left, #0072ff, #00aaff);
+  background: linear-gradient(to left, #0072ff, #00aaff);
+}
+
+.mat-mdc-card-content {
+  padding: 5px !important;
+}
+
+::ng-deep .mat-mdc-tab-body-content {
+  overflow: hidden !important;
+}
+
+.header-image {
+  width: 100%;
+  height: 100%;
+}
+
+.header-overlay-card {
+  position: absolute;
   top: 50%;
-  transform: translateY(-50%);
-  bottom: initial;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 320px;
+  max-width: 90vw;
+  background: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  text-align: center;
 }

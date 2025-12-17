@@ -1,55 +1,60 @@
 .versions {
-    background: #00aaff;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #0072ff, #00aaff);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #0072ff, #00aaff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #00aaff; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #0072ff, #00aaff); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #0072ff,
+    #00aaff
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .background {
-    background-color: rgba(256,256,256,0.2);
-    padding: 35px;
-    border-radius: 10px;
+  background-color: rgba(256, 256, 256, 0.2);
 }
 
 .videos {
-    .video {
-        position: relative;
-        padding-bottom: 60%;
-        margin: 25px auto;
-    }
-    iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-    }
+  .video {
+    position: relative;
+    padding-bottom: 60%;
+  }
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.mat-mdc-card {
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 :host ::ng-deep #current-image {
-    max-height: 90vh !important;
+  max-height: 90vh !important;
 }
 
 :host ::ng-deep figcaption {
-    display: none;
+  display: none;
 }
 
 ks-modal-gallery {
-    margin: 10px;
+  margin: 10px;
 }
 
 fa-icon.download {
-    color: #ffaa55;
+  color: #ffaa55;
 }
 
 fa-icon.download:hover {
-    color: #ff8822;
+  color: #ff8822;
 }
 
 a.download {
-    color: #ffffff;
-    background-color: #ffaa55;
+  color: #ffffff;
+  background-color: #ffaa55;
 }
 
 a.download:hover {
-    background-color: #ff8822;
+  background-color: #ff8822;
 }

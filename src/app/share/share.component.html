@@ -1,0 +1,19 @@
+<mat-dialog-content>
+  <share-buttons
+    theme="modern-light"
+    [exclude]="['print', 'messenger', 'copy']"
+    [showIcon]="true"
+    [showText]="true"
+    image="https://www.arpi-security.info/assets/screenshot-home-01.png"
+    url="https://www.arpi-security.info/"
+    title="ArPI Home Security System"
+    description="An easy to use Raspberry PI based home security system"
+  >
+  </share-buttons>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-flat-button color="primary" (click)="dialogRef.close()" align="end">
+    {{ 'arpi.action.close' | translate
+    }}<mat-icon fontSet="material-symbols-outlined">close</mat-icon>
+  </button>
+</mat-dialog-actions>

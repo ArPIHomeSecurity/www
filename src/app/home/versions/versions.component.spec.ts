@@ -25,18 +25,14 @@ describe('VersionsComponent', () => {
           loader: {
             provide: TranslateLoader,
             useFactory: HttpLoaderFactory,
-            deps: [HttpClient]
-          }
+            deps: [HttpClient],
+          },
         }),
         GalleryModule,
-        FontAwesomeModule
+        FontAwesomeModule,
       ],
-      providers: [
-        TranslateService,
-        provideHttpClient(withFetch())
-      ]
-    })
-      .compileComponents();
+      providers: [TranslateService, provideHttpClient(withFetch())],
+    }).compileComponents();
 
     const library = TestBed.inject(FaIconLibrary);
     library.addIcons(faChevronDown, faDownload);

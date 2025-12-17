@@ -4,13 +4,10 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-privacy',
   templateUrl: './privacy.component.html',
   styleUrls: ['./privacy.component.scss'],
-  standalone: false
+  standalone: false,
 })
 export class PrivacyComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

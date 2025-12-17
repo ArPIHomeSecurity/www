@@ -21,17 +21,13 @@ describe('ConsentDialogComponent', () => {
           loader: {
             provide: TranslateLoader,
             useFactory: HttpLoaderFactory,
-            deps: [HttpClient]
-          }
+            deps: [HttpClient],
+          },
         }),
       ],
-      providers: [
-        TranslateService,
-        provideHttpClient(withFetch())
-      ],
-      declarations: [ConsentDialogComponent]
-    })
-      .compileComponents();
+      providers: [TranslateService, provideHttpClient(withFetch())],
+      declarations: [ConsentDialogComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(ConsentDialogComponent);
     component = fixture.componentInstance;

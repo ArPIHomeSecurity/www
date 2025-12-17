@@ -1,19 +1,31 @@
 <div class="feature odd technologies">
   <div class="container">
-    <div class="row title">
-      <div class="col-md-12">
-        <h2 class="text-center mb-4">{{ 'arpi.features.stack' | translate }}</h2>
+    <div class="grid">
+      <div class="col-12">
+        <h2>{{ 'arpi.features.stack' | translate }}</h2>
       </div>
-    </div>
-    <div class="row">
-      <div *ngFor="let layer of technologies" class="col text-center mb-3">
-        <div class="layer border bg-white bg-opacity-75 text-dark">
-          <h3>{{ layer.name | translate }}</h3>
-          <div *ngFor="let item of layer.items;let i = index; let last=last">
-            <a [attr.href]="item.url" target="_blank"><img [attr.src]="item.image" loading="lazy" [attr.alt]="item.text"></a>
-            <hr *ngIf="!last" />
-          </div>
-        </div>
+
+      <div class="col-lg-1"></div>
+      <div *ngFor="let layer of technologies" class="col-12 col-lg-2">
+        <mat-card class="h-100">
+          <mat-card-header class="text-center">
+            <mat-card-title>
+              {{ layer.name | translate }}
+            </mat-card-title>
+          </mat-card-header>
+          <mat-card-content class="text-center">
+            <div class="grid">
+              <div
+                *ngFor="let item of layer.items; let i = index; let last = last"
+                class="col-12 col-md-3 col-lg-12"
+              >
+                <a [attr.href]="item.url" target="_blank">
+                  <img [attr.src]="item.image" loading="lazy" [attr.alt]="item.text" />
+                </a>
+              </div>
+            </div>
+          </mat-card-content>
+        </mat-card>
       </div>
     </div>
   </div>

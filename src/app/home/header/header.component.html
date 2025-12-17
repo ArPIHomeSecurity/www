@@ -1,22 +1,29 @@
-<div id="arpi-header-slider" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-inner">
-    <div *ngFor="let slide of slides; let isFirst = first" class="carousel-item" [class.active]="isFirst">
-
-      <div *ngIf="displayPlaceholder" style="height: 500px"></div>
-      <img [attr.src]="'assets/header_' + slide + '.jpg'" (load)="imageLoaded($event)">
-
-      <div class="carousel-caption bg-black bg-opacity-75 rounded">
-        <h2>{{ 'arpi.home.' + slide + '.title' | translate }}</h2>
-        <h3>{{ 'arpi.home.' + slide + '.description' | translate }}</h3>
+<div class="background">
+  <div class="container">
+    <div class="grid">
+      <div class="col-12">
+        <mat-card>
+          <mat-card-content>
+            <mat-tab-group [(selectedIndex)]="selectedIndex" animationDuration="500ms">
+              @for (slide of slides; track slide) {
+                <mat-tab>
+                  <img
+                    [attr.src]="'assets/header_' + slide + '.jpg'"
+                    (load)="imageLoaded($event)"
+                    class="header-image"
+                  />
+                  <mat-card class="header-overlay-card">
+                    <mat-card-content>
+                      <h2>{{ 'arpi.home.' + slide + '.title' | translate }}</h2>
+                      <h3>{{ 'arpi.home.' + slide + '.description' | translate }}</h3>
+                    </mat-card-content>
+                  </mat-card>
+                </mat-tab>
+              }
+            </mat-tab-group>
+          </mat-card-content>
+        </mat-card>
       </div>
     </div>
   </div>
-  <a class="carousel-control-prev" href="#arpi-header-slider" role="button" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#arpi-header-slider" role="button" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </a>
 </div>

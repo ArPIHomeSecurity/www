@@ -1,0 +1,7 @@
+# Prettier ignores
+node_modules/
+dist/
+dist-prod/
+coverage/
+*.min.js
+*.bundle.js

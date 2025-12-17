@@ -1,0 +1,141 @@
+:root {
+  --grid-gutter: 32px;
+  --grid-columns: 12;
+}
+
+.container {
+  width: 100%;
+  max-width: 1100px;
+
+  margin: 0 auto;
+  padding: 0px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(var(--grid-columns), 1fr);
+  column-gap: var(--grid-gutter);
+  row-gap: var(--grid-gutter);
+
+  padding-right: calc(var(--grid-gutter) / 2);
+  padding-left: calc(var(--grid-gutter) / 2);
+  box-sizing: border-box;
+}
+
+/* nested grids */
+.grid .grid {
+  margin: 0;
+  padding: 0;
+  column-gap: calc(var(--grid-gutter) / 4);
+  row-gap: calc(var(--grid-gutter) / 2);
+}
+
+/* 2. Base Column Spanning */
+/* By default, columns span all 12 on small/mobile screens.
+  (This assumes no explicit `.col-*` class is used)
+*/
+.col {
+  grid-column: span var(--grid-columns);
+}
+
+[class*="col-"] {
+  --col-span: 12;       /* Alapértelmezett: teljes szélesség */
+  --offset-start: auto; /* Alapértelmezett: nincs eltolás */
+  
+  grid-column: var(--offset-start) / span var(--col-span);
+  min-width: 0;         /* Megakadályozza a tartalom kifolyását */
+}
+/* Base sizing, applied to all screens */
+.col-1  { --col-span: 1; }
+.col-2  { --col-span: 2; }
+.col-3  { --col-span: 3; }
+.col-4  { --col-span: 4; }
+.col-5  { --col-span: 5; }
+.col-6  { --col-span: 6; }
+.col-7  { --col-span: 7; }
+.col-8  { --col-span: 8; }
+.col-9  { --col-span: 9; }
+.col-10 { --col-span: 10; }
+.col-11 { --col-span: 11; }
+.col-12 { --col-span: 12; }
+
+.offset-1  { --offset-start: 2; }
+.offset-2  { --offset-start: 3; }
+.offset-3  { --offset-start: 4; }
+.offset-4  { --offset-start: 5; }
+.offset-5  { --offset-start: 6; }
+.offset-6  { --offset-start: 7; }
+.offset-7  { --offset-start: 8; }
+.offset-8  { --offset-start: 9; }
+.offset-9  { --offset-start: 10; }
+.offset-10 { --offset-start: 11; }
+.offset-11 { --offset-start: 12; }
+
+/* 3. Responsive Breakpoints (Example: Tablet/Medium screens) */
+@media (min-width: 600px) {
+  /* Corresponds to Bootstrap's 'md' breakpoint */
+  /* If an element has `.col-md-6`, it will span 6 columns on medium screens and up. */
+  .col-md-1  { --col-span: 1; }
+  .col-md-2  { --col-span: 2; }
+  .col-md-3  { --col-span: 3; }
+  .col-md-4  { --col-span: 4; }
+  .col-md-5  { --col-span: 5; }
+  .col-md-6  { --col-span: 6; }
+  .col-md-7  { --col-span: 7; }
+  .col-md-8  { --col-span: 8; }
+  .col-md-9  { --col-span: 9; }
+  .col-md-10 { --col-span: 10; }
+  .col-md-11 { --col-span: 11; }
+  .col-md-12 { --col-span: 12; }
+
+  .offset-md-1 { --offset-start: 2; }
+  .offset-md-2 { --offset-start: 3; }
+  .offset-md-3 { --offset-start: 4; }
+  .offset-md-4 { --offset-start: 5; }
+  .offset-md-5 { --offset-start: 6; }
+  .offset-md-6 { --offset-start: 7; }
+  .offset-md-7 { --offset-start: 8; }
+  .offset-md-8 { --offset-start: 9; }
+  .offset-md-9 { --offset-start: 10; }
+  .offset-md-10 { --offset-start: 11; }
+  .offset-md-11 { --offset-start: 12; }
+}
+
+/* 4. Large Breakpoints (Example: Desktop/Large screens) */
+@media (min-width: 1100px) {
+  /* Corresponds to Bootstrap's 'lg' breakpoint */
+  /* If an element has `.col-lg-4`, it will span 4 columns on large screens and up. */
+  .col-lg-1 {--col-span: 1; }
+  .col-lg-2 {--col-span: 2; }
+  .col-lg-3 {--col-span: 3; }
+  .col-lg-4 {--col-span: 4; }
+  .col-lg-5 {--col-span: 5; }
+  .col-lg-6 {--col-span: 6; }
+  .col-lg-7 {--col-span: 7; }
+  .col-lg-8 {--col-span: 8; }
+  .col-lg-9 {--col-span: 9; }
+  .col-lg-10 {--col-span: 10; }
+  .col-lg-11 {--col-span: 11; }
+  .col-lg-12 {--col-span: 12; }
+
+  .offset-lg-1 { --offset-start: 2; }
+  .offset-lg-2 { --offset-start: 3; }
+  .offset-lg-3 { --offset-start: 4; }
+  .offset-lg-4 { --offset-start: 5; }
+  .offset-lg-5 { --offset-start: 6; }
+  .offset-lg-6 { --offset-start: 7; }
+  .offset-lg-7 { --offset-start: 8; }
+  .offset-lg-8 { --offset-start: 9; }
+  .offset-lg-9 { --offset-start: 10; }
+  .offset-lg-10 { --offset-start: 11; }
+  .offset-lg-11 { --offset-start: 12; }
+}
+
+
+.h-100 {
+  height: 100%;
+}
+
+.w-100 {
+  width: 100%;
+}

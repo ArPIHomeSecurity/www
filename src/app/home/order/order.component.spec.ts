@@ -17,7 +17,6 @@ describe('OrderComponent', () => {
   let fixture: ComponentFixture<OrderComponent>;
   let translate: TranslateService;
 
-
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [OrderComponent],
@@ -27,16 +26,12 @@ describe('OrderComponent', () => {
           loader: {
             provide: TranslateLoader,
             useFactory: HttpLoaderFactory,
-            deps: [HttpClient]
-          }
-        })
+            deps: [HttpClient],
+          },
+        }),
       ],
-      providers: [
-        TranslateService,
-        provideHttpClient(withFetch())
-      ]
-    })
-      .compileComponents();
+      providers: [TranslateService, provideHttpClient(withFetch())],
+    }).compileComponents();
 
     const library = TestBed.inject(FaIconLibrary);
     library.addIcons(faExternalLinkAlt);

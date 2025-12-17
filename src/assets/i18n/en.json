@@ -1,6 +1,11 @@
 {
   "arpi.title.long": "ArPI - Home Security System",
   "arpi.title.short": "ArPI",
+
+  "arpi.action.open": "Open",
+  "arpi.action.view": "View",
+  "arpi.action.close": "Close",
+
   "arpi.menu.features": "Features",
   "arpi.menu.user_interface": "User interface",
   "arpi.menu.board": "Board",
@@ -21,7 +26,7 @@
   "arpi.about.contributors.issues": "open issues",
   "arpi.about.contributors.title": "Contributors",
   "arpi.about.contributors.team": "Project is developed by GitHub team",
-  "arpi.about.title": "ArPI - Raspberry PI based home security system",
+  "arpi.about.title": "The goal of the ArPI project",
   "arpi.about.description": "Only replacing the main board of your old security system and reuse the installed components (sensors, syren, keypad) you can make your home security system smart. The system has two major components: an adapter component for interfacing between the Raspberry PI and the security system components and the open source software to configure and use the system.",
   "arpi.about.references.docs": "Documentation",
 
@@ -59,7 +64,7 @@
   "arpi.features.demo.description": "Try the ArPI web application in demo mode: a live site with no real backend, where you can log in and simulate sensor activities directly from the interface—just like using a real system.",
   "arpi.features.demo.link": "Open demo site",
   "arpi.features.simulator.description": "Install the ArPI system on a Raspberry Pi without the ArPI board. Simulate sensor activities using scripts for testing.",
-  "arpi.features.simulator.link": "See simulator documentation",
+  "arpi.features.simulator.link": "Open documentation",
 
   "arpi.features.android.title": "Android application",
   "arpi.features.android.description": "You can download our Android application from the Google Play Store.",
@@ -111,9 +116,11 @@
   "arpi.versions.hw.subtitle": "The Raspberry PI Zero W adapter for interfacing with your home security system",
   "arpi.versions.hw.v0_8": "2018 / v0.8 - development",
   "arpi.versions.hw.v0_9": "2021 / v0.9 - development",
-  "arpi.versions.hw.v2_0": "2023 / v2.0 - for order",
+  "arpi.versions.hw.v2_0": "2023 / v2.0",
+  "arpi.versions.hw.v3_0": "2025 / v3.0 - for order",
   "arpi.versions.sw.title": "ArPI software",
   "arpi.versions.sw.subtitle": "The open source software of the home security system",
+  "arpi.versions.sw.releases": "Software releases",
   "arpi.versions.sw.v1_1_0": "V3.0 board support",
   "arpi.versions.sw.v1_0_0": "2025.05 / v1.0.0 - Android application",
   "arpi.versions.sw.v0_16": "2024.11 / v0.16 - Upgrade to 'bookworm' OS version, networking improvements",
@@ -146,7 +153,7 @@
   "arpi.contact.message": "Message",
   "arpi.contact.social": "Contact Us on Slack",
   "arpi.order.title": "Order your ArPI interface board",
-  "arpi.order.description": "If you want to order an ArPI interface board, please contact us in a message here or on Slack or buy on on Tindie!",
+  "arpi.order.description": "If you want to order an ArPI interface board, please contact us in a message here or on Slack or buy on Tindie!",
   "arpi.order.external": "Buy",
   "arpi.share.title": "Share",
 

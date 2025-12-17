@@ -1,17 +1,14 @@
 .background {
   padding: 45px 0px 25px 0px;
-  background-image: url("/assets/contributors.jpg");
+  background-image: url('/assets/contributors.jpg');
   background-size: cover;
 }
 
-.section {
-  background-color: rgba(256,256,256,0.8);
-  margin-bottom: 15px;
-  padding: 50px;
-  border-radius: 10px;
-  
-  h2 {
-    text-transform: uppercase;
+.about {
+  padding: 40px 0px;
+
+  .mat-mdc-card {
+    background-color: rgba(255, 255, 255, 0.95);
   }
 }
 
@@ -21,6 +18,5 @@
 
 .badge-base.LI-profile-badge {
   margin: 0 auto;
-  width: 250px;
   text-align: center;
 }

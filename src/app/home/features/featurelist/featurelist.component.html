@@ -1,19 +1,22 @@
-<div class="feature odd text-light">
+<div class="feature odd">
   <div class="container">
-    <div class="row">
+    <div class="grid">
       <div class="col-12">
-        <h2 class="text-center mt-5">{{ 'arpi.features.general.title' | translate }}</h2>
+        <h2>{{ 'arpi.features.general.title' | translate }}</h2>
       </div>
-      <div class="col-md-4 mb-3" *ngFor="let feature of generalFeatures">
-        <div class="card h-100 border border-primary shadow bg-white bg-opacity-75 text-dark">
-          <div class="card-body">
-            <h3 class="card-title">
-              <fa-icon [icon]="feature.icon" [class]="feature.color"></fa-icon> {{ feature.title | translate }}
-            </h3>
-            <p class="card-text">{{ feature.description | translate }}</p>
-          </div>
-        </div>
-      </div>
+      <mat-card *ngFor="let feature of generalFeatures" class="h-100 col-12 col-md-6 col-lg-4">
+        <mat-card-header>
+          <mat-card-title>
+            <mat-icon fontSet="material-symbols-outlined" [color]="feature.color" material>{{
+              feature.icon
+            }}</mat-icon>
+            {{ feature.title | translate }}
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p class="text-justify">{{ feature.description | translate }}</p>
+        </mat-card-content>
+      </mat-card>
     </div>
   </div>
 </div>

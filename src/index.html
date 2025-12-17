@@ -1,247 +1,341 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta name="google-site-verification" content="v79Xj8eUGO80Wir976DyCJuPdq96S4qt5JYLJDJbkWM" />
 
-<head>
-  <meta name="google-site-verification" content="v79Xj8eUGO80Wir976DyCJuPdq96S4qt5JYLJDJbkWM" />
+    <meta charset="utf-8" />
+    <title>ArPI - Raspberry PI based home security system</title>
+    <base href="/" />
 
-  <meta charset="utf-8">
-  <title>ArPI - Raspberry PI based home security system</title>
-  <base href="/">
+    <!-- SEO Meta Tags -->
+    <meta
+      name="description"
+      content="ArPI is an open-source Raspberry Pi based home security system. Replace your old alarm system mainboard and reuse existing sensors, keypads, and sirens. Easy DIY installation with modern web interface, notifications, and remote access. Download for free!"
+    />
+    <meta
+      name="keywords"
+      content="ArPI, Raspberry Pi, home security, alarm system, DIY security, open source, home automation, security system, IoT, smart home, sensors, keypad, siren"
+    />
+    <meta name="author" content="ArPIHomeSecurity" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="English" />
 
-  <!-- SEO Meta Tags -->
-  <meta name="description" content="ArPI is an open-source Raspberry Pi based home security system. Replace your old alarm system mainboard and reuse existing sensors, keypads, and sirens. Easy DIY installation with modern web interface, notifications, and remote access. Download for free!">
-  <meta name="keywords" content="ArPI, Raspberry Pi, home security, alarm system, DIY security, open source, home automation, security system, IoT, smart home, sensors, keypad, siren">
-  <meta name="author" content="ArPIHomeSecurity">
-  <meta name="robots" content="index, follow">
-  <meta name="language" content="English">
-  
-  <!-- Additional SEO Tags for better search results -->
-  <meta name="category" content="Technology">
-  <meta name="coverage" content="Worldwide">
-  <meta name="distribution" content="Global">
-  <meta name="rating" content="General">
-  <meta name="revisit-after" content="7 days">
-  <meta name="target" content="all">
-  <meta name="HandheldFriendly" content="True">
-  <meta name="MobileOptimized" content="320">
-  
-  <!-- Site Links structured data hints -->
-  <link rel="alternate" type="application/rss+xml" title="ArPI Security News" href="https://www.arpi-security.info/feed.xml">
-  <link rel="sitemap" type="application/xml" title="Sitemap" href="https://www.arpi-security.info/sitemap.xml">
-  
-  <!-- Navigation hints for search engines -->
-  <link rel="section" href="https://www.arpi-security.info/#features" title="Features">
-  <link rel="section" href="https://demo.arpi-security.info" title="Demo">
-  <link rel="section" href="https://github.com/ArPIHomeSecurity" title="Source Code">
-  <link rel="section" href="https://docs.arpi-security.info" title="Documentation">
-  <link rel="section" href="https://arpi-security.slack.com/" title="Community">
-  <link rel="section" href="https://www.arpi-security.info/#order" title="Order">
-  <link rel="section" href="https://www.arpi-security.info/#contact" title="Contact">
-  
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.arpi-security.info/">
-  <meta property="og:title" content="ArPI - Raspberry PI based home security system">
-  <meta property="og:description" content="ArPI is an open-source Raspberry Pi based home security system. Replace your old alarm system mainboard and reuse existing sensors, keypads, and sirens.">
-  <meta property="og:image" content="https://www.arpi-security.info/assets/icon-256.webp">
-  <meta property="og:image:width" content="256">
-  <meta property="og:image:height" content="256">
-  <meta property="og:site_name" content="ArPI Security">
-  
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" content="https://www.arpi-security.info/">
-  <meta name="twitter:title" content="ArPI - Raspberry PI based home security system">
-  <meta name="twitter:description" content="ArPI is an open-source Raspberry Pi based home security system. Replace your old alarm system mainboard and reuse existing sensors, keypads, and sirens.">
-  <meta name="twitter:image" content="https://www.arpi-security.info/assets/icon-256.webp">
-  
-  <!-- Additional SEO Meta Tags -->
-  <meta name="theme-color" content="#007bff">
-  <meta name="application-name" content="ArPI Security">
-  <meta name="apple-mobile-web-app-title" content="ArPI Security">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  <meta name="format-detection" content="telephone=no">
-  
-  <!-- Canonical URL -->
-  <link rel="canonical" href="https://www.arpi-security.info/">
-  
-  <!-- Hreflang for internationalization -->
-  <link rel="alternate" hreflang="en" href="https://www.arpi-security.info/">
-  <link rel="alternate" hreflang="hu" href="https://www.arpi-security.info/hu">
-  <link rel="alternate" hreflang="x-default" href="https://www.arpi-security.info/">
+    <!-- Additional SEO Tags for better search results -->
+    <meta name="category" content="Technology" />
+    <meta name="coverage" content="Worldwide" />
+    <meta name="distribution" content="Global" />
+    <meta name="rating" content="General" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="target" content="all" />
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
 
-  <!-- Preload critical resources for performance -->
-  <link rel="preload" href="assets/arpi-logo-16.ico" as="image">
-  <link rel="preload" href="assets/icon-256.webp" as="image">
-  <link rel="dns-prefetch" href="//www.googletagmanager.com">
-  <link rel="dns-prefetch" href="//fonts.googleapis.com">
-  <link rel="preconnect" href="https://www.googletagmanager.com">
+    <!-- Site Links structured data hints -->
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="ArPI Security News"
+      href="https://www.arpi-security.info/feed.xml"
+    />
+    <link
+      rel="sitemap"
+      type="application/xml"
+      title="Sitemap"
+      href="https://www.arpi-security.info/sitemap.xml"
+    />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="assets/arpi-logo-16.ico">
-  <!-- Temporary disable linkedin profile -->
-  <!-- script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script-->
+    <!-- Navigation hints for search engines -->
+    <link rel="section" href="https://www.arpi-security.info/#features" title="Features" />
+    <link rel="section" href="https://demo.arpi-security.info" title="Demo" />
+    <link rel="section" href="https://github.com/ArPIHomeSecurity" title="Source Code" />
+    <link rel="section" href="https://docs.arpi-security.info" title="Documentation" />
+    <link rel="section" href="https://arpi-security.slack.com/" title="Community" />
+    <link rel="section" href="https://www.arpi-security.info/#order" title="Order" />
+    <link rel="section" href="https://www.arpi-security.info/#contact" title="Contact" />
 
-  <style type="text/css">
-    .loader {
-      color: #3b3b3b;
-      font-size: 90px;
-      text-indent: -9999em;
-      overflow: hidden;
-      width: 1em;
-      height: 1em;
-      border-radius: 50%;
-      margin: 72px auto;
-      position: relative;
-      -webkit-transform: translateZ(0);
-      -ms-transform: translateZ(0);
-      transform: translateZ(0);
-      -webkit-animation: load6 1.7s infinite ease, round 1.7s infinite ease;
-      animation: load6 1.7s infinite ease, round 1.7s infinite ease;
-    }
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.arpi-security.info/" />
+    <meta property="og:title" content="ArPI - Raspberry PI based home security system" />
+    <meta
+      property="og:description"
+      content="ArPI is an open-source Raspberry Pi based home security system. Replace your old alarm system mainboard and reuse existing sensors, keypads, and sirens."
+    />
+    <meta property="og:image" content="https://www.arpi-security.info/assets/icon-256.webp" />
+    <meta property="og:image:width" content="256" />
+    <meta property="og:image:height" content="256" />
+    <meta property="og:site_name" content="ArPI Security" />
 
-    @-webkit-keyframes load6 {
-      0% {
-        box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://www.arpi-security.info/" />
+    <meta name="twitter:title" content="ArPI - Raspberry PI based home security system" />
+    <meta
+      name="twitter:description"
+      content="ArPI is an open-source Raspberry Pi based home security system. Replace your old alarm system mainboard and reuse existing sensors, keypads, and sirens."
+    />
+    <meta name="twitter:image" content="https://www.arpi-security.info/assets/icon-256.webp" />
+
+    <!-- Additional SEO Meta Tags -->
+    <meta name="theme-color" content="#007bff" />
+    <meta name="application-name" content="ArPI Security" />
+    <meta name="apple-mobile-web-app-title" content="ArPI Security" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.arpi-security.info/" />
+
+    <!-- Hreflang for internationalization -->
+    <link rel="alternate" hreflang="en" href="https://www.arpi-security.info/" />
+    <link rel="alternate" hreflang="hu" href="https://www.arpi-security.info/hu" />
+    <link rel="alternate" hreflang="x-default" href="https://www.arpi-security.info/" />
+
+    <!-- Preload critical resources for performance -->
+    <link rel="preload" href="assets/arpi-logo-16.ico" as="image" />
+    <link rel="preload" href="assets/icon-256.webp" as="image" />
+    <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+    <link rel="preconnect" href="https://www.googletagmanager.com" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="assets/arpi-logo-16.ico" />
+    <!-- Temporary disable linkedin profile -->
+    <!-- script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script-->
+
+    <style type="text/css">
+      .loader {
+        color: #3b3b3b;
+        font-size: 90px;
+        text-indent: -9999em;
+        overflow: hidden;
+        width: 1em;
+        height: 1em;
+        border-radius: 50%;
+        margin: 72px auto;
+        position: relative;
+        -webkit-transform: translateZ(0);
+        -ms-transform: translateZ(0);
+        transform: translateZ(0);
+        -webkit-animation:
+          load6 1.7s infinite ease,
+          round 1.7s infinite ease;
+        animation:
+          load6 1.7s infinite ease,
+          round 1.7s infinite ease;
       }
 
-      5%,
-      95% {
-        box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+      @-webkit-keyframes load6 {
+        0% {
+          box-shadow:
+            0 -0.83em 0 -0.4em,
+            0 -0.83em 0 -0.42em,
+            0 -0.83em 0 -0.44em,
+            0 -0.83em 0 -0.46em,
+            0 -0.83em 0 -0.477em;
+        }
+
+        5%,
+        95% {
+          box-shadow:
+            0 -0.83em 0 -0.4em,
+            0 -0.83em 0 -0.42em,
+            0 -0.83em 0 -0.44em,
+            0 -0.83em 0 -0.46em,
+            0 -0.83em 0 -0.477em;
+        }
+
+        10%,
+        59% {
+          box-shadow:
+            0 -0.83em 0 -0.4em,
+            -0.087em -0.825em 0 -0.42em,
+            -0.173em -0.812em 0 -0.44em,
+            -0.256em -0.789em 0 -0.46em,
+            -0.297em -0.775em 0 -0.477em;
+        }
+
+        20% {
+          box-shadow:
+            0 -0.83em 0 -0.4em,
+            -0.338em -0.758em 0 -0.42em,
+            -0.555em -0.617em 0 -0.44em,
+            -0.671em -0.488em 0 -0.46em,
+            -0.749em -0.34em 0 -0.477em;
+        }
+
+        38% {
+          box-shadow:
+            0 -0.83em 0 -0.4em,
+            -0.377em -0.74em 0 -0.42em,
+            -0.645em -0.522em 0 -0.44em,
+            -0.775em -0.297em 0 -0.46em,
+            -0.82em -0.09em 0 -0.477em;
+        }
+
+        100% {
+          box-shadow:
+            0 -0.83em 0 -0.4em,
+            0 -0.83em 0 -0.42em,
+            0 -0.83em 0 -0.44em,
+            0 -0.83em 0 -0.46em,
+            0 -0.83em 0 -0.477em;
+        }
       }
 
-      10%,
-      59% {
-        box-shadow: 0 -0.83em 0 -0.4em, -0.087em -0.825em 0 -0.42em, -0.173em -0.812em 0 -0.44em, -0.256em -0.789em 0 -0.46em, -0.297em -0.775em 0 -0.477em;
+      @keyframes load6 {
+        0% {
+          box-shadow:
+            0 -0.83em 0 -0.4em,
+            0 -0.83em 0 -0.42em,
+            0 -0.83em 0 -0.44em,
+            0 -0.83em 0 -0.46em,
+            0 -0.83em 0 -0.477em;
+        }
+
+        5%,
+        95% {
+          box-shadow:
+            0 -0.83em 0 -0.4em,
+            0 -0.83em 0 -0.42em,
+            0 -0.83em 0 -0.44em,
+            0 -0.83em 0 -0.46em,
+            0 -0.83em 0 -0.477em;
+        }
+
+        10%,
+        59% {
+          box-shadow:
+            0 -0.83em 0 -0.4em,
+            -0.087em -0.825em 0 -0.42em,
+            -0.173em -0.812em 0 -0.44em,
+            -0.256em -0.789em 0 -0.46em,
+            -0.297em -0.775em 0 -0.477em;
+        }
+
+        20% {
+          box-shadow:
+            0 -0.83em 0 -0.4em,
+            -0.338em -0.758em 0 -0.42em,
+            -0.555em -0.617em 0 -0.44em,
+            -0.671em -0.488em 0 -0.46em,
+            -0.749em -0.34em 0 -0.477em;
+        }
+
+        38% {
+          box-shadow:
+            0 -0.83em 0 -0.4em,
+            -0.377em -0.74em 0 -0.42em,
+            -0.645em -0.522em 0 -0.44em,
+            -0.775em -0.297em 0 -0.46em,
+            -0.82em -0.09em 0 -0.477em;
+        }
+
+        100% {
+          box-shadow:
+            0 -0.83em 0 -0.4em,
+            0 -0.83em 0 -0.42em,
+            0 -0.83em 0 -0.44em,
+            0 -0.83em 0 -0.46em,
+            0 -0.83em 0 -0.477em;
+        }
       }
 
-      20% {
-        box-shadow: 0 -0.83em 0 -0.4em, -0.338em -0.758em 0 -0.42em, -0.555em -0.617em 0 -0.44em, -0.671em -0.488em 0 -0.46em, -0.749em -0.34em 0 -0.477em;
+      @-webkit-keyframes round {
+        0% {
+          -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+        }
+
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
       }
 
-      38% {
-        box-shadow: 0 -0.83em 0 -0.4em, -0.377em -0.74em 0 -0.42em, -0.645em -0.522em 0 -0.44em, -0.775em -0.297em 0 -0.46em, -0.82em -0.09em 0 -0.477em;
+      @keyframes round {
+        0% {
+          -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+        }
+
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
       }
+    </style>
 
-      100% {
-        box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+    <!-- Github Pages hack to allow SPA refresh without receiving 404. -->
+    <script>
+      (function () {
+        // Retrieve the URL the user was trying to access when receiving the 404.
+        var redirect = sessionStorage.redirect;
+        // Remove the URL from sessionStorage.
+        delete sessionStorage.redirect;
+        // Check if we actually need to redirect.
+        // console.log('Change location: ', location.href, redirect)
+        if (redirect && redirect != location.href) {
+          // We need to redirect to the URL the user was trying to access.
+          history.replaceState(null, null, redirect);
+        }
+      })();
+    </script>
+    <!-- /Github Pages hack. -->
+
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-5QZ2RD9');
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-28DZK2C517"></script>
+    <script>
+      // check local storage for google analytics consent
+      var consent = localStorage.getItem('google-analytics-consent') || 'denied';
+
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
       }
-    }
+      gtag('consent', 'default', {
+        ad_storage: consent,
+        ad_user_data: consent,
+        ad_personalization: consent,
+        analytics_storage: consent,
+      });
 
-    @keyframes load6 {
-      0% {
-        box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
-      }
+      gtag('config', 'G-28DZK2C517');
+    </script>
+    <!-- End Google tag (gtag.js) -->
+  </head>
 
-      5%,
-      95% {
-        box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
-      }
+  <body class="mat-bg-surface mat-text-on-surface">
+    <app-root>
+      <div class="loader">Loading...</div>
+    </app-root>
+  </body>
 
-      10%,
-      59% {
-        box-shadow: 0 -0.83em 0 -0.4em, -0.087em -0.825em 0 -0.42em, -0.173em -0.812em 0 -0.44em, -0.256em -0.789em 0 -0.46em, -0.297em -0.775em 0 -0.477em;
-      }
-
-      20% {
-        box-shadow: 0 -0.83em 0 -0.4em, -0.338em -0.758em 0 -0.42em, -0.555em -0.617em 0 -0.44em, -0.671em -0.488em 0 -0.46em, -0.749em -0.34em 0 -0.477em;
-      }
-
-      38% {
-        box-shadow: 0 -0.83em 0 -0.4em, -0.377em -0.74em 0 -0.42em, -0.645em -0.522em 0 -0.44em, -0.775em -0.297em 0 -0.46em, -0.82em -0.09em 0 -0.477em;
-      }
-
-      100% {
-        box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
-      }
-    }
-
-    @-webkit-keyframes round {
-      0% {
-        -webkit-transform: rotate(0deg);
-        transform: rotate(0deg);
-      }
-
-      100% {
-        -webkit-transform: rotate(360deg);
-        transform: rotate(360deg);
-      }
-    }
-
-    @keyframes round {
-      0% {
-        -webkit-transform: rotate(0deg);
-        transform: rotate(0deg);
-      }
-
-      100% {
-        -webkit-transform: rotate(360deg);
-        transform: rotate(360deg);
-      }
-    }
-  </style>
-
-  <!-- Github Pages hack to allow SPA refresh without receiving 404. -->
-  <script>
-    (function () {
-      // Retrieve the URL the user was trying to access when receiving the 404.
-      var redirect = sessionStorage.redirect;
-      // Remove the URL from sessionStorage.
-      delete sessionStorage.redirect;
-      // Check if we actually need to redirect.
-      // console.log('Change location: ', location.href, redirect)
-      if (redirect && redirect != location.href) {
-        // We need to redirect to the URL the user was trying to access.
-        history.replaceState(null, null, redirect);
-      }
-    })();
-  </script>
-  <!-- /Github Pages hack. -->
-
-  <!-- Google Tag Manager -->
-  <script>
-    (function (w, d, s, l, i) {
-      w[l] = w[l] || []; w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
-      var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
-      j.async = true; j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', 'GTM-5QZ2RD9');
-  </script>
-  <!-- End Google Tag Manager -->
-
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-28DZK2C517"></script>
-  <script>
-    // check local storage for google analytics consent
-    var consent = localStorage.getItem('google-analytics-consent') || 'denied';
-
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('consent', 'default', {
-      'ad_storage': consent,
-      'ad_user_data': consent,
-      'ad_personalization': consent,
-      'analytics_storage': consent,
-    });
-
-    gtag('config', 'G-28DZK2C517');
-  </script>
-  <!-- End Google tag (gtag.js) -->
-</head>
-
-
-<body class="bg-light">
-  <app-root>
-    <div class="loader">Loading...</div>
-  </app-root>
-</body>
-
-<!-- Google Tag Manager (noscript) -->
-<noscript>
-  <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5QZ2RD9" height="0" width="0"
-    style="display:none;visibility:hidden">
-  </iframe>
-</noscript>
-<!-- End Google Tag Manager (noscript) -->
-
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+    <iframe
+      src="https://www.googletagmanager.com/ns.html?id=GTM-5QZ2RD9"
+      height="0"
+      width="0"
+      style="display: none; visibility: hidden"
+    >
+    </iframe>
+  </noscript>
+  <!-- End Google Tag Manager (noscript) -->
 </html>

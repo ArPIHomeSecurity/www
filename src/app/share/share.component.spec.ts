@@ -31,20 +31,19 @@ describe('ShareComponent', () => {
           loader: {
             provide: TranslateLoader,
             useFactory: HttpLoaderFactory,
-            deps: [HttpClient]
-          }
+            deps: [HttpClient],
+          },
         }),
         LazyLoadImageModule,
         FontAwesomeModule,
-        ShareButtons
+        ShareButtons,
       ],
       providers: [
         TranslateService,
         provideHttpClient(withFetch()),
-        provideShareButtonsOptions(shareIcons())
-      ]
-    })
-      .compileComponents();
+        provideShareButtonsOptions(shareIcons()),
+      ],
+    }).compileComponents();
   }));
 
   beforeEach(() => {

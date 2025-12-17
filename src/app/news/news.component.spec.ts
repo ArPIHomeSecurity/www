@@ -17,16 +17,12 @@ describe('NewsComponent', () => {
           loader: {
             provide: TranslateLoader,
             useFactory: HttpLoaderFactory,
-            deps: [HttpClient]
-          }
-        })
+            deps: [HttpClient],
+          },
+        }),
       ],
-      providers: [
-        TranslateService,
-        provideHttpClient(withFetch())
-      ] 
-    })
-      .compileComponents();
+      providers: [TranslateService, provideHttpClient(withFetch())],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(NewsComponent);
     component = fixture.componentInstance;

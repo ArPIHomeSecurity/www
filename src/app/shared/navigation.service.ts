@@ -10,78 +10,77 @@ export interface NavigationItem {
 }
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class NavigationService {
-
   private navigationItems: NavigationItem[] = [
     {
       label: 'Home',
       url: 'https://www.arpi-security.info',
       description: 'ArPI Home Security System - Open-source Raspberry Pi based security solution',
-      priority: 1.0
+      priority: 1.0,
     },
     {
       label: 'Features',
       url: 'https://www.arpi-security.info/#features',
       description: 'Explore ArPI features and capabilities',
-      priority: 0.9
+      priority: 0.9,
     },
     {
       label: 'Demo',
       url: 'https://demo.arpi-security.info',
       description: 'View live demo of ArPI home security system',
-      priority: 0.8
+      priority: 0.8,
     },
     {
       label: 'GitHub',
       url: 'https://github.com/ArPIHomeSecurity',
       description: 'Source code and documentation',
       external: true,
-      priority: 0.9
+      priority: 0.9,
     },
     {
       label: 'Documentation',
       url: 'https://docs.arpi-security.info',
       description: 'Official ArPI documentation and guides',
       external: true,
-      priority: 0.8
+      priority: 0.8,
     },
     {
       label: 'Community',
       url: 'https://arpi-security.slack.com/',
       description: 'Join ArPI community on Slack',
       external: true,
-      priority: 0.7
+      priority: 0.7,
     },
     {
       label: 'Order',
       url: 'https://www.arpi-security.info/#order',
       description: 'Purchase ArPI hardware kits',
-      priority: 0.6
+      priority: 0.6,
     },
     {
       label: 'ArPI Board',
       url: 'https://www.tindie.com/products/gkovacs81/arpi-board-v20/',
       description: 'Purchase ArPI Board v2.0 on Tindie',
       external: true,
-      priority: 0.6
+      priority: 0.6,
     },
     {
       label: 'Contact',
       url: 'https://www.arpi-security.info/#contact',
       description: 'Get in touch with ArPI team',
-      priority: 0.5
+      priority: 0.5,
     },
     {
       label: 'News',
       url: 'https://www.arpi-security.info/news',
       description: 'News of ArPI Home Security',
-      priority: 0.5
-    } 
+      priority: 0.5,
+    },
   ];
 
-  constructor() { }
+  constructor() {}
 
   getNavigationItems(): NavigationItem[] {
     return this.navigationItems;

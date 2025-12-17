@@ -5,15 +5,12 @@ import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
   selector: 'app-order',
   templateUrl: './order.component.html',
   styleUrls: ['./order.component.scss'],
-  standalone: false
+  standalone: false,
 })
 export class OrderComponent implements OnInit {
-
   faLink = faExternalLinkAlt;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

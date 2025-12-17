@@ -25,17 +25,13 @@ describe('FooterComponent', () => {
           loader: {
             provide: TranslateLoader,
             useFactory: HttpLoaderFactory,
-            deps: [HttpClient]
-          }
+            deps: [HttpClient],
+          },
         }),
       ],
-      providers: [
-        TranslateService,
-        provideHttpClient(withFetch())
-      ],
-      declarations: [FooterComponent]
-    })
-      .compileComponents();
+      providers: [TranslateService, provideHttpClient(withFetch())],
+      declarations: [FooterComponent],
+    }).compileComponents();
 
     const library = TestBed.inject(FaIconLibrary);
     library.addIcons(faGithub, faCookie, faFileSignature, faShieldHalved);

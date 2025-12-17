@@ -8,28 +8,34 @@ import { NewsComponent } from './news/news.component';
 const routes: Routes = [
   {
     path: '',
-    component: MainComponent
+    component: MainComponent,
   },
   {
     path: 'news',
-    component: NewsComponent
+    component: NewsComponent,
   },
   {
     path: 'privacy',
-    component: PrivacyComponent
+    component: PrivacyComponent,
   },
   {
     path: 'terms',
-    component: TermsComponent
+    component: TermsComponent,
   },
   {
     path: '**',
-    redirectTo: '/'
+    redirectTo: '/',
   },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, { useHash: false })],
-  exports: [RouterModule]
+  imports: [
+    RouterModule.forRoot(routes, {
+      useHash: false,
+      anchorScrolling: 'enabled',
+      scrollPositionRestoration: 'enabled',
+    }),
+  ],
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

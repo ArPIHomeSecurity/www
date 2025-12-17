@@ -26,17 +26,13 @@ describe('ContactComponent', () => {
           loader: {
             provide: TranslateLoader,
             useFactory: HttpLoaderFactory,
-            deps: [HttpClient]
-          }
+            deps: [HttpClient],
+          },
         }),
-        LazyLoadImageModule
+        LazyLoadImageModule,
       ],
-      providers: [
-        TranslateService,
-        provideHttpClient(withFetch())
-      ]
-    })
-      .compileComponents();
+      providers: [TranslateService, provideHttpClient(withFetch())],
+    }).compileComponents();
   }));
 
   beforeEach(() => {

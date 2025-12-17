@@ -4,13 +4,10 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-terms',
   templateUrl: './terms.component.html',
   styleUrls: ['./terms.component.scss'],
-  standalone: false
+  standalone: false,
 })
 export class TermsComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

@@ -1,20 +1,22 @@
-
 .background {
-  background-image: url("/assets/message.jpg");
+  background-image: url('/assets/message.jpg');
   background-size: cover;
   background-position-x: center;
   background-position-y: center;
 }
 
 .contact {
-  padding: 65px 0px 50px 0px;
-  border-radius: 10px;
+  padding: 40px 0px;
 
   h2 {
     margin-bottom: 30px;
   }
+
+  .mat-mdc-card {
+    background-color: rgba(255, 255, 255, 0.8);
+  }
 }
 
-form:invalid>#submit-message {
+form:invalid > #submit-message {
   pointer-events: none;
 }

@@ -1,13 +1,14 @@
-@use "../features.scss";
+@use '../features.scss';
 
-.carousel-inner {
-  .carousel-item {
-    img {
-      width: 100%;
-      max-width: 400px;
-    }
-  }
+.mat-mdc-card {
+  background: rgba(255, 255, 255, 0.75);
 }
+
+/*
+.mat-mdc-tab-group {
+  min-height: 500px;
+}
+*/
 
 #web-application-icon {
   margin: auto;
@@ -19,4 +20,19 @@
 #google-play-store-qr-code {
   border: 10px solid #007bff;
   border-radius: 5px;
+  width: 75%;
+  max-width: 250px;
+}
+
+:host ::ng-deep .mat-mdc-tab-header {
+  display: none !important;
+}
+
+.screenshot-image {
+  max-height: 550px;
+  max-width: 100%;
+}
+
+.demo-image {
+  max-width: 300px;
 }

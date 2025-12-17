@@ -1,16 +1,40 @@
-.navbar {
-  .navbar-brand {
-    img {
-      width: 40px;
-      margin-right: 10px;
-      float: left;
-    }
+.sticky-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
 
-    h1 {
-      font-size: 20px;
-      font-weight: 400;
-      margin: 7px 0px;
-      line-height: 24px;
-    }
-  }
+/* Fix for stick toolbar in mat-sidenav-content */
+mat-sidenav-content.mat-drawer-content.mat-sidenav-content {
+  overflow: visible !important;
+  overflow-x: visible !important;
+  overflow-y: visible !important;
+}
+
+mat-sidenav-container.mat-drawer-container.mat-sidenav-container {
+  overflow: visible !important;
+  overflow-x: visible !important;
+  overflow-y: visible !important;
+}
+/* END */
+
+img.arpi-logo {
+  height: 20px;
+  width: 20px;
+  margin-right: 10px;
+  float: left;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.sidebar {
+  width: 260px;
+  min-width: 200px;
+  max-width: 90vw;
+}
+.toolbar-title {
+  font-weight: bold;
+  margin-left: 1rem;
 }

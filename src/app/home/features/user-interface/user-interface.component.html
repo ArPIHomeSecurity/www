@@ -1,118 +1,141 @@
 <div class="feature even">
   <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <h3 class="text-center mt-5">{{ 'arpi.features.ui.title' | translate }}</h3>
-      </div>
-      <div class="col-md-6 mb-3">
-        <div
-          class="section border rounded h-100 d-flex flex-column align-items-center justify-content-start p-4 bg-white bg-opacity-75">
-          <div id="arpi-features-slider" class="carousel slide carousel-fade w-100 mb-3" data-bs-ride="carousel"
-            data-bs-interval="2500">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="assets/screenshot-home-01.png"
-                  alt="ArPI home security system dashboard - real-time monitoring interface" loading="lazy"
-                  class="d-block mx-auto">
-              </div>
-              <div class="carousel-item">
-                <img src="assets/screenshot-home-02.png"
-                  alt="ArPI security system home screen - status overview and controls" loading="lazy"
-                  class="d-block mx-auto">
-              </div>
-              <div class="carousel-item">
-                <img src="assets/screenshot-sensor-01.png"
-                  alt="ArPI sensor management interface - configure and monitor security sensors" loading="lazy"
-                  class="d-block mx-auto">
-              </div>
-              <div class="carousel-item">
-                <img src="assets/screenshot-zone-01.png"
-                  alt="ArPI zone configuration - security zones and area management" loading="lazy"
-                  class="d-block mx-auto">
-              </div>
-              <div class="carousel-item">
-                <img src="assets/screenshot-menu-01.png"
-                  alt="ArPI navigation menu - system settings and configuration options" loading="lazy"
-                  class="d-block mx-auto">
-              </div>
-              <div class="carousel-item">
-                <img src="assets/screenshot-area-01.png"
-                  alt="ArPI area management - security area configuration and monitoring" loading="lazy"
-                  class="d-block mx-auto">
-              </div>
+    <div class="grid">
+      <h2 class="col-12">
+        {{ 'arpi.features.ui.title' | translate }}
+      </h2>
+    </div>
+
+    <div class="grid">
+      <mat-card class="col-12">
+        <mat-card-content>
+          <div class="grid">
+            <div class="col-12 col-md-6">
+              <mat-tab-group dynamicHeight [(selectedIndex)]="selectedIndex" mat-stretch-tabs>
+                @for (tab of tabs; track tab) {
+                  <mat-tab class="text-center">
+                    <div class="w-100 h-100 text-center">
+                      <img
+                        [src]="tab.img"
+                        class="screenshot-image"
+                        [alt]="tab.alt"
+                        loading="lazy"
+                        (load)="imageLoaded($event)"
+                      />
+                    </div>
+                  </mat-tab>
+                }
+              </mat-tab-group>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <p>{{ 'arpi.features.ui.description' | translate }}</p>
+              <ul>
+                <li>{{ 'arpi.features.ui.feature1' | translate }}</li>
+                <li>{{ 'arpi.features.ui.feature2' | translate }}</li>
+                <li>{{ 'arpi.features.ui.feature3' | translate }}</li>
+                <li>{{ 'arpi.features.ui.feature4' | translate }}</li>
+                <li>{{ 'arpi.features.ui.feature5' | translate }}</li>
+              </ul>
             </div>
           </div>
-        </div>
-      </div>
+        </mat-card-content>
+      </mat-card>
 
-      <div class="col-md-6 mb-3">
-        <div class="section border rounded h-100 d-flex flex-column justify-content-start p-4 bg-white bg-opacity-75">
-          <p>{{ 'arpi.features.ui.description' | translate }}</p>
-          <ul>
-            <li>{{ 'arpi.features.ui.feature1' | translate }}</li>
-            <li>{{ 'arpi.features.ui.feature2' | translate }}</li>
-            <li>{{ 'arpi.features.ui.feature3' | translate }}</li>
-            <li>{{ 'arpi.features.ui.feature4' | translate }}</li>
-            <li>{{ 'arpi.features.ui.feature5' | translate }}</li>
-          </ul>
-        </div>
-      </div>
-
-    </div>
-    <div class="row">
-      <div class="col-md-4 text-center mb-3">
-        <div
-          class="section border rounded h-100 d-flex flex-column align-items-center justify-content-start p-4 bg-white bg-opacity-75">
+      <mat-card class="col-12 col-md-6 col-lg-4">
+        <mat-card-content class="h-100">
           <h3>{{ 'arpi.features.web.title' | translate }}</h3>
-          <p>{{ 'arpi.features.web.description' | translate }}</p>
-          <a href="https://app.arpi-security.info/" target="app">
-            <img id="web-application-icon" src="assets/icon-256.webp" alt="ARPI Web Application" class="img-fluid mb-3"
-              style="width: 400px;">
+          <div class="text-center">
+            <p>{{ 'arpi.features.web.description' | translate }}</p>
+            <img
+              id="web-application-icon"
+              src="assets/icon-256.webp"
+              alt="ARPI Web Application"
+              class="w-100"
+            />
+            <p class="text-justify">
+              {{ 'arpi.features.simulator.description' | translate }}
+              <br />
+            </p>
+          </div>
+        </mat-card-content>
+        <mat-divider></mat-divider>
+        <mat-card-actions align="end">
+          <a
+            matButton="filled"
+            color="primary"
+            href="https://docs.arpi-security.info/en/latest/end_users/simulator/"
+            target="_blank"
+          >
+            {{ 'arpi.features.simulator.link' | translate }}
           </a>
-        </div>
-      </div>
-      <div class="col-md-4 text-center mb-3">
-        <div
-          class="section border rounded h-100 d-flex flex-column align-items-center justify-content-start p-4 bg-white bg-opacity-75">
+          &nbsp;
+          <a matButton="filled" color="primary" href="https://app.arpi-security.info/" target="app">
+            {{ 'arpi.action.open' | translate }}
+          </a>
+        </mat-card-actions>
+      </mat-card>
+
+      <mat-card class="col-12 col-md-6 col-lg-4">
+        <mat-card-content class="h-100">
           <h3>{{ 'arpi.features.android.title' | translate }}</h3>
-          <p>{{ 'arpi.features.android.description' | translate }}</p>
-          <div class="text-center my-4">
-            <img id="google-play-store-qr-code" src="assets/android-qr-code.svg" alt="ARPI Android App QR Code"
-              class="img-fluid" style="max-width: 200px;">
-            <br>
-            <a href="https://play.google.com/store/apps/details?id=com.arpi.webapplication" target="google-play">
-              <img src="assets/google-play-badge.svg" alt="Get it on Google Play" class="img-fluid my-2"
-                style="width: 200px;">
+          <div class="text-center">
+            <p>{{ 'arpi.features.android.description' | translate }}</p>
+            <img
+              id="google-play-store-qr-code"
+              class="w-100"
+              src="assets/android-qr-code.svg"
+              alt="ARPI Android App QR Code"
+            />
+            <br />
+            <a
+              href="https://play.google.com/store/apps/details?id=com.arpi.webapplication"
+              target="google-play"
+            >
+              <img
+                src="assets/google-play-badge.svg"
+                alt="Get it on Google Play"
+                class="img-fluid my-2"
+              />
             </a>
           </div>
-        </div>
-      </div>
+        </mat-card-content>
+        <mat-divider></mat-divider>
+        <mat-card-actions align="end">
+          <a
+            matButton="filled"
+            color="primary"
+            href="https://play.google.com/store/apps/details?id=com.arpi.webapplication"
+            target="google-play"
+          >
+            {{ 'arpi.action.open' | translate }}
+          </a>
+        </mat-card-actions>
+      </mat-card>
 
-      <div class="col-md-4 mb-3">
-        <div
-          class="section border rounded h-100 d-flex flex-column align-items-center justify-content-start p-4 bg-white bg-opacity-75">
+      <mat-card class="col-12 col-md-12 col-lg-4">
+        <mat-card-content class="h-100">
           <div class="text-center">
             <a href="https://demo.arpi-security.info/" target="demo">
-              <img src="assets/demo.png" class="img-fluid my-4" alt="ARPI Demo">
+              <img src="assets/demo.png" class="demo-image w-100" alt="ARPI Demo" />
             </a>
           </div>
           <p class="text-center">
             {{ 'arpi.features.demo.description' | translate }}
-            <br>
-            <a href="https://demo.arpi-security.info/" target="demo">
-              {{ 'arpi.features.demo.link' | translate }}
-            </a>
           </p>
-          <hr class="border border-primary border-2 opacity-75 w-100 my-4">
-          <p class="text-center mb-1">
-            {{ 'arpi.features.simulator.description' | translate }}
-            <br>
-            <a href="https://docs.arpi-security.info/en/latest/end_users/simulator/" target="_blank">
-              {{ 'arpi.features.simulator.link' | translate }}
-            </a>
-          </p>
-        </div>
-      </div>
+        </mat-card-content>
+        <mat-divider></mat-divider>
+        <mat-card-actions align="end">
+          <a
+            matButton="filled"
+            color="primary"
+            href="https://demo.arpi-security.info/"
+            target="_blank"
+          >
+            {{ 'arpi.action.open' | translate }}
+          </a>
+        </mat-card-actions>
+      </mat-card>
     </div>
   </div>
 </div>
