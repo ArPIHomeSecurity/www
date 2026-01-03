@@ -66,7 +66,7 @@ export class BoardComponent {
 
   getImages(title: string) {
     if (!this.imagesCache[title]) {
-      this.imagesCache[title] = [new Image(0, { img: 'assets/arpi_board_' + title + '.png' })];
+      this.imagesCache[title] = [new Image(0, { img: 'assets/ArPI_V3.0/arpi_board_' + title + '.png' })];
     }
     return this.imagesCache[title];
   }
