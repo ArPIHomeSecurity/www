@@ -97,6 +97,8 @@
   "arpi.features.stack.connection": "Kapcsolat",
   "arpi.features.stack.integration": "Integráció",
 
+  "arpi.features.production": "PCB gyártás",
+
   "arpi.documentation.title": "Dokumentáció",
   "arpi.documentation.intro": "Az ArPI otthoni riasztórendszer teljes dokumentációja elérhető itt:",
   "arpi.documentation.enduser.title": "Végfelhasználó",

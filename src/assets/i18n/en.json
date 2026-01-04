@@ -99,6 +99,8 @@
   "arpi.features.stack.connection": "Connection",
   "arpi.features.stack.integration": "Integration",
 
+  "arpi.features.production": "PCB manufacturing",
+
   "arpi.documentation.title": "Documentation",
   "arpi.documentation.intro": "Comprehensive documentation for ArPI Home Security is available at",
   "arpi.documentation.enduser.title": "End User",
