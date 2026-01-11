@@ -29,6 +29,14 @@ export class NewsComponent {
       content: 'arpi.news.02.content',
       link: 'https://www.tindie.com/products/gkovacs81/arpi-board-v30/',
     },
+    {
+      title: 'arpi.news.03.title',
+      image: 'assets/news/2026-01-11.webp',
+      date: '2026-01-11',
+      content: 'arpi.news.03.content',
+      link: 'https://github.com/ArPIHomeSecurity/arpi_server/releases/tag/2.1.0',
+    },
+
     // {
     //   title: 'arpi.news.02.title',
     //   image: 'assets/news/news-2025-09-15.jpg',

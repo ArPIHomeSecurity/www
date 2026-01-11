@@ -177,5 +177,8 @@
   "arpi.news.01.content": "The new ArPI Board v3.0 is launching within the next 3 months! It features zone doubling (15 channels, 30 sensors), an integrated level shifter and voltage regulator, plus advanced error detection. Stay tuned for more updates!",
 
   "arpi.news.02.title": "ArPI Board v3.0 Release is here",
-  "arpi.news.02.content": "Testing of the new ArPI Board v3.0 is complete, and we are excited to announce that it is now available for order!"
+  "arpi.news.02.content": "Testing of the new ArPI Board v3.0 is complete, and we are excited to announce that it is now available for order!",
+
+  "arpi.news.03.title": "ArPI Software version v2.1",
+  "arpi.news.03.content": "The new ArPI Software version v2.1 is released, adding support for the ArPI Board v3.0 and several fixes."
 }
