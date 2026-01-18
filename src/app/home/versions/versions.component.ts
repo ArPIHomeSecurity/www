@@ -56,6 +56,9 @@ export class VersionsComponent implements OnInit {
     new Image(0, {
       img: 'assets/ArPI_V3.0/arpi_01.webp',
     }),
+    new Image(1, {
+      img: 'assets/ArPI_V3.0/arpi_02.webp',
+    }),
   ];
 
   images_case_2_0: Image[] = [
