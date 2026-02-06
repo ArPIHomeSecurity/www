@@ -1,4 +1,5 @@
-import { AfterViewInit, Component, ElementRef, ViewChild, OnDestroy } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, ViewChild, OnDestroy, PLATFORM_ID, inject } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { MatDialog } from '@angular/material/dialog';
 import { TranslateService } from '@ngx-translate/core';
@@ -14,7 +15,6 @@ import {
 import { ConsentDialogComponent } from './consent.dialog/consent.dialog.component';
 import { ShareComponent } from './share/share.component';
 
-declare let bootstrap: any;
 
 @Component({
   selector: 'app-root',
@@ -37,6 +37,7 @@ export class AppComponent implements AfterViewInit, OnDestroy {
 
   isDesktop = true;
   private breakpointSubscription: any;
+  private platformId = inject(PLATFORM_ID);
 
   constructor(
     private translate: TranslateService,
@@ -81,19 +82,15 @@ export class AppComponent implements AfterViewInit, OnDestroy {
   }
 
   ngAfterViewInit() {
-    // check localstorage in SSR
-    if (typeof localStorage === 'undefined') {
+    // Only run in browser, not during SSR
+    if (!isPlatformBrowser(this.platformId)) {
       return;
     }
 
     if (localStorage.getItem('google-analytics-consent') === null) {
       // trigger the consent dialog
       setTimeout(() => {
-        const consentDialogElement = document.getElementById('consentDialog');
-        if (consentDialogElement) {
-          const modal = new bootstrap.Modal(consentDialogElement);
-          modal.show();
-        }
+        this.openConsentDialog();
       }, 2000);
     }
   }
