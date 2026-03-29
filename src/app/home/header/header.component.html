@@ -8,7 +8,7 @@
               @for (slide of slides; track slide) {
                 <mat-tab>
                   <img
-                    [attr.src]="'assets/header_' + slide + '.jpg'"
+                    [attr.src]="'assets/header/' + slide + '.jpg'"
                     (load)="imageLoaded($event)"
                     class="header-image"
                   />

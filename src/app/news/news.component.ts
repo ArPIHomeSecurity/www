@@ -36,13 +36,13 @@ export class NewsComponent {
       content: 'arpi.news.03.content',
       link: 'https://github.com/ArPIHomeSecurity/arpi_server/releases/tag/2.1.0',
     },
-
-    // {
-    //   title: 'arpi.news.02.title',
-    //   image: 'assets/news/news-2025-09-15.jpg',
-    //   date: '2025-09-15',
-    //   content: 'arpi.news.02.content',
-    // },
+    {
+      title: 'arpi.news.04.title',
+      image: 'assets/news/2026-03-29.webp',
+      date: '2026-03-29',
+      content: 'arpi.news.04.content',
+      link: 'https://github.com/ArPIHomeSecurity/arpi_server/releases/tag/2.2.0',
+    },
     // Add more news items as needed
   ];
 

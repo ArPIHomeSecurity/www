@@ -9,7 +9,7 @@ import { takeUntil } from 'rxjs/operators';
   standalone: false,
 })
 export class HeaderComponent implements OnDestroy {
-  slides = ['build', 'upgrade', 'opensource', 'cloudless'];
+  slides = ['mcp', 'build', 'upgrade', 'opensource', 'cloudless'];
   selectedIndex = 0;
   private destroy$ = new Subject<void>();
   private autoSlideStarted = false;

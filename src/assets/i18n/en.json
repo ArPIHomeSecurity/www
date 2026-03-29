@@ -123,7 +123,8 @@
   "arpi.versions.sw.title": "ArPI software",
   "arpi.versions.sw.subtitle": "The open source software of the home security system",
   "arpi.versions.sw.releases": "Software releases",
-  "arpi.versions.sw.v2_2_0": "MCP support",
+  "arpi.versions.sw.v2_3_0": "General improvements and fixes",
+  "arpi.versions.sw.v2_2_0": "2026.03 / v2.2.0 - MCP support for AI assistant integration",
   "arpi.versions.sw.v2_1_0": "2026.01 / v2.1.0 - V3.0 board support",
   "arpi.versions.sw.v1_0_0": "2025.05 / v1.0.0 - Android application",
   "arpi.versions.sw.v0_16": "2024.11 / v0.16 - Upgrade to 'bookworm' OS version, networking improvements",
@@ -143,6 +144,8 @@
   "arpi.versions.case.subtitle": "Casing for the ArPI board V2.0",
   "arpi.versions.case.download_base": "Download base case STL",
   "arpi.versions.case.download_cover": "Download cover case STL",
+  "arpi.home.mcp.title": "MCP support",
+  "arpi.home.mcp.description": "Integrate AI capabilities into your home security system",
   "arpi.home.build.title": "DIY",
   "arpi.home.build.description": "Build your own home security system with a Raspberry PI",
   "arpi.home.upgrade.title": "Upgrade",
@@ -180,5 +183,8 @@
   "arpi.news.02.content": "Testing of the new ArPI Board v3.0 is complete, and we are excited to announce that it is now available for order!",
 
   "arpi.news.03.title": "ArPI Software version v2.1",
-  "arpi.news.03.content": "The new ArPI Software version v2.1 is released, adding support for the ArPI Board v3.0 and several fixes."
+  "arpi.news.03.content": "The new ArPI Software version v2.1 is released, adding support for the ArPI Board v3.0 and several fixes.",
+
+  "arpi.news.04.title": "ArPI Software version v2.2",
+  "arpi.news.04.content": "ArPI Software v2.2 is now available, introducing MCP (Model Context Protocol) support for seamless AI assistant integration with your home security system."
 }
