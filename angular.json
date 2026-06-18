@@ -36,8 +36,10 @@
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/assets",
+              "src/.well-known",
               "src/favicon.ico",
               "src/robots.txt",
+              "src/llm.txt",
               "src/sitemap.xml",
               "src/404.html"
             ],

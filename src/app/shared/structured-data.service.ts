@@ -40,7 +40,11 @@ export class StructuredDataService {
         '@type': 'Person',
         name: 'Gábor Kovács',
       },
-      sameAs: ['https://github.com/ArPIHomeSecurity', 'https://arpi-security.slack.com/'],
+      sameAs: [
+        'https://github.com/ArPIHomeSecurity',
+        'https://arpi-security.slack.com/',
+        'https://www.arpi-security.info/.well-known/mcp.json',
+      ],
       contactPoint: {
         '@type': 'ContactPoint',
         contactType: 'Customer Support',
@@ -75,6 +79,7 @@ export class StructuredDataService {
         'Open Source Software',
         'DIY Electronics',
         'Home Automation',
+        'Model Context Protocol (MCP)',
       ],
       mainEntityOfPage: {
         '@type': 'WebPage',
@@ -93,7 +98,7 @@ export class StructuredDataService {
       alternateName: 'ArPI',
       description:
         'Open-source Raspberry Pi based home security system with web interface, mobile app, ' +
-        'and DIY installation support.',
+        'DIY installation support, and MCP integration for AI assistants.',
       applicationCategory: 'Security',
       operatingSystem: 'Raspberry Pi OS',
       downloadUrl: 'https://github.com/ArPIHomeSecurity/arpi_management/releases',
@@ -102,8 +107,26 @@ export class StructuredDataService {
         name: 'ArPIHomeSecurity',
       },
       programmingLanguage: 'Python,Typescript',
-      releaseNotes: 'https://github.com/ArPIHomeSecurity/arpi_management/releases',
-      softwareVersion: '1.0.0',
+      releaseNotes: 'https://github.com/ArPIHomeSecurity/arpi_server/releases/tag/v2.2.0',
+      softwareVersion: '2.2.0',
+      featureList: [
+        'Remote access and notifications',
+        'Reusable legacy sensors and keypads',
+        'Home automation integrations',
+        'MCP support for AI assistant integration',
+      ],
+      additionalProperty: [
+        {
+          '@type': 'PropertyValue',
+          name: 'mcpManifest',
+          value: 'https://www.arpi-security.info/.well-known/mcp.json',
+        },
+        {
+          '@type': 'PropertyValue',
+          name: 'llmContext',
+          value: 'https://www.arpi-security.info/llm.txt',
+        },
+      ],
       codeRepository: [
         'https://github.com/ArPIHomeSecurity/arpi_management/',
         'https://github.com/ArPIHomeSecurity/arpi_webapplication/',
@@ -174,6 +197,12 @@ export class StructuredDataService {
           name: 'Documentation',
           description: 'Official ArPI documentation and guides',
           url: 'https://docs.arpi-security.info',
+        },
+        {
+          '@type': 'SiteNavigationElement',
+          name: 'MCP Manifest',
+          description: 'Machine-readable MCP capability metadata',
+          url: 'https://www.arpi-security.info/.well-known/mcp.json',
         },
         {
           '@type': 'SiteNavigationElement',
@@ -354,7 +383,7 @@ export class StructuredDataService {
         height: 256,
       },
       articleSection: 'Technology',
-      keywords: ['Raspberry Pi', 'Home Security', 'Open Source', 'IoT', 'DIY'],
+      keywords: ['Raspberry Pi', 'Home Security', 'Open Source', 'IoT', 'DIY', 'MCP', 'Model Context Protocol'],
       about: [
         {
           '@type': 'Thing',

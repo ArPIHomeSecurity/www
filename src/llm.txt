@@ -1,0 +1,68 @@
+# ArPI Security - LLM Context File
+
+Site: https://www.arpi-security.info/
+Project: ArPI (open-source Raspberry Pi based home security system)
+Owner/Organization: https://github.com/ArPIHomeSecurity
+Last reviewed: 2026-06-18
+
+## Purpose
+ArPI is a DIY/open-source home security platform that lets users replace a legacy alarm mainboard while reusing existing sensors, keypads, sirens, and wiring. It provides modern web/mobile management, remote access, and integrations.
+
+## Core offering
+- Raspberry Pi based controller software for home alarm systems.
+- Adapter boards (multiple hardware revisions, latest highlighted as V3.0).
+- Web application and Android application.
+- Community-driven open-source development.
+
+## Key website sections
+- Home: product overview, features, UI preview, technology stack, board hardware details, releases, contributors, contact/order links.
+- Privacy: data handling policy for website contact form + Google Analytics cookies.
+- Terms: terms of use, liability and warranty disclaimers.
+- News: update feed rendered from localized content.
+
+## Product capabilities (high-level)
+- Secure remote access and multi-user management.
+- Multiple locations/areas support.
+- Programmable outputs and automation hooks.
+- Notifications (email/SMS), power outage detection, arm/disarm delays.
+- Integrations with Home Assistant and Domoticz.
+- Hardware interfaces for sensors, keypad (Wiegand), GSM, UPS, RTC.
+
+## Technology stack (website content)
+- Hardware: Raspberry Pi.
+- Backend: Python, PostgreSQL, Nginx, MQTT.
+- Frontend: Angular, Angular Material.
+- Connectivity/Security: Let's Encrypt, Socket.IO.
+
+## Primary public routes
+- https://www.arpi-security.info/
+- https://www.arpi-security.info/privacy
+- https://www.arpi-security.info/terms
+- https://www.arpi-security.info/news
+- https://www.arpi-security.info/.well-known/mcp.json
+
+## Important external links
+- Documentation hub: https://docs.arpi-security.info/
+- End user docs: https://docs.arpi-security.info/en/latest/end_users/
+- Security engineer docs: https://docs.arpi-security.info/en/latest/security_engineers/
+- Developer docs: https://docs.arpi-security.info/en/latest/developers/
+- Demo web app: https://demo.arpi-security.info/
+- Web app: https://app.arpi-security.info/
+- Android app: https://play.google.com/store/apps/details?id=com.arpi.webapplication
+- GitHub org: https://github.com/ArPIHomeSecurity
+- Community Slack invite: https://join.slack.com/t/arpi-security/shared_invite/zt-2jne6y453-596Q92c~WVZiKwxpdmc~bg
+
+## MCP server capability
+- Discovery manifest: https://www.arpi-security.info/.well-known/mcp.json
+- Release note reference: ArPI Software v2.2.0 introduces MCP support for AI assistant integration.
+- Source of truth for implementation details: ArPI GitHub repositories and developer documentation.
+
+## Legal/usage notes
+- Terms describe service as provided "as is" and at user risk.
+- Privacy policy states contact form email handling and Google Analytics cookie usage for website analytics.
+
+## Guidance for LLM agents
+- Treat docs.arpi-security.info as the source of technical implementation details.
+- Treat arpi-security.info as product/marketing/legal overview.
+- For software versions and changelogs, prefer linked GitHub releases from ArPI repositories.
+- Avoid assuming paid SaaS: project messaging emphasizes open-source and self-hosted/home deployment.

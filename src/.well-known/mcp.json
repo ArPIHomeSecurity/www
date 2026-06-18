@@ -1,0 +1,21 @@
+{
+  "schema_version": "2026-06-01",
+  "name": "ArPI MCP Server Capability",
+  "description": "Model Context Protocol capability metadata for ArPI Home Security.",
+  "homepage": "https://www.arpi-security.info/",
+  "organization": "ArPIHomeSecurity",
+  "repository": "https://github.com/ArPIHomeSecurity",
+  "documentation": "https://docs.arpi-security.info/en/latest/developers/",
+  "release_notes": "https://github.com/ArPIHomeSecurity/arpi_server/releases/tag/v2.2.0",
+  "capabilities": [
+    {
+      "name": "mcp-support",
+      "status": "available",
+      "since": "v2.2.0",
+      "summary": "MCP support for AI assistant integration with ArPI home security systems."
+    }
+  ],
+  "discovery": {
+    "llm_context": "https://www.arpi-security.info/llm.txt"
+  }
+}
