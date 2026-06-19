@@ -50,7 +50,7 @@ ArPI is a DIY/open-source home security platform that lets users replace a legac
 - Web app: https://app.arpi-security.info/
 - Android app: https://play.google.com/store/apps/details?id=com.arpi.webapplication
 - GitHub org: https://github.com/ArPIHomeSecurity
-- Community Slack invite: https://join.slack.com/t/arpi-security/shared_invite/zt-2jne6y453-596Q92c~WVZiKwxpdmc~bg
+- Community Slack invite: https://join.slack.com/t/arpi-security/shared_invite/zt-41h4vjkzq-QYH51ap2jWsiLuQmndVQkQ
 
 ## MCP server capability
 - Discovery manifest: https://www.arpi-security.info/.well-known/mcp.json
