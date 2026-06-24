@@ -16,6 +16,6 @@
     }
   ],
   "discovery": {
-    "llm_context": "https://www.arpi-security.info/llm.txt"
+    "llm_context": "https://www.arpi-security.info/llms.txt"
   }
 }
