@@ -186,5 +186,8 @@
   "arpi.news.03.content": "A legújabb ArPI Szoftver verzió, a v2.1 megjelent, amely támogatást nyújt az ArPI Board v3.0-hoz és számos javítást tartalmaz.",
 
   "arpi.news.04.title": "ArPI Software verzió v2.2",
-  "arpi.news.04.content": "Az ArPI Software v2.2 mostantól elérhető, bevezetve az MCP (Model Context Protocol) támogatást a zökkenőmentes AI asszisztens integrációhoz az otthoni biztonsági rendszereddel."
+  "arpi.news.04.content": "Az ArPI Software v2.2 mostantól elérhető, bevezetve az MCP (Model Context Protocol) támogatást a zökkenőmentes AI asszisztens integrációhoz az otthoni biztonsági rendszereddel.",
+
+  "arpi.news.05.title": "ArPI Software verzió v2.7.0",
+  "arpi.news.05.content": "A rendszer MQTT vezérléséhez tartozó első kódhozzájárulás bekerült az ArPI Software v2.7.0-ba."
 }

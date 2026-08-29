@@ -43,6 +43,13 @@ export class NewsComponent {
       content: 'arpi.news.04.content',
       link: 'https://github.com/ArPIHomeSecurity/arpi_server/releases/tag/2.2.0',
     },
+    {
+      title: 'arpi.news.05.title',
+      image: 'assets/news/2026-08-29.webp',
+      date: '2026-08-29',
+      content: 'arpi.news.05.content',
+      link: 'https://github.com/ArPIHomeSecurity/arpi_server/releases/tag/2.7.0',
+    },
     // Add more news items as needed
   ];
 

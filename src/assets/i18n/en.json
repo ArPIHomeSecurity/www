@@ -190,5 +190,8 @@
   "arpi.news.03.content": "The new ArPI Software version v2.1 is released, adding support for the ArPI Board v3.0 and several fixes.",
 
   "arpi.news.04.title": "ArPI Software version v2.2",
-  "arpi.news.04.content": "ArPI Software v2.2 is now available, introducing MCP (Model Context Protocol) support for seamless AI assistant integration with your home security system."
+  "arpi.news.04.content": "ArPI Software v2.2 is now available, introducing MCP (Model Context Protocol) support for seamless AI assistant integration with your home security system.",
+
+  "arpi.news.05.title": "ArPI Software version v2.7.0",
+  "arpi.news.05.content": "The first code contribution for MQTT control of the system is now included in ArPI Software v2.7.0."
 }

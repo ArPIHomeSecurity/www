@@ -5,7 +5,7 @@
         <h1>{{ 'arpi.news.title' | translate }}</h1>
       </div>
 
-      <div *ngFor="let news of newsList; let i = index" class="col-12">
+      <div *ngFor="let news of newsList.slice().reverse(); let i = index" class="col-12">
         <mat-card class="col-3">
           <mat-card-header>
             <mat-card-title>{{ news.title | translate }}</mat-card-title>
