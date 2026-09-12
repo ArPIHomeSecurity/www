@@ -190,5 +190,8 @@
   "arpi.news.04.content": "Az ArPI Software v2.2 mostantól elérhető, bevezetve az MCP (Model Context Protocol) támogatást a zökkenőmentes AI asszisztens integrációhoz az otthoni biztonsági rendszereddel.",
 
   "arpi.news.05.title": "ArPI Software verzió v2.7.0",
-  "arpi.news.05.content": "A rendszer MQTT vezérléséhez tartozó első kódhozzájárulás bekerült az ArPI Software v2.7.0-ba."
+  "arpi.news.05.content": "A rendszer MQTT vezérléséhez tartozó első kódhozzájárulás bekerült az ArPI Software v2.7.0-ba.",
+
+  "arpi.news.06.title": "ArPI Zigbee támogatással",
+  "arpi.news.06.content": "Elkezdődött az ArPI Software v3.0 fejlesztése Zigbee támogatással."
 }
